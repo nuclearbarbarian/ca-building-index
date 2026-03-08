@@ -5,7 +5,7 @@ import defaultFeeData from './data/feeData.json';
 // PENNEY DESIGN SYSTEM TOKENS
 // 1940s Trade Journal Aesthetic — Period-Accurate Revival
 // ═══════════════════════════════════════════════════════════════
-const NB = {
+const PDS = {
   // Backgrounds — newsprint & paper
   void:    '#F5F2E8',   // Newsprint — page background
   shadow:  '#FDFCF9',   // Paper White — panel / card background
@@ -26,7 +26,7 @@ const NB = {
   fonts:   `@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,700&family=IBM+Plex+Mono:wght@400;700&display=swap');`,
 };
 
-// Tier mapping to NB palette
+// Tier mapping to PDS palette
 const TIERS = [
   { min:0.75, label:'EXTREMELY HARD',   color:'#6B1F1F',  dark:'#4A1515'   },
   { min:0.55, label:'VERY HARD',        color:'#8B2B2B',  dark:'#5C1A1A'   },
@@ -428,25 +428,25 @@ const COUNTY_SHAPES = {
 // LAYERS
 // ═══════════════════════════════════════════════════════════════
 const LAYERS = {
-  composite:    { label:'Overall Difficulty', color:NB.ember,    weight:null,
+  composite:    { label:'Overall Difficulty', color:PDS.ember,    weight:null,
     description:'A weighted composite of all eight regulatory factors below. Counties scoring above 75 face conditions hostile enough to make most projects economically unviable. Think of it as the sum total of institutional resistance a builder must overcome.' },
-  permitDays:   { label:'Permit Timeline',    color:NB.electric, weight:0.20, format:v=>`${v}d`, domain:[30,450],
+  permitDays:   { label:'Permit Timeline',    color:PDS.electric, weight:0.20, format:v=>`${v}d`, domain:[30,450],
     description:'The median number of calendar days from application to permit issuance for a new residential project. Every extra month is dead carrying cost — land loans accruing, construction windows closing, pro formas collapsing. San Francisco routinely exceeds a year.' },
-  feesPerUnit:  { label:'Dev Fees / Unit',    color:NB.fuel,     weight:0.20, format:v=>fmtK(v), domain:[5000,100000],
+  feesPerUnit:  { label:'Dev Fees / Unit',    color:PDS.fuel,     weight:0.20, format:v=>fmtK(v), domain:[5000,100000],
     description:'Total government-imposed fees per housing unit: impact fees, plan check, utility connections, school fees, and affordable housing in-lieu payments. In coastal California these can exceed $150,000 per unit — a pure regulatory tax on housing production.' },
-  ceqaRisk:     { label:'CEQA Risk',          color:NB.ember,    weight:0.12, format:v=>`${Math.round(v*100)}%`, domain:[0,1],
+  ceqaRisk:     { label:'CEQA Risk',          color:PDS.ember,    weight:0.12, format:v=>`${Math.round(v*100)}%`, domain:[0,1],
     description:'Probability of a project facing California Environmental Quality Act litigation or extended review. CEQA is frequently weaponized by neighbors and competitors to kill projects that have nothing to do with environmental harm. A high score means delay, legal fees, and settlement costs.' },
-  coastalPct:   { label:'Coastal Zone',       color:NB.coolant,  weight:0.09, format:v=>`${v}%`, domain:[0,100],
+  coastalPct:   { label:'Coastal Zone',       color:PDS.coolant,  weight:0.09, format:v=>`${v}%`, domain:[0,100],
     description:'Percentage of the jurisdiction\'s land area subject to California Coastal Commission review. Coastal Act permitting adds a second approval layer on top of local permits, with its own appeals process. Projects in the Coastal Zone can take years longer than identical inland projects.' },
   fireZonePct:  { label:'Fire Hazard',        color:'#A8441F',   weight:0.09, format:v=>`${v}%`, domain:[0,100],
     description:'Share of land in a CalFire High or Very High Fire Hazard Severity Zone. Building in these zones triggers mandatory hardening requirements, insurance difficulties, and sometimes outright denial. After Paradise and Lahaina, some insurers have simply exited California entirely.' },
-  approvalRate: { label:'Approval Rate',      color:NB.electric, weight:0.09, format:v=>`${Math.round(v*100)}%`, domain:[0.5,1], invert:true,
+  approvalRate: { label:'Approval Rate',      color:PDS.electric, weight:0.09, format:v=>`${Math.round(v*100)}%`, domain:[0.5,1], invert:true,
     description:'The fraction of submitted housing applications that reach final approval. A low approval rate signals a hostile planning commission, aggressive design review, or a council with a pattern of finding pretextual grounds to deny. High is good — low means the game is rigged.' },
-  rhnaProgress: { label:'RHNA Progress',      color:NB.fuel,     weight:0.09, format:v=>`${Math.round(v*100)}%`, domain:[0,1], invert:true,
+  rhnaProgress: { label:'RHNA Progress',      color:PDS.fuel,     weight:0.09, format:v=>`${Math.round(v*100)}%`, domain:[0,1], invert:true,
     description:'How far along a jurisdiction is toward meeting its Regional Housing Needs Allocation — the state-mandated number of homes it must plan and permit. Low progress means the jurisdiction is chronically under-building, which tightens supply and signals bureaucratic resistance to growth.' },
-  sb35Status:   { label:'SB 35 Status',       color:NB.blood,    weight:0.05, format:v=>v==='subject'?'SUBJECT':'EXEMPT', categorical:true,
+  sb35Status:   { label:'SB 35 Status',       color:PDS.blood,    weight:0.05, format:v=>v==='subject'?'SUBJECT':'EXEMPT', categorical:true,
     description:'Whether the jurisdiction is subject to SB 35, which grants by-right ministerial approval to qualifying projects in cities that are behind on their RHNA targets. Being subject to SB 35 is a red flag — it means the city has failed its housing obligations and the state has stripped some of its discretionary power.' },
-  airportNoisePct:{ label:'Airport Noise Zone', color:NB.reactor,  weight:0.07, format:v=>`${v}%`, domain:[0,40],
+  airportNoisePct:{ label:'Airport Noise Zone', color:PDS.reactor,  weight:0.07, format:v=>`${v}%`, domain:[0,40],
     description:"Percentage of the county's developable residential land inside a 65 dB CNEL contour — the noise threshold at which California Building Code §1207 mandates acoustic analysis and mitigation. Sourced from Airport Land Use Compatibility Plans (ALUCPs) filed with Caltrans Division of Aeronautics. High-noise zones add acoustic study costs ($5k–$20k per project), mandatory building treatment, and in some cases outright prohibition of residential use. San Mateo (SFO), Los Angeles (LAX + six general aviation airports), and San Diego (Lindbergh + Miramar + Montgomery) are the most constrained." },
 };
 
@@ -604,20 +604,20 @@ function useHCDData() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// NB DESIGN COMPONENTS
+// PDS DESIGN COMPONENTS
 // ═══════════════════════════════════════════════════════════════
 
 // Section header — Oswald uppercase with ember rule
-const SectionLabel = ({ children, accent=NB.ember }) => (
+const SectionLabel = ({ children, accent=PDS.ember }) => (
   <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.7rem',
-    fontVariant:'small-caps', letterSpacing:'0.1em', color:NB.reactor,
-    borderBottom:`2px solid ${NB.reactor}`, paddingBottom:'0.3rem', marginBottom:'0.75rem', fontWeight:700 }}>
+    fontVariant:'small-caps', letterSpacing:'0.1em', color:PDS.reactor,
+    borderBottom:`2px solid ${PDS.reactor}`, paddingBottom:'0.3rem', marginBottom:'0.75rem', fontWeight:700 }}>
     {children}
   </div>
 );
 
 // Monospace data value — Courier Prime
-const DataVal = ({ children, color=NB.fuel, size='0.9rem' }) => (
+const DataVal = ({ children, color=PDS.fuel, size='0.9rem' }) => (
   <span style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", color, fontSize:size, fontWeight:400 }}>
     {children}
   </span>
@@ -626,7 +626,7 @@ const DataVal = ({ children, color=NB.fuel, size='0.9rem' }) => (
 // Classification stamp — for difficulty tiers
 const TierStamp = ({ tier, score }) => (
   <div style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem',
-    border:`1px solid ${NB.mist}`, borderLeft:`3px solid ${tier.color}`, padding:'0.15rem 0.6rem' }}>
+    border:`1px solid ${PDS.mist}`, borderLeft:`3px solid ${tier.color}`, padding:'0.15rem 0.6rem' }}>
     <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.65rem',
       fontVariant:'small-caps', letterSpacing:'0.1em', color:tier.color, fontWeight:700 }}>
       {tier.label}
@@ -642,9 +642,9 @@ const BlueprintGrid = () => null;
 const PaperTexture = () => null;
 
 // Live indicator — Pope Electric, not green
-const LivePip = ({ color=NB.electric, active=true }) => (
+const LivePip = ({ color=PDS.electric, active=true }) => (
   <span style={{ display:'inline-block', width:5, height:5, borderRadius:'50%',
-    background: active?color:NB.fog, verticalAlign:'middle', marginLeft:3,
+    background: active?color:PDS.fog, verticalAlign:'middle', marginLeft:3,
     boxShadow: undefined,
     animation: active?'pip 2.5s infinite':undefined }} />
 );
@@ -679,28 +679,28 @@ function MetroZoomMap({ metroKey, cityScores, geoBounds, selectedCity, onCityCli
   return (
     <div style={{ position:'fixed', inset:0, background:'rgba(245,242,232,0.97)', display:'flex',
       alignItems:'center', justifyContent:'center', zIndex:200, backdropFilter:'blur(6px)' }}>
-      <div style={{ background:NB.shadow, border:`1px solid ${NB.ember}60`,
+      <div style={{ background:PDS.shadow, border:`1px solid ${PDS.ember}60`,
         width:'min(660px,96vw)', maxHeight:'94vh', display:'flex', flexDirection:'column', gap:0, overflow:'hidden' }}>
 
         {/* Header — Ferriss monumental */}
-        <div style={{ background:NB.reactor, borderBottom:`2px solid ${NB.reactor}`,
+        <div style={{ background:PDS.reactor, borderBottom:`2px solid ${PDS.reactor}`,
           padding:'0.875rem 1.25rem', display:'flex', justifyContent:'space-between', alignItems:'center', position:'relative' }}>
           <BlueprintGrid />
           <div style={{ position:'relative' }}>
             <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem', letterSpacing:'0.25em',
-              color:NB.oxide, textTransform:'uppercase', marginBottom:3 }}>Field Report · Metro Zone</div>
+              color:PDS.oxide, textTransform:'uppercase', marginBottom:3 }}>Field Report · Metro Zone</div>
             <h2 style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-              fontSize:'1.4rem', fontWeight:700, color:NB.shadow, margin:0 }}>
+              fontSize:'1.4rem', fontWeight:700, color:PDS.shadow, margin:0 }}>
               {metroKey}
             </h2>
           </div>
-          <button onClick={onClose} style={{ background:'none', border:`1px solid ${NB.fog}`,
-            color:NB.void, fontSize:'0.8rem', cursor:'pointer', padding:'0.3rem 0.6rem',
-            fontFamily:"'IBM Plex Mono','Consolas',monospace", background:'transparent', border:`1px solid ${NB.fuel}` }}>✕ CLOSE</button>
+          <button onClick={onClose} style={{ background:'none', border:`1px solid ${PDS.fog}`,
+            color:PDS.void, fontSize:'0.8rem', cursor:'pointer', padding:'0.3rem 0.6rem',
+            fontFamily:"'IBM Plex Mono','Consolas',monospace", background:'transparent', border:`1px solid ${PDS.fuel}` }}>✕ CLOSE</button>
         </div>
 
         {/* Blueprint map */}
-        <div style={{ padding:'1rem', position:'relative', background:NB.void }}>
+        <div style={{ padding:'1rem', position:'relative', background:PDS.void }}>
           <BlueprintGrid />
           <svg viewBox={`0 0 ${W} ${H}`} style={{ width:'100%', display:'block', position:'relative' }}>
             {/* County watermarks */}
@@ -709,7 +709,7 @@ function MetroZoomMap({ metroKey, cityScores, geoBounds, selectedCity, onCityCli
               if(!cs.length)return null;
               const xs=cs.map(c=>toSvg(c.lat,c.lon).x), ys=cs.map(c=>toSvg(c.lat,c.lon).y);
               const cx=xs.reduce((a,b)=>a+b,0)/xs.length, cy=ys.reduce((a,b)=>a+b,0)/ys.length;
-              return <text key={county} x={cx} y={cy} fill={`${NB.electric}40`} fontSize="11"
+              return <text key={county} x={cx} y={cy} fill={`${PDS.electric}40`} fontSize="11"
                 textAnchor="middle" fontFamily="'Source Serif 4','Charter',Georgia,serif" letterSpacing="2" fontWeight="600">
                 {county.toUpperCase()}
               </text>;
@@ -723,15 +723,15 @@ function MetroZoomMap({ metroKey, cityScores, geoBounds, selectedCity, onCityCli
               const isSelected=selectedCity===city.name;
               return (
                 <g key={city.name} style={{cursor:'pointer'}} onClick={()=>onCityClick(city.name)}>
-                  {isSelected&&<circle cx={pt.x} cy={pt.y} r={r+5} fill="none" stroke={NB.reactor} strokeWidth="1.5"/>}
+                  {isSelected&&<circle cx={pt.x} cy={pt.y} r={r+5} fill="none" stroke={PDS.reactor} strokeWidth="1.5"/>}
                   <circle cx={pt.x} cy={pt.y} r={r} fill={col}
                     fillOpacity={city.hasFeeData?0.88:0.35}
-                    stroke={city.hasFeeData?col:NB.fog} strokeWidth={city.hasFeeData?1:0.6}/>
+                    stroke={city.hasFeeData?col:PDS.fog} strokeWidth={city.hasFeeData?1:0.6}/>
                   {city.hasFeeData&&r>8&&<text x={pt.x} y={pt.y+1} textAnchor="middle" dominantBaseline="middle"
                     fill="#FDFCF9" fontSize={r>12?"9":"7"} fontWeight="700"
                     fontFamily="'IBM Plex Mono','Consolas',monospace">{Math.round(s*100)}</text>}
                   <text x={pt.x} y={pt.y+r+9} textAnchor="middle"
-                    fill={isSelected?NB.reactor:NB.oxide} fontSize={isSelected?8:7}
+                    fill={isSelected?PDS.reactor:PDS.oxide} fontSize={isSelected?8:7}
                     fontFamily="'Source Serif 4','Charter',Georgia,serif" letterSpacing="1" fontWeight="600">
                     {city.name.toUpperCase().split(' ')[0]}
                   </text>
@@ -742,16 +742,16 @@ function MetroZoomMap({ metroKey, cityScores, geoBounds, selectedCity, onCityCli
         </div>
 
         {/* Tier legend */}
-        <div style={{ padding:'0.75rem 1.25rem', background:NB.shadow,
-          borderTop:`1px solid ${NB.fog}`, display:'flex', gap:'1rem', flexWrap:'wrap' }}>
+        <div style={{ padding:'0.75rem 1.25rem', background:PDS.shadow,
+          borderTop:`1px solid ${PDS.fog}`, display:'flex', gap:'1rem', flexWrap:'wrap' }}>
           {TIERS.slice().reverse().map(t=>(
             <div key={t.label} style={{ display:'flex', alignItems:'center', gap:5 }}>
               <div style={{ width:8, height:8, background:t.color, borderRadius:2 }} />
               <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-                letterSpacing:'0.1em', color:NB.oxide, textTransform:'uppercase' }}>{t.label}</span>
+                letterSpacing:'0.1em', color:PDS.oxide, textTransform:'uppercase' }}>{t.label}</span>
             </div>
           ))}
-          <span style={{ marginLeft:'auto', fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.65rem', color:NB.fog }}>
+          <span style={{ marginLeft:'auto', fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.65rem', color:PDS.fog }}>
             {cities.filter(c=>c.hasFeeData).length} scraped · {cities.length} total
           </span>
         </div>
@@ -778,12 +778,12 @@ function CityDetail({ city, onBack }) {
   ].filter(r=>r[1]!=null&&r[1]>0);
 
   return (
-    <div style={{ background:NB.shadow, border:`1px solid ${NB.mist}`, borderTop:`2px solid ${NB.reactor}` }}>
+    <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`, borderTop:`2px solid ${PDS.reactor}` }}>
       {/* Header */}
-      <div style={{ padding:'1rem', borderBottom:`1px solid ${NB.fog}` }}>
+      <div style={{ padding:'1rem', borderBottom:`1px solid ${PDS.fog}` }}>
         <BlueprintGrid />
         <button onClick={onBack} style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-          letterSpacing:'0.2em', color:NB.electric, background:'none', border:'none', cursor:'pointer',
+          letterSpacing:'0.2em', color:PDS.electric, background:'none', border:'none', cursor:'pointer',
           textTransform:'uppercase', marginBottom:'0.6rem', display:'block', padding:0, fontVariant:'small-caps' }}>
           ← Back to County
         </button>
@@ -791,17 +791,17 @@ function CityDetail({ city, onBack }) {
           <div>
             <div style={{ display:'flex', gap:6, alignItems:'center', marginBottom:4 }}>
               {city.hasFeeData&&<span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.55rem',
-                letterSpacing:'0.2em', color:NB.electric, border:`1px solid ${NB.electric}`,
+                letterSpacing:'0.2em', color:PDS.electric, border:`1px solid ${PDS.electric}`,
                 padding:'1px 5px', textTransform:'uppercase', fontVariant:'small-caps' }}>&#x26A1; Live Data</span>}
               {city.hasHCDData&&<span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.55rem',
-                letterSpacing:'0.2em', color:NB.coolant, border:`1px solid ${NB.coolant}`,
+                letterSpacing:'0.2em', color:PDS.coolant, border:`1px solid ${PDS.coolant}`,
                 padding:'1px 5px', textTransform:'uppercase', fontVariant:'small-caps' }}>HCD Live</span>}
             </div>
             <h2 style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-              fontWeight:700, fontSize:'1.5rem', color:NB.reactor, margin:'0 0 2px', lineHeight:1 }}>
+              fontWeight:700, fontSize:'1.5rem', color:PDS.reactor, margin:'0 0 2px', lineHeight:1 }}>
               {city.name}
             </h2>
-            <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem', color:NB.oxide }}>
+            <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem', color:PDS.oxide }}>
               {city.county} County · Pop. {city.population?.toLocaleString()}
             </div>
           </div>
@@ -826,14 +826,14 @@ function CityDetail({ city, onBack }) {
             return (
               <div key={key} style={{ display:'grid', gridTemplateColumns:'80px 1fr 45px 12px', gap:5, alignItems:'center' }}>
                 <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-                  letterSpacing:'0.1em', color:NB.oxide, textTransform:'uppercase', overflow:'hidden',
+                  letterSpacing:'0.1em', color:PDS.oxide, textTransform:'uppercase', overflow:'hidden',
                   textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{cfg.label}</span>
-                <div style={{ height:3, background:NB.fog }}>
+                <div style={{ height:3, background:PDS.fog }}>
                   <div style={{ height:'100%', background:cfg.color, width:`${bar}%`, transition:'width .3s' }}/>
                 </div>
                 <DataVal color={cfg.color} size="0.78rem">{cfg.format?cfg.format(val):val}</DataVal>
                 <span style={{ fontSize:'0.6rem', textAlign:'center',
-                  color:isCity?NB.electric:NB.fog }}>{isCity?'⚡':'≈'}</span>
+                  color:isCity?PDS.electric:PDS.fog }}>{isCity?'⚡':'≈'}</span>
               </div>
             );
           })}
@@ -841,29 +841,29 @@ function CityDetail({ city, onBack }) {
 
         {/* Fee breakdown */}
         {feeRows.length>0&&(
-          <div style={{ marginTop:'0.75rem', borderLeft:`2px solid ${NB.ember}`, paddingLeft:'0.75rem' }}>
-            <SectionLabel accent={NB.ember}>
+          <div style={{ marginTop:'0.75rem', borderLeft:`2px solid ${PDS.ember}`, paddingLeft:'0.75rem' }}>
+            <SectionLabel accent={PDS.ember}>
               Fee Schedule {city.docYear?`· ${city.docYear}`:''}
             </SectionLabel>
             {feeRows.map(([label,val,isPct,isTotal])=>(
               <div key={label} style={{ display:'flex', justifyContent:'space-between',
-                padding:'3px 0', borderBottom:`1px solid ${NB.fog}30` }}>
+                padding:'3px 0', borderBottom:`1px solid ${PDS.fog}30` }}>
                 <span style={{ fontFamily:"'Source Serif 4',Georgia,serif",
-                  fontSize:'0.78rem', color:isTotal?NB.reactor:NB.oxide }}>{label}</span>
-                <DataVal color={isTotal?NB.ember:NB.fuel} size="0.8rem">
+                  fontSize:'0.78rem', color:isTotal?PDS.reactor:PDS.oxide }}>{label}</span>
+                <DataVal color={isTotal?PDS.ember:PDS.fuel} size="0.8rem">
                   {isPct?`${((val||0)*100).toFixed(0)}%`:fmtFull(val)}
                 </DataVal>
               </div>
             ))}
             {city.sourceUrl&&<a href={city.sourceUrl} target="_blank" rel="noreferrer"
               style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.6rem',
-                color:NB.electric, display:'block', marginTop:6, textDecoration:'none' }}>
+                color:PDS.electric, display:'block', marginTop:6, textDecoration:'none' }}>
               ↗ {city.sourceUrl.replace(/^https?:\/\//,'').slice(0,50)}
             </a>}
           </div>
         )}
         <div style={{ marginTop:6, fontFamily:"'IBM Plex Mono','Consolas',monospace",
-          fontSize:'0.62rem', color:NB.fog }}>
+          fontSize:'0.62rem', color:PDS.fog }}>
           ≈ Permit timeline, CEQA, fire zone from {city.county} County baseline
         </div>
       </div>
@@ -885,8 +885,8 @@ function HETooltipLabel() {
       onMouseMove={e=>setPos({ x:e.clientX, y:e.clientY })}
       onMouseLeave={()=>setShow(false)}>
       <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-        letterSpacing:'0.15em', color:NB.oxide, textTransform:'uppercase',
-        cursor:'help', borderBottom:`1px dotted ${NB.fog}` }}>
+        letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase',
+        cursor:'help', borderBottom:`1px dotted ${PDS.fog}` }}>
         HE Status{' '}
       </span>
       {show && (
@@ -896,21 +896,21 @@ function HETooltipLabel() {
           top:  pos.y + 14,
           zIndex:9999,
           width:280,
-          background:NB.void,
-          border:`1px solid ${NB.mist}`,
-          borderLeft:`3px solid ${NB.electric}`,
+          background:PDS.void,
+          border:`1px solid ${PDS.mist}`,
+          borderLeft:`3px solid ${PDS.electric}`,
           padding:'0.65rem 0.8rem',
           pointerEvents:'none',
-          boxShadow:`0 8px 32px rgba(44,36,22,.14), 0 0 0 1px ${NB.fog}`,
+          boxShadow:`0 8px 32px rgba(44,36,22,.14), 0 0 0 1px ${PDS.fog}`,
           animation:'fadeUp .12s ease',
         }}>
           <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-            letterSpacing:'0.2em', color:NB.electric, textTransform:'uppercase',
+            letterSpacing:'0.2em', color:PDS.electric, textTransform:'uppercase',
             fontWeight:600, marginBottom:'0.35rem' }}>
             Housing Element Status
           </div>
           <p style={{ fontFamily:"'Source Serif 4',Georgia,serif", fontSize:'0.76rem',
-            color:NB.fuel, lineHeight:1.65, margin:0 }}>
+            color:PDS.fuel, lineHeight:1.65, margin:0 }}>
             {HE_TOOLTIP}
           </p>
         </div>
@@ -922,20 +922,20 @@ function HETooltipLabel() {
 function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, onLoadScraper }) {
   const tier = getTier(data.composite);
   return (
-    <div style={{ background:NB.shadow, border:`1px solid ${NB.mist}`, borderTop:`2px solid ${NB.reactor}` }}>
-      <div style={{ padding:'1rem', borderBottom:`1px solid ${NB.fog}` }}>
+    <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`, borderTop:`2px solid ${PDS.reactor}` }}>
+      <div style={{ padding:'1rem', borderBottom:`1px solid ${PDS.fog}` }}>
         <BlueprintGrid />
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', position:'relative' }}>
           <div>
             <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-              letterSpacing:'0.2em', color:NB.fuel, fontVariant:'small-caps', letterSpacing:'0.08em', marginBottom:3 }}>
+              letterSpacing:'0.2em', color:PDS.fuel, fontVariant:'small-caps', letterSpacing:'0.08em', marginBottom:3 }}>
               County · California
             </div>
             <h2 style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-              fontWeight:700, fontSize:'1.6rem', color:NB.reactor, margin:'0 0 2px', lineHeight:1 }}>
+              fontWeight:700, fontSize:'1.6rem', color:PDS.reactor, margin:'0 0 2px', lineHeight:1 }}>
               {county}
             </h2>
-            <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem', color:NB.oxide }}>
+            <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem', color:PDS.oxide }}>
               Pop. {data.population?.toLocaleString()}
             </div>
           </div>
@@ -959,9 +959,9 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
             return (
               <div key={key} style={{ display:'grid', gridTemplateColumns:'80px 1fr 45px 12px', gap:5, alignItems:'center' }}>
                 <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-                  letterSpacing:'0.1em', color:NB.oxide, textTransform:'uppercase', overflow:'hidden',
+                  letterSpacing:'0.1em', color:PDS.oxide, textTransform:'uppercase', overflow:'hidden',
                   textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{cfg.label}</span>
-                <div style={{ height:3, background:NB.fog }}>
+                <div style={{ height:3, background:PDS.fog }}>
                   <div style={{ height:'100%', background:cfg.color, width:`${bar}%`, transition:'width .3s' }}/>
                 </div>
                 <DataVal color={cfg.color} size="0.78rem">{cfg.format?cfg.format(val):val}</DataVal>
@@ -972,16 +972,16 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
         </div>
 
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'0.5rem',
-          padding:'0.6rem 0', borderTop:`1px solid ${NB.fog}`, marginBottom:'0.6rem' }}>
+          padding:'0.6rem 0', borderTop:`1px solid ${PDS.fog}`, marginBottom:'0.6rem' }}>
           <div style={{ position:'relative' }}>
             <HETooltipLabel />
-            <DataVal color={data.heCompliance==='compliant'?NB.electric:NB.blood} size="0.75rem">
+            <DataVal color={data.heCompliance==='compliant'?PDS.electric:PDS.blood} size="0.75rem">
               {data.heCompliance==='compliant'?'COMPLIANT':'NON-COMPLIANT'}
             </DataVal>
           </div>
           <div>
             <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-              letterSpacing:'0.15em', color:NB.oxide, textTransform:'uppercase' }}>Median </span>
+              letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase' }}>Median </span>
             <DataVal size="0.75rem">${(data.medianHomePrice/1000).toFixed(0)}K</DataVal>
           </div>
         </div>
@@ -997,15 +997,15 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
                 return (
                   <button key={city.name} onClick={()=>onCityClick(city.name)}
                     style={{ display:'flex', alignItems:'center', gap:5, padding:'4px 6px',
-                      background:NB.void, border:`1px solid ${NB.fog}`,
+                      background:PDS.void, border:`1px solid ${PDS.fog}`,
                       cursor:'pointer', textAlign:'left', transition:'border-color .1s' }}>
                     <div style={{ width:4, height:4, background:t.color, flexShrink:0 }}/>
                     <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.65rem',
-                      letterSpacing:'0.05em', color:NB.fuel, flex:1, overflow:'hidden',
+                      letterSpacing:'0.05em', color:PDS.fuel, flex:1, overflow:'hidden',
                       textOverflow:'ellipsis', whiteSpace:'nowrap', textTransform:'uppercase' }}>
                       {city.name}
                     </span>
-                    {city.hasFeeData&&<span style={{ fontSize:'0.55rem', color:NB.electric }}>⚡</span>}
+                    {city.hasFeeData&&<span style={{ fontSize:'0.55rem', color:PDS.electric }}>⚡</span>}
                     <DataVal color={t.color} size="0.7rem">{Math.round((city.composite||0)*100)}</DataVal>
                   </button>
                 );
@@ -1017,8 +1017,8 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
         {!citiesInCounty.some(c=>c.hasFeeData)&&(
           <button onClick={onLoadScraper}
             style={{ marginTop:'0.6rem', width:'100%', padding:'0.5rem',
-              background:NB.void, border:`1px dashed ${NB.electric}40`,
-              color:NB.electric, fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+              background:PDS.void, border:`1px dashed ${PDS.electric}40`,
+              color:PDS.electric, fontFamily:"'Source Serif 4','Charter',Georgia,serif",
               fontSize:'0.6rem', letterSpacing:'0.2em', textTransform:'uppercase', cursor:'pointer' }}>
             📂 Load Fee Scraper Data
           </button>
@@ -1043,31 +1043,31 @@ function FeeUploadPanel({ onLoad, onClose }) {
   return (
     <div style={{ position:'fixed', inset:0, background:'rgba(245,242,232,0.97)',
       display:'flex', alignItems:'center', justifyContent:'center', zIndex:300, backdropFilter:'blur(6px)' }}>
-      <div style={{ background:NB.shadow, border:`1px solid ${NB.ember}70`, width:'min(500px,94vw)' }}>
-        <div style={{ background:NB.reactor, borderBottom:`2px solid ${NB.reactor}`,
+      <div style={{ background:PDS.shadow, border:`1px solid ${PDS.ember}70`, width:'min(500px,94vw)' }}>
+        <div style={{ background:PDS.reactor, borderBottom:`2px solid ${PDS.reactor}`,
           padding:'0.875rem 1.25rem', display:'flex', justifyContent:'space-between', alignItems:'center', position:'relative' }}>
           <BlueprintGrid />
           <div style={{ position:'relative' }}>
             <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-              letterSpacing:'0.25em', color:NB.electric, textTransform:'uppercase', marginBottom:3 }}>
+              letterSpacing:'0.25em', color:PDS.electric, textTransform:'uppercase', marginBottom:3 }}>
               Intelligence Upload
             </div>
             <h3 style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-              fontSize:'1.2rem', fontWeight:700, color:NB.shadow, margin:0 }}>
+              fontSize:'1.2rem', fontWeight:700, color:PDS.shadow, margin:0 }}>
               Load Fee Scraper Data
             </h3>
           </div>
-          <button onClick={onClose} style={{ background:'none', border:`1px solid ${NB.fog}`,
-            color:NB.void, fontSize:'0.8rem', cursor:'pointer', padding:'0.25rem 0.5rem',
-            fontFamily:"'IBM Plex Mono','Consolas',monospace", background:'transparent', border:`1px solid ${NB.fuel}` }}>✕</button>
+          <button onClick={onClose} style={{ background:'none', border:`1px solid ${PDS.fog}`,
+            color:PDS.void, fontSize:'0.8rem', cursor:'pointer', padding:'0.25rem 0.5rem',
+            fontFamily:"'IBM Plex Mono','Consolas',monospace", background:'transparent', border:`1px solid ${PDS.fuel}` }}>✕</button>
         </div>
         <div style={{ padding:'1.25rem' }}>
-          <div onClick={()=>fileRef.current?.click()} style={{ background:NB.void,
-            border:`2px dashed ${NB.mist}`, padding:'1.25rem', textAlign:'center',
+          <div onClick={()=>fileRef.current?.click()} style={{ background:PDS.void,
+            border:`2px dashed ${PDS.mist}`, padding:'1.25rem', textAlign:'center',
             cursor:'pointer', marginBottom:'0.75rem' }}>
             <div style={{ fontSize:'1.5rem', marginBottom:4 }}>📂</div>
             <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.7rem',
-              letterSpacing:'0.15em', color:NB.electric, textTransform:'uppercase' }}>
+              letterSpacing:'0.15em', color:PDS.electric, textTransform:'uppercase' }}>
               Upload results.json
             </div>
             <input ref={fileRef} type="file" accept=".json" style={{ display:'none' }} onChange={e=>{
@@ -1077,22 +1077,22 @@ function FeeUploadPanel({ onLoad, onClose }) {
           </div>
           <textarea value={text} onChange={e=>{setText(e.target.value);setError('');}}
             placeholder='[{"name":"Palo Alto","county":"Santa Clara","status":"success","fees":{"estimatedTotalNewSFR":142000,...,  airportNoisePct:0   }}]'
-            style={{ width:'100%', height:80, background:NB.void, border:`1px solid ${NB.fog}`,
-              padding:'0.5rem', color:NB.fuel, fontSize:'0.75rem',
+            style={{ width:'100%', height:80, background:PDS.void, border:`1px solid ${PDS.fog}`,
+              padding:'0.5rem', color:PDS.fuel, fontSize:'0.75rem',
               fontFamily:"'IBM Plex Mono','Consolas',monospace", resize:'vertical', boxSizing:'border-box' }}/>
           {error&&<div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem',
-            color:NB.blood, marginTop:4 }}>{error}</div>}
+            color:PDS.blood, marginTop:4 }}>{error}</div>}
           <div style={{ display:'flex', gap:8, marginTop:'0.75rem' }}>
             <button onClick={()=>parse(text)} disabled={!text.trim()}
-              style={{ flex:1, padding:'0.6rem', background:text.trim()?NB.void:'transparent',
-                border:`1px solid ${text.trim()?NB.ember:NB.fog}`,
-                color:text.trim()?NB.ember:NB.fog,
+              style={{ flex:1, padding:'0.6rem', background:text.trim()?PDS.void:'transparent',
+                border:`1px solid ${text.trim()?PDS.ember:PDS.fog}`,
+                color:text.trim()?PDS.ember:PDS.fog,
                 fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.7rem',
                 letterSpacing:'0.2em', textTransform:'uppercase', cursor:text.trim()?'pointer':'not-allowed' }}>
               Load Data
             </button>
             <button onClick={onClose} style={{ padding:'0.6rem 1rem', background:'none',
-              border:`1px solid ${NB.fog}`, color:NB.oxide,
+              border:`1px solid ${PDS.fog}`, color:PDS.oxide,
               fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.7rem',
               letterSpacing:'0.15em', textTransform:'uppercase', cursor:'pointer' }}>
               Cancel
@@ -1119,6 +1119,7 @@ export default function CaliforniaBuildingIndex() {
   const [selectedCity,   setSelectedCity]   = useState(null);
   const [showSources,    setShowSources]    = useState(false);
   const [showUpload,     setShowUpload]     = useState(false);
+  const [showDataSources, setShowDataSources] = useState(false);
   const [activeMetro,    setActiveMetro]    = useState(null);
   const [scraperRecords, setScraperRecords] = useState(()=>{
     try { const s=localStorage.getItem('ca-fee-data'); return s?JSON.parse(s):defaultFeeData; } catch{return defaultFeeData;}
@@ -1190,7 +1191,7 @@ export default function CaliforniaBuildingIndex() {
 
   // Map fill — subtractive charcoal logic with ember/blood heat
   const getCountyFill = useCallback((county)=>{
-    const d=countyScores[county]; if(!d)return NB.void;
+    const d=countyScores[county]; if(!d)return PDS.void;
     let intensity = activeLayer==='composite' ? d.composite
       : LAYERS[activeLayer]?.categorical ? (d[activeLayer]==='subject'?0.8:0.2)
       : (d.normalized[activeLayer]||0);
@@ -1210,18 +1211,18 @@ export default function CaliforniaBuildingIndex() {
   const scraperCities = rankedCities.length;
 
   const statusCfg = {
-    idle:    { color:NB.fog,      label:'INITIALIZING' },
-    fetching:{ color:NB.electric, label:'CONNECTING TO HCD' },
-    partial: { color:NB.fuel,     label:`PARTIAL · ${Object.keys(countyLive).length} COUNTIES` },
-    success: { color:NB.electric, label:`LIVE · ${Object.keys(countyLive).length} COUNTIES` },
-    error:   { color:NB.blood,    label:'OFFLINE · BASELINE ESTIMATES' },
-  }[fetchStatus]||{ color:NB.fog, label:'…' };
+    idle:    { color:PDS.fog,      label:'INITIALIZING' },
+    fetching:{ color:PDS.electric, label:'CONNECTING TO HCD' },
+    partial: { color:PDS.fuel,     label:`PARTIAL · ${Object.keys(countyLive).length} COUNTIES` },
+    success: { color:PDS.electric, label:`LIVE · ${Object.keys(countyLive).length} COUNTIES` },
+    error:   { color:PDS.blood,    label:'OFFLINE · BASELINE ESTIMATES' },
+  }[fetchStatus]||{ color:PDS.fog, label:'…' };
 
   return (
-    <div style={{ minHeight:'100vh', background:NB.void, color:NB.reactor,
+    <div style={{ minHeight:'100vh', background:PDS.void, color:PDS.reactor,
       fontFamily:"'Source Serif 4',Georgia,serif" }}>
       <style>{`
-        ${NB.fonts}
+        ${PDS.fonts}
         @keyframes pip{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.5)}}
         @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
         @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -1229,8 +1230,8 @@ export default function CaliforniaBuildingIndex() {
         .cp{cursor:pointer;transition:background .1s}.cp:hover{background:rgba(26,26,26,.04)}
         .nb-btn{transition:all .12s;cursor:pointer}.nb-btn:hover{opacity:.8}
         ::-webkit-scrollbar{width:4px;height:4px}
-        ::-webkit-scrollbar-track{background:${NB.void}}
-        ::-webkit-scrollbar-thumb{background:${NB.mist}}
+        ::-webkit-scrollbar-track{background:${PDS.void}}
+        ::-webkit-scrollbar-thumb{background:${PDS.mist}}
         select,input{font-family:'Source Serif 4',Georgia,serif}
         button{border-radius:0!important}
       `}</style>
@@ -1241,15 +1242,72 @@ export default function CaliforniaBuildingIndex() {
         selectedCity={selectedCity} onCityClick={n=>{setSelectedCity(n);setActiveMetro(null);}} onClose={()=>setActiveMetro(null)}/>}
 
       {/* ── MASTHEAD — Penney document-header: ink bg, white text ── */}
-      <div style={{ background:NB.reactor, borderBottom:`2px solid ${NB.reactor}`,
+      <div style={{ background:PDS.reactor, borderBottom:`2px solid ${PDS.reactor}`,
         padding:'2rem 1.5rem 1.5rem', textAlign:'center' }}>
-        <div style={{ maxWidth:1200, margin:'0 auto' }}>
+        <div style={{ maxWidth:1200, margin:'0 auto', position:'relative' }}>
+
+          {/* Sources button — top right of masthead */}
+          <div style={{ position:'absolute', top:0, right:0 }}
+            onMouseEnter={()=>setShowDataSources(true)}
+            onMouseLeave={()=>setShowDataSources(false)}>
+            <button style={{
+              fontFamily:"'IBM Plex Mono','Consolas',monospace",
+              fontSize:'0.65rem', letterSpacing:'0.15em',
+              color:PDS.mist, background:'none',
+              border:`1px solid ${PDS.mist}80`,
+              padding:'4px 10px', textTransform:'uppercase',
+              cursor:'default', userSelect:'none',
+            }}>
+              Sources
+            </button>
+            {showDataSources&&(
+              <div style={{
+                position:'absolute', top:'100%', right:0, marginTop:4,
+                background:PDS.void, border:`1px solid ${PDS.fog}`,
+                borderLeft:`3px solid ${PDS.electric}`,
+                padding:'0.75rem 1rem', width:360, zIndex:999,
+                boxShadow:'0 4px 16px rgba(26,26,26,.15)',
+                animation:'fadeUp .12s ease', textAlign:'left',
+              }}>
+                <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+                  fontSize:'0.6rem', letterSpacing:'0.2em', color:PDS.oxide,
+                  textTransform:'uppercase', marginBottom:'0.6rem', borderBottom:`1px solid ${PDS.fog}`,
+                  paddingBottom:'0.4rem' }}>
+                  Data Sources
+                </div>
+                {[
+                  { label:'HCD Annual Progress Reports', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Permit counts & housing production by jurisdiction' },
+                  { label:'Housing Element / SB 35 Status', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Housing element compliance & SB 35 eligibility determinations' },
+                  { label:'RHNA Progress Report', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Regional Housing Needs Allocation fulfillment by jurisdiction' },
+                  { label:'CA County Boundaries', org:'CA State GIS Open Data', url:'gis.data.ca.gov', desc:'GeoJSON county boundaries for the interactive map' },
+                  { label:'Baseline Jurisdiction Estimates', org:'Compiled — state & local sources', url:null, desc:'Permit timelines, CEQA risk, coastal/fire zone coverage, approval rates' },
+                  { label:'Municipal Development Fee Schedules', org:'City websites (scraped)', url:null, desc:'Impact fees for 120+ cities: transportation, park, water, sewer, affordable housing in-lieu' },
+                ].map((s,i)=>(
+                  <div key={i} style={{ paddingBottom:'0.55rem', marginBottom:'0.55rem',
+                    borderBottom:i<5?`1px solid ${PDS.fog}30`:'none' }}>
+                    <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+                      fontSize:'0.68rem', color:PDS.reactor, fontWeight:600, marginBottom:2 }}>
+                      {s.label}
+                    </div>
+                    <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace",
+                      fontSize:'0.57rem', color:PDS.electric, marginBottom:2 }}>
+                      {s.org}{s.url?` · ${s.url}`:''}
+                    </div>
+                    <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+                      fontSize:'0.62rem', color:PDS.fuel, fontStyle:'italic' }}>
+                      {s.desc}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
           <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.72rem',
-            letterSpacing:'0.1em', color:NB.oxide, textTransform:'uppercase', marginBottom:'0.5rem' }}>
+            letterSpacing:'0.1em', color:PDS.oxide, textTransform:'uppercase', marginBottom:'0.5rem' }}>
             California Housing Policy &bull; All 58 Counties &bull; 120+ Cities
           </div>
           <h1 style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-            fontWeight:700, fontSize:'clamp(1.6rem,4vw,2.4rem)', color:NB.shadow,
+            fontWeight:700, fontSize:'clamp(1.6rem,4vw,2.4rem)', color:PDS.shadow,
             margin:'0 0 0.75rem', lineHeight:1.1, letterSpacing:'0.05em', textTransform:'uppercase' }}>
             Building Difficulty Index
           </h1>
@@ -1267,7 +1325,7 @@ export default function CaliforniaBuildingIndex() {
         display:'grid', gridTemplateColumns:'1fr auto', gap:8 }}>
 
         {/* HCD */}
-        <div style={{ background:NB.shadow, border:`1px solid ${NB.fog}`,
+        <div style={{ background:PDS.shadow, border:`1px solid ${PDS.fog}`,
           padding:'0.5rem 0.875rem', display:'flex', alignItems:'center', gap:10 }}>
           <LivePip color={statusCfg.color} active={fetchStatus==='success'||fetchStatus==='partial'||fetchStatus==='fetching'}/>
           <span style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.68rem',
@@ -1275,34 +1333,34 @@ export default function CaliforniaBuildingIndex() {
             HCD DATASTORE · {statusCfg.label}
           </span>
           {lastFetched&&<span style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace",
-            fontSize:'0.6rem', color:NB.fog }}>{lastFetched.toLocaleTimeString()}</span>}
+            fontSize:'0.6rem', color:PDS.fog }}>{lastFetched.toLocaleTimeString()}</span>}
           <button onClick={()=>setShowSources(s=>!s)} className="nb-btn"
             style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem', letterSpacing:'0.15em',
-              color:NB.oxide, background:'none', border:`1px solid ${NB.fog}`,
+              color:PDS.oxide, background:'none', border:`1px solid ${PDS.fog}`,
               padding:'2px 7px', textTransform:'uppercase', cursor:'pointer' }}>
             {showSources?'▲':'▼'} SRC
           </button>
           <button onClick={refresh} disabled={fetchStatus==='fetching'} className="nb-btn"
             style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem',
-              color:fetchStatus==='fetching'?NB.fog:NB.electric, background:'none',
-              border:`1px solid ${fetchStatus==='fetching'?NB.fog:NB.electric}40`,
+              color:fetchStatus==='fetching'?PDS.fog:PDS.electric, background:'none',
+              border:`1px solid ${fetchStatus==='fetching'?PDS.fog:PDS.electric}40`,
               padding:'2px 8px', cursor:'pointer' }}>↻</button>
         </div>
 
         {/* Fee scraper */}
         <div onClick={()=>setShowUpload(true)} className="nb-btn"
-          style={{ background:NB.shadow, border:`1px solid ${scraperRecords?NB.electric:NB.fog}`,
+          style={{ background:PDS.shadow, border:`1px solid ${scraperRecords?PDS.electric:PDS.fog}`,
             padding:'0.5rem 0.875rem', display:'flex', alignItems:'center', gap:8,
             cursor:'pointer', minWidth:195 }}>
           {scraperRecords?(
             <>
-              <LivePip color={NB.electric}/>
+              <LivePip color={PDS.electric}/>
               <div>
                 <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.68rem',
-                  letterSpacing:'0.1em', color:NB.electric }}>
+                  letterSpacing:'0.1em', color:PDS.electric }}>
                   FEE DATA · {scraperCities} CITIES
                 </div>
-                <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.58rem', color:NB.fog }}>
+                <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.58rem', color:PDS.fog }}>
                   {scraperRecords.length} records loaded
                 </div>
               </div>
@@ -1312,12 +1370,12 @@ export default function CaliforniaBuildingIndex() {
               <span style={{ fontSize:'0.9rem' }}>📂</span>
               <div>
                 <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.65rem',
-                  letterSpacing:'0.15em', color:NB.oxide, textTransform:'uppercase' }}>Load Fee Data</div>
-                <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.58rem', color:NB.fog }}>
+                  letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase' }}>Load Fee Data</div>
+                <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.58rem', color:PDS.fog }}>
                   results.json from scraper
                 </div>
               </div>
-              <span style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem', color:NB.fog }}>→</span>
+              <span style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem', color:PDS.fog }}>→</span>
             </>
           )}
         </div>
@@ -1326,14 +1384,14 @@ export default function CaliforniaBuildingIndex() {
       {/* Source details */}
       {showSources&&(
         <div style={{ maxWidth:1200, margin:'6px auto 0', padding:'0 1.5rem', animation:'fadeUp .2s ease' }}>
-          <div style={{ background:NB.shadow, border:`1px solid ${NB.mist}`,
+          <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`,
             padding:'0.75rem 1rem', display:'grid',
             gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:0 }}>
             {Object.entries(sources).map(([k,v])=>{
-              const col={success:NB.electric,error:NB.blood,fetching:NB.fuel}[v.status]||NB.fog;
+              const col={success:PDS.electric,error:PDS.blood,fetching:PDS.fuel}[v.status]||PDS.fog;
               return (
                 <div key={k} style={{ display:'flex', gap:8, padding:'0.4rem 0',
-                  borderBottom:`1px solid ${NB.fog}30` }}>
+                  borderBottom:`1px solid ${PDS.fog}30` }}>
                   <span style={{ width:13,height:13,border:`1px solid ${col}`,color:col,
                     display:'flex',alignItems:'center',justifyContent:'center',fontSize:'7px',
                     flexShrink:0,fontFamily:"'IBM Plex Mono','Consolas',monospace",
@@ -1342,11 +1400,11 @@ export default function CaliforniaBuildingIndex() {
                   </span>
                   <div>
                     <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.65rem',
-                      letterSpacing:'0.1em', color:NB.fuel, textTransform:'uppercase' }}>{v.label}</div>
+                      letterSpacing:'0.1em', color:PDS.fuel, textTransform:'uppercase' }}>{v.label}</div>
                     {v.status==='success'&&<div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace",
-                      fontSize:'0.58rem', color:NB.fog }}>{v.records?.toLocaleString()} rec · {v.year}</div>}
+                      fontSize:'0.58rem', color:PDS.fog }}>{v.records?.toLocaleString()} rec · {v.year}</div>}
                     {v.status==='error'&&<div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace",
-                      fontSize:'0.58rem', color:NB.blood }}>{v.error?.slice(0,45)}</div>}
+                      fontSize:'0.58rem', color:PDS.blood }}>{v.error?.slice(0,45)}</div>}
                   </div>
                 </div>
               );
@@ -1365,7 +1423,7 @@ export default function CaliforniaBuildingIndex() {
             top:  tooltipPos.y + 14,
             zIndex:999,
             width:320,
-            background:NB.void,
+            background:PDS.void,
             border:`1px solid ${LAYERS[hoveredLayer].color}60`,
             borderLeft:`3px solid ${LAYERS[hoveredLayer].color}`,
             padding:'0.75rem 0.875rem',
@@ -1379,18 +1437,18 @@ export default function CaliforniaBuildingIndex() {
                 {LAYERS[hoveredLayer].label}
               </span>
               {LAYERS[hoveredLayer].weight && (
-                <span style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.6rem', color:NB.fog }}>
+                <span style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.6rem', color:PDS.fog }}>
                   {Math.round(LAYERS[hoveredLayer].weight * 100)}% weight
                 </span>
               )}
             </div>
             <p style={{ fontFamily:"'Source Serif 4',Georgia,serif", fontSize:'0.78rem',
-              color:NB.fuel, lineHeight:1.65, margin:0 }}>
+              color:PDS.fuel, lineHeight:1.65, margin:0 }}>
               {LAYERS[hoveredLayer].description}
             </p>
           </div>
         )}
-        <div style={{ background:NB.shadow, border:`1px solid ${NB.fog}`,
+        <div style={{ background:PDS.shadow, border:`1px solid ${PDS.fog}`,
           borderBottom:'none', display:'flex', flexWrap:'wrap', gap:0 }}>
           {Object.entries(LAYERS).map(([key,cfg])=>{
             const isActive=key===activeLayer;
@@ -1399,20 +1457,20 @@ export default function CaliforniaBuildingIndex() {
                 onMouseEnter={e=>{ setHoveredLayer(key); setTooltipPos({ x:e.clientX, y:e.clientY }); }}
                 onMouseMove={e=>setTooltipPos({ x:e.clientX, y:e.clientY })}
                 onMouseLeave={()=>setHoveredLayer(null)}
-                style={{ padding:'0.55rem 0.9rem', background:isActive?NB.fog:'transparent',
-                  border:'none', borderRight:`1px solid ${NB.fog}`,
-                  borderBottom:isActive?`2px solid ${NB.reactor}`:'2px solid transparent',
-                  color:isActive?NB.reactor:NB.oxide, cursor:'pointer',
+                style={{ padding:'0.55rem 0.9rem', background:isActive?PDS.fog:'transparent',
+                  border:'none', borderRight:`1px solid ${PDS.fog}`,
+                  borderBottom:isActive?`2px solid ${PDS.reactor}`:'2px solid transparent',
+                  color:isActive?PDS.reactor:PDS.oxide, cursor:'pointer',
                   fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.65rem',
                   letterSpacing:'0.15em', textTransform:'uppercase', fontWeight:isActive?600:400,
                   display:'flex', alignItems:'center', gap:4 }}>
                 {cfg.label}
                 {key==='feesPerUnit'&&<span style={{ fontSize:'0.55rem',
-                  color:isActive&&scraperRecords?NB.electric:NB.fog }}>
+                  color:isActive&&scraperRecords?PDS.electric:PDS.fog }}>
                   {scraperRecords?'⚡':'≈'}
                 </span>}
                 {['rhnaProgress','sb35Status'].includes(key)&&hcdOk&&(
-                  <LivePip color={isActive?NB.electric:NB.fog} active={true}/>
+                  <LivePip color={isActive?PDS.electric:PDS.fog} active={true}/>
                 )}
               </button>
             );
@@ -1422,11 +1480,11 @@ export default function CaliforniaBuildingIndex() {
 
       {/* ── METRO SHORTCUTS ── */}
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 1.5rem 0.5rem' }}>
-        <div style={{ background:NB.shadow, border:`1px solid ${NB.fog}`,
-          borderTop:`1px solid ${NB.mist}`, padding:'0.4rem 0.75rem',
+        <div style={{ background:PDS.shadow, border:`1px solid ${PDS.fog}`,
+          borderTop:`1px solid ${PDS.mist}`, padding:'0.4rem 0.75rem',
           display:'flex', flexWrap:'wrap', gap:6, alignItems:'center' }}>
           <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.55rem',
-            letterSpacing:'0.25em', color:NB.fog, textTransform:'uppercase' }}>Metro:</span>
+            letterSpacing:'0.25em', color:PDS.fog, textTransform:'uppercase' }}>Metro:</span>
           {Object.entries(METROS).map(([key])=>{
             const m=METROS[key];
             const n=Object.values(cityScores).filter(c=>
@@ -1436,11 +1494,11 @@ export default function CaliforniaBuildingIndex() {
               <button key={key} onClick={()=>setActiveMetro(key)} className="nb-btn"
                 style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.62rem',
                   letterSpacing:'0.1em', textTransform:'uppercase',
-                  background:'none', border:`1px solid ${NB.mist}`, padding:'2px 8px',
-                  color:NB.fuel, cursor:'pointer', display:'flex', alignItems:'center', gap:4 }}>
+                  background:'none', border:`1px solid ${PDS.mist}`, padding:'2px 8px',
+                  color:PDS.fuel, cursor:'pointer', display:'flex', alignItems:'center', gap:4 }}>
                 {key}
                 {n>0&&<span style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.6rem',
-                  color:NB.electric, background:`${NB.electric}18`, padding:'0 4px' }}>{n}</span>}
+                  color:PDS.electric, background:`${PDS.electric}18`, padding:'0 4px' }}>{n}</span>}
               </button>
             );
           })}
@@ -1453,15 +1511,15 @@ export default function CaliforniaBuildingIndex() {
         <style>{`@media(min-width:1024px){.main-row{flex-direction:row!important}}`}</style>
 
         {/* ── MAP — real CA county GIS boundaries ── */}
-        <div style={{ flex:1, background:NB.void, border:`1px solid ${NB.mist}`,
-          borderTop:`2px solid ${NB.reactor}`, position:'relative', overflow:'hidden', minWidth:0 }}>
+        <div style={{ flex:1, background:PDS.void, border:`1px solid ${PDS.mist}`,
+          borderTop:`2px solid ${PDS.reactor}`, position:'relative', overflow:'hidden', minWidth:0 }}>
           <BlueprintGrid />
           {/* GeoJSON load status indicator */}
           {geoStatus==='loading'&&(
             <div style={{ position:'absolute', top:8, left:8, zIndex:10,
               fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.6rem',
-              color:NB.electric, letterSpacing:'0.1em', background:NB.void,
-              padding:'2px 6px', border:`1px solid ${NB.fog}` }}>
+              color:PDS.electric, letterSpacing:'0.1em', background:PDS.void,
+              padding:'2px 6px', border:`1px solid ${PDS.fog}` }}>
               Loading GIS boundaries…
             </div>
           )}
@@ -1481,7 +1539,7 @@ export default function CaliforniaBuildingIndex() {
                 <path key={county} className="cp"
                   d={d}
                   fill={getCountyFill(county)}
-                  stroke={isActive?NB.reactor:hasScraper?NB.electric:`${NB.mist}90`}
+                  stroke={isActive?PDS.reactor:hasScraper?PDS.electric:`${PDS.mist}90`}
                   strokeWidth={isActive?2:hasScraper?1.2:0.5}
                   onMouseEnter={()=>setHoveredCounty(county)}
                   onMouseLeave={()=>setHoveredCounty(null)}
@@ -1502,7 +1560,7 @@ export default function CaliforniaBuildingIndex() {
                   fontSize={w>80?8.5:w>45?7:6}
                   fontFamily="'IBM Plex Mono','Consolas',monospace"
                   fontWeight="400"
-                  fill={isActive?NB.reactor:`${NB.reactor}55`}
+                  fill={isActive?PDS.reactor:`${PDS.reactor}55`}
                   style={{ pointerEvents:'none', userSelect:'none' }}>
                   {county.length>14?county.replace(' County','').split(' ').map(w=>w[0]).join(''):county}
                 </text>
@@ -1522,10 +1580,10 @@ export default function CaliforniaBuildingIndex() {
                     onMouseEnter={()=>setHoveredCounty(city.county)}
                     onClick={()=>{ setSelectedCity(n=>n===city.name?null:city.name); setSelectedCounty(null); }}>
                     {isSel&&<circle cx={city.svgX} cy={city.svgY} r={r+5} fill="none"
-                      stroke={NB.reactor} strokeWidth="1.5"/>}
+                      stroke={PDS.reactor} strokeWidth="1.5"/>}
                     <circle cx={city.svgX} cy={city.svgY} r={r}
                       fill={col} fillOpacity={city.hasFeeData?0.92:0.35}
-                      stroke={city.hasFeeData?col:`${NB.fog}60`} strokeWidth=".7"/>
+                      stroke={city.hasFeeData?col:`${PDS.fog}60`} strokeWidth=".7"/>
                   </g>
                 );
               })}
@@ -1538,19 +1596,19 @@ export default function CaliforniaBuildingIndex() {
               </linearGradient>
             </defs>
             <g transform="translate(10,595)">
-              <text x="0" y="0" fill={NB.fog} fontSize="7.5"
+              <text x="0" y="0" fill={PDS.fog} fontSize="7.5"
                 fontFamily="'Source Serif 4','Charter',Georgia,serif" letterSpacing="2" fontWeight="600">
                 {LAYERS[activeLayer].label.toUpperCase()}
               </text>
               <rect x="0" y="7" width="105" height="5" fill="url(#nbGrad)"/>
-              <text x="0" y="21" fill={NB.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">LOW</text>
-              <text x="85" y="21" fill={NB.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">HIGH</text>
+              <text x="0" y="21" fill={PDS.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">LOW</text>
+              <text x="85" y="21" fill={PDS.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">HIGH</text>
             </g>
             <g transform="translate(10,622)">
               <circle cx="4" cy="4" r="4" fill={scoreColor(0.7,0.9)}/>
-              <text x="12" y="8" fill={NB.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">scraped fee data</text>
+              <text x="12" y="8" fill={PDS.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">scraped fee data</text>
               <circle cx="4" cy="16" r="4" fill={scoreColor(0.4,0.3)}/>
-              <text x="12" y="20" fill={NB.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">HCD only</text>
+              <text x="12" y="20" fill={PDS.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">HCD only</text>
             </g>
           </svg>
         </div>
@@ -1559,19 +1617,19 @@ export default function CaliforniaBuildingIndex() {
         <div style={{ width:'100%', maxWidth:380, display:'flex', flexDirection:'column', gap:10 }}>
 
           {/* Active layer descriptor */}
-          <div style={{ background:NB.shadow, border:`1px solid ${NB.mist}`, borderTop:`2px solid ${NB.reactor}`, padding:'0.75rem 1rem' }}>
+          <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`, borderTop:`2px solid ${PDS.reactor}`, padding:'0.75rem 1rem' }}>
             <div style={{ display:'flex', alignItems:'baseline', gap:8, marginBottom:3 }}>
               <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-                fontSize:'1rem', fontWeight:700, color:NB.reactor }}>
+                fontSize:'1rem', fontWeight:700, color:PDS.reactor }}>
                 {LAYERS[activeLayer].label}
               </span>
               {LAYERS[activeLayer].weight&&(
-                <DataVal size="0.65rem" color={NB.fog}>
+                <DataVal size="0.65rem" color={PDS.fog}>
                   {Math.round(LAYERS[activeLayer].weight*100)}% weight
                 </DataVal>
               )}
             </div>
-            <p style={{ fontSize:'0.78rem', color:NB.oxide, margin:0, lineHeight:1.6,
+            <p style={{ fontSize:'0.78rem', color:PDS.oxide, margin:0, lineHeight:1.6,
               fontFamily:"'Source Serif 4',Georgia,serif" }}>
               {LAYERS[activeLayer].description ||
                 (activeLayer==='feesPerUnit'&&!scraperRecords
@@ -1592,27 +1650,27 @@ export default function CaliforniaBuildingIndex() {
               onLoadScraper={()=>setShowUpload(true)}
             />
           ):(
-            <div style={{ background:NB.shadow, border:`1px solid ${NB.fog}`,
+            <div style={{ background:PDS.shadow, border:`1px solid ${PDS.fog}`,
               padding:'2rem 1rem', textAlign:'center',
-              fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.82rem', fontStyle:'italic', color:NB.oxide }}>
+              fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.82rem', fontStyle:'italic', color:PDS.oxide }}>
               — Select a county or city dot —
             </div>
           )}
 
           {/* Rankings — with tabs */}
-          <div style={{ background:NB.shadow, border:`1px solid ${NB.mist}`, borderTop:`2px solid ${NB.reactor}` }}>
+          <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`, borderTop:`2px solid ${PDS.reactor}` }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center',
-              padding:'0.6rem 0.875rem', borderBottom:`2px solid ${NB.fog}` }}>
+              padding:'0.6rem 0.875rem', borderBottom:`2px solid ${PDS.fog}` }}>
               <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-                fontSize:'0.9rem', fontWeight:700, color:NB.reactor }}>Rankings</span>
+                fontSize:'0.9rem', fontWeight:700, color:PDS.reactor }}>Rankings</span>
               <div style={{ display:'flex', gap:0 }}>
                 {['county','city'].map(t=>(
                   <button key={t} onClick={()=>setRankTab(t)} className="nb-btn"
                     style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
                       letterSpacing:'0.15em', textTransform:'uppercase', padding:'3px 9px',
-                      background:rankTab===t?NB.fog:'none',
-                      border:`1px solid ${rankTab===t?NB.reactor:NB.fog}`,
-                      color:rankTab===t?NB.reactor:NB.oxide, cursor:'pointer' }}>
+                      background:rankTab===t?PDS.fog:'none',
+                      border:`1px solid ${rankTab===t?PDS.reactor:PDS.fog}`,
+                      color:rankTab===t?PDS.reactor:PDS.oxide, cursor:'pointer' }}>
                     {t}{t==='city'&&scraperCities>0?` (${scraperCities})`:''}
                   </button>
                 ))}
@@ -1621,7 +1679,7 @@ export default function CaliforniaBuildingIndex() {
 
             {rankTab==='city'&&rankedCities.length===0?(
               <div style={{ padding:'1rem', textAlign:'center',
-                fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem', color:NB.fog }}>
+                fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.7rem', color:PDS.fog }}>
                 Load scraper data to unlock city rankings
               </div>
             ):(
@@ -1641,21 +1699,21 @@ export default function CaliforniaBuildingIndex() {
                     <div key={item.key} onClick={item.onClick}
                       style={{ display:'grid', gridTemplateColumns:'26px 1fr auto auto',
                         alignItems:'center', gap:6, padding:'5px 0.875rem',
-                        borderBottom:`1px solid ${NB.fog}20`, cursor:'pointer',
+                        borderBottom:`1px solid ${PDS.fog}20`, cursor:'pointer',
                         transition:'background .1s' }}
-                      onMouseEnter={e=>e.currentTarget.style.background=NB.fog+'90'}
+                      onMouseEnter={e=>e.currentTarget.style.background=PDS.fog+'90'}
                       onMouseLeave={e=>e.currentTarget.style.background='transparent'}>
-                      <DataVal size="0.7rem" color={i<3?NB.ember:i<10?NB.oxide:NB.fog}>
+                      <DataVal size="0.7rem" color={i<3?PDS.ember:i<10?PDS.oxide:PDS.fog}>
                         {String(i+1).padStart(2,'0')}
                       </DataVal>
                       <div>
                         <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.68rem',
-                          letterSpacing:'0.05em', color:NB.fuel, overflow:'hidden',
+                          letterSpacing:'0.05em', color:PDS.fuel, overflow:'hidden',
                           textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{item.label}</div>
                         {item.sub&&<div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace",
-                          fontSize:'0.58rem', color:NB.fog }}>{item.sub}</div>}
+                          fontSize:'0.58rem', color:PDS.fog }}>{item.sub}</div>}
                       </div>
-                      {item.hasFee&&<span style={{ fontSize:'0.6rem', color:NB.electric }}>⚡</span>}
+                      {item.hasFee&&<span style={{ fontSize:'0.6rem', color:PDS.electric }}>⚡</span>}
                       <DataVal color={tier.color} size="0.85rem">
                         {Math.round(item.score*100)}
                       </DataVal>
@@ -1668,12 +1726,12 @@ export default function CaliforniaBuildingIndex() {
 
           {/* Scraper loaded card */}
           {scraperRecords&&(
-            <div style={{ background:NB.shadow, border:`1px solid ${NB.mist}`, borderLeft:`3px solid ${NB.electric}`,
+            <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`, borderLeft:`3px solid ${PDS.electric}`,
               padding:'0.75rem 1rem', animation:'fadeUp .3s ease' }}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:6 }}>
-                <SectionLabel accent={NB.electric}>Field Intelligence</SectionLabel>
+                <SectionLabel accent={PDS.electric}>Field Intelligence</SectionLabel>
                 <button onClick={()=>{try{localStorage.removeItem('ca-fee-data');}catch{}setScraperRecords(defaultFeeData);}} className="nb-btn"
-                  style={{ background:'none', border:'none', color:NB.fog,
+                  style={{ background:'none', border:'none', color:PDS.fog,
                     fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.65rem', cursor:'pointer' }}>
                   ✕ clear
                 </button>
@@ -1686,19 +1744,19 @@ export default function CaliforniaBuildingIndex() {
                 ].map(([l,v])=>(
                   <div key={l}>
                     <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.55rem',
-                      letterSpacing:'0.15em', color:NB.fog, textTransform:'uppercase' }}>{l}</div>
-                    <DataVal color={NB.electric} size="1.1rem">{v}</DataVal>
+                      letterSpacing:'0.15em', color:PDS.fog, textTransform:'uppercase' }}>{l}</div>
+                    <DataVal color={PDS.electric} size="1.1rem">{v}</DataVal>
                   </div>
                 ))}
               </div>
               <div style={{ marginTop:8 }}>
-                <div style={{ height:3, background:NB.fog }}>
-                  <div style={{ height:'100%', background:NB.electric,
+                <div style={{ height:3, background:PDS.fog }}>
+                  <div style={{ height:'100%', background:PDS.electric,
                     width:`${(new Set(rankedCities.map(c=>c.county)).size/58)*100}%`,
                     transition:'width .5s' }}/>
                 </div>
                 <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.6rem',
-                  color:NB.fog, marginTop:3 }}>
+                  color:PDS.fog, marginTop:3 }}>
                   {new Set(rankedCities.map(c=>c.county)).size}/58 counties covered
                 </div>
               </div>
@@ -1708,15 +1766,15 @@ export default function CaliforniaBuildingIndex() {
       </div>
 
       {/* ── FOOTER — Penney document-footer ── */}
-      <div style={{ borderTop:`2px solid ${NB.reactor}`, padding:'1rem 1.5rem',
-        background:NB.shadow, textAlign:'center' }}>
+      <div style={{ borderTop:`2px solid ${PDS.reactor}`, padding:'1rem 1.5rem',
+        background:PDS.shadow, textAlign:'center' }}>
         <div style={{ maxWidth:1200, margin:'0 auto' }}>
           <p style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-            fontSize:'0.82rem', color:NB.oxide, margin:'0 0 4px', fontStyle:'italic' }}>
+            fontSize:'0.82rem', color:PDS.oxide, margin:'0 0 4px', fontStyle:'italic' }}>
             California Building Difficulty Index &bull; {CITY_GEO.length} cities &bull; data.ca.gov
           </p>
           <p style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.62rem',
-            color:NB.mist, margin:0, letterSpacing:'0.05em' }}>
+            color:PDS.mist, margin:0, letterSpacing:'0.05em' }}>
             Permit Time (20%) · Fees (20%) · CEQA (12%) · Coastal (9%) · Fire (9%) · Approval (9%) · RHNA (9%) · Noise (7%) · SB35 (5%)
           </p>
         </div>
