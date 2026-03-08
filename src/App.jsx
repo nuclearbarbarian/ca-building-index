@@ -897,7 +897,7 @@ function MHPLabel() {
       <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
         letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase',
         cursor:'help', borderBottom:`1px dotted ${PDS.fog}` }}>
-        MHP{' '}
+        MHP:{'\u00a0\u00a0'}
       </span>
       {show && (
         <div style={{
@@ -941,7 +941,7 @@ function HETooltipLabel() {
       <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
         letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase',
         cursor:'help', borderBottom:`1px dotted ${PDS.fog}` }}>
-        HE Status{' '}
+        HE Status:{'\u00a0\u00a0'}
       </span>
       {show && (
         <div style={{
