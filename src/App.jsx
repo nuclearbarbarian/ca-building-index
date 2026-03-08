@@ -1343,9 +1343,10 @@ export default function CaliforniaBuildingIndex() {
                   { label:'Baseline Jurisdiction Estimates', org:'Compiled — state & local sources', url:null, desc:'Permit timelines, CEQA risk, coastal/fire zone coverage, approval rates' },
                   { label:'Historic Preservation Districts', org:'CA Office of Historic Preservation', url:'ohp.parks.ca.gov', desc:'Share of developable land subject to historic overlay review — design restrictions, materials requirements, and demolition constraints' },
                   { label:'Municipal Development Fee Schedules', org:'City websites (scraped)', url:null, desc:'Impact fees for 120+ cities: transportation, park, water, sewer, affordable housing in-lieu' },
+                  { label:'Carrying Cost Estimator', org:'Methodology — industry benchmarks', url:null, desc:'Land valued at 20% of median home price (typical CA infill land share); $35K/unit pre-dev soft costs (architecture, engineering, environmental, legal — CA average); 8.5% commercial construction loan rate; holding period = county permit timeline in days' },
                 ].map((s,i)=>(
                   <div key={i} style={{ paddingBottom:'0.55rem', marginBottom:'0.55rem',
-                    borderBottom:i<6?`1px solid ${PDS.fog}30`:'none' }}>
+                    borderBottom:i<7?`1px solid ${PDS.fog}30`:'none' }}>
                     <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
                       fontSize:'0.68rem', color:PDS.reactor, fontWeight:600, marginBottom:2 }}>
                       {s.label}
