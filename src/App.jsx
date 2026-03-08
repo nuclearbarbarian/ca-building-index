@@ -1093,7 +1093,7 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
           </div>
           <div>
             <MHPLabel />
-            <DataVal size="0.75rem">${(data.medianHomePrice/1000).toFixed(0)}K</DataVal>
+            <DataVal size="0.75rem" color={PDS.electric}>${(data.medianHomePrice/1000).toFixed(0)}K</DataVal>
           </div>
         </div>
 
