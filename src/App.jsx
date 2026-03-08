@@ -990,21 +990,44 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
         </div>
 
         {/* ── Carrying Cost Estimate ─────────────────────────────────── */}
-        <div style={{ padding:'0.5rem 0.65rem', background:PDS.void,
-          border:`1px solid ${PDS.fog}`, borderLeft:`2px solid ${PDS.ember}`,
-          marginBottom:'0.6rem' }}>
-          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'baseline' }}>
-            <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-              letterSpacing:'0.12em', color:PDS.oxide, textTransform:'uppercase' }}>
-              Carrying Cost / Unit
-            </span>
-            <DataVal color={PDS.ember} size="0.9rem">{fmtFull(carry.cost)}</DataVal>
+        <div style={{ position:'relative' }}
+          onMouseEnter={e=>{ const t=e.currentTarget.querySelector('.carry-tooltip'); if(t) t.style.display='block'; }}
+          onMouseLeave={e=>{ const t=e.currentTarget.querySelector('.carry-tooltip'); if(t) t.style.display='none'; }}>
+          <div style={{ padding:'0.5rem 0.65rem', background:PDS.void,
+            border:`1px solid ${PDS.fog}`, borderLeft:`2px solid ${PDS.ember}`,
+            marginBottom:'0.6rem', cursor:'help' }}>
+            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'baseline' }}>
+              <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
+                letterSpacing:'0.12em', color:PDS.oxide, textTransform:'uppercase' }}>
+                Carrying Cost / Unit
+              </span>
+              <DataVal color={PDS.ember} size="0.9rem">{fmtFull(carry.cost)}</DataVal>
+            </div>
+            <div style={{ marginTop:'0.3rem', display:'flex', gap:'0.8rem', flexWrap:'wrap',
+              fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.58rem', color:PDS.oxide }}>
+              <span>land+soft {fmtK(carry.financedBasis)}</span>
+              <span>· {(CARRYING_LOAN_RATE*100).toFixed(1)}% loan</span>
+              <span>· {data.permitDays}d</span>
+            </div>
           </div>
-          <div style={{ marginTop:'0.3rem', display:'flex', gap:'0.8rem', flexWrap:'wrap',
-            fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.58rem', color:PDS.oxide }}>
-            <span>land+soft {fmtK(carry.financedBasis)}</span>
-            <span>· {(CARRYING_LOAN_RATE*100).toFixed(1)}% loan</span>
-            <span>· {data.permitDays}d</span>
+          <div className="carry-tooltip" style={{
+            display:'none', position:'absolute', bottom:'calc(100% + 4px)', left:0, right:0, zIndex:50,
+            background:PDS.shadow, border:`1px solid ${PDS.ember}`, borderLeft:`2px solid ${PDS.ember}`,
+            padding:'0.6rem 0.75rem',
+            fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.58rem', color:PDS.oxide,
+            lineHeight:1.6, pointerEvents:'none',
+          }}>
+            <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
+              letterSpacing:'0.1em', color:PDS.reactor, textTransform:'uppercase', marginBottom:'0.35rem' }}>
+              How this is calculated
+            </div>
+            <div>Land / unit = median home price ({fmtFull(data.medianHomePrice)}) × 20%</div>
+            <div>= {fmtFull(carry.landPerUnit)}</div>
+            <div style={{ marginTop:'0.25rem' }}>+ Pre-dev soft costs (arch, engineering, legal) = $35,000</div>
+            <div>= Financed basis of {fmtFull(carry.financedBasis)}</div>
+            <div style={{ marginTop:'0.25rem' }}>× {(CARRYING_LOAN_RATE*100).toFixed(1)}% construction loan rate</div>
+            <div>× {data.permitDays} days ÷ 365</div>
+            <div style={{ marginTop:'0.35rem', color:PDS.ember }}>= {fmtFull(carry.cost)} per unit in carrying cost</div>
           </div>
         </div>
 
@@ -1018,7 +1041,7 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
           </div>
           <div>
             <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-              letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase' }}>Median </span>
+              letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase' }}>Median Home Price </span>
             <DataVal size="0.75rem">${(data.medianHomePrice/1000).toFixed(0)}K</DataVal>
           </div>
         </div>
@@ -1320,9 +1343,10 @@ export default function CaliforniaBuildingIndex() {
                   { label:'Baseline Jurisdiction Estimates', org:'Compiled — state & local sources', url:null, desc:'Permit timelines, CEQA risk, coastal/fire zone coverage, approval rates' },
                   { label:'Historic Preservation Districts', org:'CA Office of Historic Preservation', url:'ohp.parks.ca.gov', desc:'Share of developable land subject to historic overlay review — design restrictions, materials requirements, and demolition constraints' },
                   { label:'Municipal Development Fee Schedules', org:'City websites (scraped)', url:null, desc:'Impact fees for 120+ cities: transportation, park, water, sewer, affordable housing in-lieu' },
+                  { label:'Carrying Cost Estimator', org:'Methodology — industry benchmarks', url:null, desc:'Land valued at 20% of median home price (typical CA infill land share); $35K/unit pre-dev soft costs (architecture, engineering, environmental, legal — CA average); 8.5% commercial construction loan rate; holding period = county permit timeline in days' },
                 ].map((s,i)=>(
                   <div key={i} style={{ paddingBottom:'0.55rem', marginBottom:'0.55rem',
-                    borderBottom:i<6?`1px solid ${PDS.fog}30`:'none' }}>
+                    borderBottom:i<7?`1px solid ${PDS.fog}30`:'none' }}>
                     <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
                       fontSize:'0.68rem', color:PDS.reactor, fontWeight:600, marginBottom:2 }}>
                       {s.label}
