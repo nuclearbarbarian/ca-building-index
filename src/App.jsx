@@ -1083,57 +1083,6 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
           </div>
         </div>
 
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'0.5rem',
-          padding:'0.6rem 0', borderTop:`1px solid ${PDS.fog}`, marginBottom:'0.6rem' }}>
-          <div style={{ position:'relative' }}>
-            <HETooltipLabel />
-            <DataVal color={data.heCompliance==='compliant'?PDS.electric:PDS.blood} size="0.75rem">
-              {data.heCompliance==='compliant'?'COMPLIANT':'NON-COMPLIANT'}
-            </DataVal>
-          </div>
-          <div>
-            <MHPLabel />
-            <DataVal size="0.75rem" color={PDS.electric}>${(data.medianHomePrice/1000).toFixed(0)}K</DataVal>
-          </div>
-        </div>
-
-        {/* City grid */}
-        {citiesInCounty.length>0&&(
-          <div>
-            <SectionLabel>Cities in Territory ({citiesInCounty.length})</SectionLabel>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:3,
-              maxHeight:170, overflowY:'auto' }}>
-              {citiesInCounty.sort((a,b)=>(b.composite||0)-(a.composite||0)).map(city=>{
-                const t=getTier(city.composite||0);
-                return (
-                  <button key={city.name} onClick={()=>onCityClick(city.name)}
-                    style={{ display:'flex', alignItems:'center', gap:5, padding:'4px 6px',
-                      background:PDS.void, border:`1px solid ${PDS.fog}`,
-                      cursor:'pointer', textAlign:'left', transition:'border-color .1s' }}>
-                    <div style={{ width:4, height:4, background:t.color, flexShrink:0 }}/>
-                    <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.65rem',
-                      letterSpacing:'0.05em', color:PDS.fuel, flex:1, overflow:'hidden',
-                      textOverflow:'ellipsis', whiteSpace:'nowrap', textTransform:'uppercase' }}>
-                      {city.name}
-                    </span>
-                    {city.hasFeeData&&<span style={{ fontSize:'0.55rem', color:PDS.electric }}>⚡</span>}
-                    <DataVal color={t.color} size="0.7rem">{Math.round((city.composite||0)*100)}</DataVal>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {!citiesInCounty.some(c=>c.hasFeeData)&&(
-          <button onClick={onLoadScraper}
-            style={{ marginTop:'0.6rem', width:'100%', padding:'0.5rem',
-              background:PDS.void, border:`1px dashed ${PDS.electric}40`,
-              color:PDS.electric, fontFamily:"'Source Serif 4','Charter',Georgia,serif",
-              fontSize:'0.6rem', letterSpacing:'0.2em', textTransform:'uppercase', cursor:'pointer' }}>
-            📂 Load Fee Scraper Data
-          </button>
-        )}
       </div>
     </div>
   );
@@ -1621,7 +1570,8 @@ export default function CaliforniaBuildingIndex() {
 
       {/* ── MAIN CONTENT ── */}
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 1.5rem 3rem',
-        display:'flex', flexDirection:'column', gap:14 }} className="main-row">
+        display:'flex', flexDirection:'column' }}>
+        <div style={{ display:'flex', flexDirection:'column', gap:14 }} className="main-row">
         <style>{`@media(min-width:1024px){.main-row{flex-direction:row!important}}`}</style>
 
         {/* ── MAP — real CA county GIS boundaries ── */}
@@ -1771,6 +1721,67 @@ export default function CaliforniaBuildingIndex() {
             </div>
           )}
 
+        </div>
+        </div>
+
+        {/* ── BELOW ROW: HE status, city grid, rankings ── */}
+        <div style={{ display:'flex', justifyContent:'flex-end' }}>
+        <div style={{ width:'100%', maxWidth:380, display:'flex', flexDirection:'column', gap:10 }}>
+
+          {activeCounty&&!activeCity&&countyScores[activeCounty]&&(
+            <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`, padding:'0 1rem' }}>
+              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'0.5rem',
+                padding:'0.6rem 0', borderTop:`1px solid ${PDS.fog}`, marginBottom:'0.6rem' }}>
+                <div style={{ position:'relative' }}>
+                  <HETooltipLabel />
+                  <DataVal color={countyScores[activeCounty].heCompliance==='compliant'?PDS.electric:PDS.blood} size="0.75rem">
+                    {countyScores[activeCounty].heCompliance==='compliant'?'COMPLIANT':'NON-COMPLIANT'}
+                  </DataVal>
+                </div>
+                <div>
+                  <MHPLabel />
+                  <DataVal size="0.75rem" color={PDS.electric}>${(countyScores[activeCounty].medianHomePrice/1000).toFixed(0)}K</DataVal>
+                </div>
+              </div>
+              {/* City grid */}
+              {(citiesByCounty[activeCounty]||[]).length>0&&(
+                <div>
+                  <SectionLabel>Cities in Territory ({(citiesByCounty[activeCounty]||[]).length})</SectionLabel>
+                  <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:3,
+                    maxHeight:170, overflowY:'auto' }}>
+                    {(citiesByCounty[activeCounty]||[]).slice().sort((a,b)=>(b.composite||0)-(a.composite||0)).map(city=>{
+                      const t=getTier(city.composite||0);
+                      return (
+                        <button key={city.name} onClick={()=>setSelectedCity(city.name)}
+                          style={{ display:'flex', alignItems:'center', gap:5, padding:'4px 6px',
+                            background:PDS.void, border:`1px solid ${PDS.fog}`,
+                            cursor:'pointer', textAlign:'left', transition:'border-color .1s' }}>
+                          <div style={{ width:4, height:4, background:t.color, flexShrink:0 }}/>
+                          <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.65rem',
+                            letterSpacing:'0.05em', color:PDS.fuel, flex:1, overflow:'hidden',
+                            textOverflow:'ellipsis', whiteSpace:'nowrap', textTransform:'uppercase' }}>
+                            {city.name}
+                          </span>
+                          {city.hasFeeData&&<span style={{ fontSize:'0.55rem', color:PDS.electric }}>⚡</span>}
+                          <DataVal color={t.color} size="0.7rem">{Math.round((city.composite||0)*100)}</DataVal>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+              {!(citiesByCounty[activeCounty]||[]).some(c=>c.hasFeeData)&&(
+                <button onClick={()=>setShowUpload(true)}
+                  style={{ marginTop:'0.6rem', width:'100%', padding:'0.5rem',
+                    background:PDS.void, border:`1px dashed ${PDS.electric}40`,
+                    color:PDS.electric, fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+                    fontSize:'0.6rem', letterSpacing:'0.2em', textTransform:'uppercase', cursor:'pointer' }}>
+                  📂 Load Fee Scraper Data
+                </button>
+              )}
+            </div>
+          )}
+
           {/* Rankings — with tabs */}
           <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`, borderTop:`2px solid ${PDS.reactor}` }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center',
@@ -1876,6 +1887,7 @@ export default function CaliforniaBuildingIndex() {
               </div>
             </div>
           )}
+        </div>
         </div>
       </div>
 
