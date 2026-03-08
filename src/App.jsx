@@ -1357,9 +1357,10 @@ export default function CaliforniaBuildingIndex() {
                   { label:'Historic Preservation Districts', org:'CA Office of Historic Preservation', url:'ohp.parks.ca.gov', desc:'Share of developable land subject to historic overlay review — design restrictions, materials requirements, and demolition constraints' },
                   { label:'Municipal Development Fee Schedules', org:'City websites (scraped)', url:null, desc:'Impact fees for 120+ cities: transportation, park, water, sewer, affordable housing in-lieu' },
                   { label:'Carrying Cost Estimator', org:'Methodology — industry benchmarks', url:null, desc:'Land valued at 20% of median home price (typical CA infill land share); $35K/unit pre-dev soft costs (architecture, engineering, environmental, legal — CA average); 8.5% commercial construction loan rate; holding period = county permit timeline in days' },
-                ].map((s,i)=>(
+                  { label:'CalGreen Tier & Cost Estimates', org:'CA Building Standards Commission · CA Energy Commission', url:'dgs.ca.gov/BSC', desc:'Local CalGreen tier adoption (Tier 1/2 amendments and energy reach codes) compiled from CBSC, CEC, and municipal building code databases. Per-unit cost premiums above state baseline derived from CEC Title 24 Part 11 cost-effectiveness studies and CBSC regulatory impact analyses: Tier 1 ~$2k–$8k/unit, Tier 2 ~$8k–$25k/unit, all-electric reach codes ~$25k–$45k/unit' },
+                ].map((s,i,arr)=>(
                   <div key={i} style={{ paddingBottom:'0.55rem', marginBottom:'0.55rem',
-                    borderBottom:i<7?`1px solid ${PDS.fog}30`:'none' }}>
+                    borderBottom:i<arr.length-1?`1px solid ${PDS.fog}30`:'none' }}>
                     <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
                       fontSize:'0.68rem', color:PDS.reactor, fontWeight:600, marginBottom:2 }}>
                       {s.label}
