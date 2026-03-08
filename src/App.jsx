@@ -1253,8 +1253,8 @@ export default function CaliforniaBuildingIndex() {
             <button style={{
               fontFamily:"'IBM Plex Mono','Consolas',monospace",
               fontSize:'0.65rem', letterSpacing:'0.15em',
-              color:PDS.oxide, background:'none',
-              border:`1px solid ${PDS.oxide}50`,
+              color:PDS.mist, background:'none',
+              border:`1px solid ${PDS.mist}80`,
               padding:'4px 10px', textTransform:'uppercase',
               cursor:'default', userSelect:'none',
             }}>
