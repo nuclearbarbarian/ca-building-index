@@ -886,6 +886,45 @@ function CityDetail({ city, onBack }) {
   );
 }
 
+function MHPLabel() {
+  const [show, setShow] = useState(false);
+  const [pos,  setPos]  = useState({ x:0, y:0 });
+  return (
+    <span style={{ position:'relative', display:'inline-block' }}
+      onMouseEnter={e=>{ setShow(true); setPos({ x:e.clientX, y:e.clientY }); }}
+      onMouseMove={e=>setPos({ x:e.clientX, y:e.clientY })}
+      onMouseLeave={()=>setShow(false)}>
+      <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
+        letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase',
+        cursor:'help', borderBottom:`1px dotted ${PDS.fog}` }}>
+        MHP{' '}
+      </span>
+      {show && (
+        <div style={{
+          position:'fixed',
+          left: Math.min(pos.x, (typeof window!=='undefined'?window.innerWidth:800) - 300),
+          top:  pos.y + 14,
+          zIndex:9999,
+          background:PDS.void,
+          border:`1px solid ${PDS.mist}`,
+          borderLeft:`3px solid ${PDS.electric}`,
+          padding:'0.5rem 0.8rem',
+          pointerEvents:'none',
+          boxShadow:`0 8px 32px rgba(44,36,22,.14), 0 0 0 1px ${PDS.fog}`,
+          animation:'fadeUp .12s ease',
+          whiteSpace:'nowrap',
+        }}>
+          <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
+            letterSpacing:'0.2em', color:PDS.electric, textTransform:'uppercase',
+            fontWeight:600 }}>
+            Median Home Price
+          </div>
+        </div>
+      )}
+    </span>
+  );
+}
+
 // ═══════════════════════════════════════════════════════════════
 // COUNTY DETAIL
 // ═══════════════════════════════════════════════════════════════
@@ -1053,8 +1092,7 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
             </DataVal>
           </div>
           <div>
-            <span title="Median Home Price" style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-              letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase', cursor:'help', borderBottom:`1px dotted ${PDS.oxide}` }}>MHP </span>
+            <MHPLabel />
             <DataVal size="0.75rem">${(data.medianHomePrice/1000).toFixed(0)}K</DataVal>
           </div>
         </div>
