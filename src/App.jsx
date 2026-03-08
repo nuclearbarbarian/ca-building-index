@@ -67,6 +67,16 @@ const normCity   = s => (s||'').trim().replace(/\s+/g,' ').toLowerCase();
 const clamp      = (v,lo,hi) => Math.max(lo,Math.min(hi,v));
 const fmtK       = v => v>=1000 ? `$${Math.round(v/1000)}k` : `$${Math.round(v)}`;
 const fmtFull    = v => `$${Math.round(v).toLocaleString()}`;
+// CalGreen compliance cost above state baseline per unit (SFR), piecewise linear
+// Sources: CEC cost-effectiveness studies, CBSC Title 24 Part 11 RIA, USGBC CA data
+// 0.0-0.3: baseline only (~$0-$2k admin/documentation); 0.3-0.5: Tier 1 (~$2k-$8k);
+// 0.5-0.75: Tier 2 (~$8k-$25k); 0.75-1.0: reach codes + all-electric (~$25k-$45k)
+const calGreenCost = v => {
+  if (v < 0.3)  return Math.round(v / 0.3 * 2000);
+  if (v < 0.5)  return Math.round(2000 + (v-0.3)/0.2 * 6000);
+  if (v < 0.75) return Math.round(8000 + (v-0.5)/0.25 * 17000);
+  return          Math.round(25000 + (v-0.75)/0.25 * 20000);
+};
 
 // ═══════════════════════════════════════════════════════════════
 // GEO SYSTEM
@@ -450,8 +460,8 @@ const LAYERS = {
     description:"Percentage of the county's developable residential land inside a 65 dB CNEL contour — the noise threshold at which California Building Code §1207 mandates acoustic analysis and mitigation. Sourced from Airport Land Use Compatibility Plans (ALUCPs) filed with Caltrans Division of Aeronautics. High-noise zones add acoustic study costs ($5k–$20k per project), mandatory building treatment, and in some cases outright prohibition of residential use. San Mateo (SFO), Los Angeles (LAX + six general aviation airports), and San Diego (Lindbergh + Miramar + Montgomery) are the most constrained." },
   histPreservation:{ label:'Historic Preservation', color:'#7A5C3A', weight:0.05, format:v=>`${Math.round(v*100)}%`, domain:[0,1],
     description:"Share of a county's developable land subject to historic preservation overlay review. Designated historic districts — enforced under the California Historic Building Code and local ordinances — impose design review, materials restrictions, and demolition constraints that can add months and five-figure compliance costs to otherwise routine projects. San Francisco's blanket neighborhood designations, Santa Barbara's Spanish Colonial enforcement, and Gold Rush-era foothill counties carry the heaviest burden. Even a single contributing structure on a parcel can trigger full discretionary review." },
-  calGreen:     { label:'CalGreen Tier',      color:PDS.coolant,  weight:0.05, format:v=>v>=0.8?'TIER 2+':v>=0.5?'TIER 1':'BASELINE', domain:[0,1],
-    description:"How far a jurisdiction's local green building requirements exceed the state CalGreen baseline (Title 24 Part 11). Cities and counties may adopt Tier 1 or Tier 2 amendments — or energy reach codes — mandating higher efficiency, all-electric construction, or stricter water and materials standards. Bay Area jurisdictions are the most aggressive adopters; Berkeley and San Francisco have mandated all-electric construction since 2019–2020. Each tier step adds compliance cost, plan check complexity, and potential redesign liability." },
+  calGreen:     { label:'CalGreen Tier',      color:PDS.coolant,  weight:0.05, format:v=>fmtK(calGreenCost(v)), domain:[0,1],
+    description:"Estimated hard-cost premium per unit above state CalGreen baseline (Title 24 Part 11), based on CEC cost-effectiveness studies and CBSC Title 24 Part 11 regulatory impact analyses. Tier 1 amendments add roughly $2k–$8k/unit (20% efficiency gain, EV conduit, enhanced water fixtures). Tier 2 adds $8k–$25k/unit (30% efficiency, stricter waste and IAQ). Energy reach codes with all-electric mandates — as in San Francisco and Berkeley — push compliance costs to $25k–$45k/unit through heat pump HVAC, induction-only kitchens, and battery-ready wiring. Unlike impact fees, these are construction cost increases baked into contractor bids, not line-item charges." },
 };
 
 const scoreMetrics = (data) => {
