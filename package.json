@@ -1,0 +1,21 @@
+{
+  "name": "ca-building-difficulty-index",
+  "version": "6.0.0",
+  "description": "California Building Difficulty Index — Nuclear Barbarians edition",
+  "type": "module",
+  "scripts": {
+    "dev":     "vite",
+    "build":   "vite build",
+    "preview": "vite preview",
+    "scrape":  "node scraper/scrape.js",
+    "scrape:live": "node scraper/scrape.js --live"
+  },
+  "dependencies": {
+    "react":     "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite":                 "^5.4.11"
+  }
+}
