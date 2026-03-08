@@ -747,10 +747,10 @@ function MetroZoomMap({ metroKey, cityScores, geoBounds, selectedCity, onCityCli
         <div style={{ padding:'0.75rem 1.25rem', background:PDS.shadow,
           borderTop:`1px solid ${PDS.fog}`, display:'flex', gap:'1rem', flexWrap:'wrap' }}>
           {TIERS.slice().reverse().map(t=>(
-            <div key={t.label} style={{ display:'flex', alignItems:'center', gap:5 }}>
-              <div style={{ width:8, height:8, background:t.color, borderRadius:2 }} />
-              <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-                letterSpacing:'0.1em', color:PDS.oxide, textTransform:'uppercase' }}>{t.label}</span>
+            <div key={t.label} style={{ display:'flex', alignItems:'center', gap:6 }}>
+              <div style={{ width:11, height:11, background:t.color, borderRadius:2 }} />
+              <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.72rem',
+                letterSpacing:'0.1em', color:PDS.fuel, textTransform:'uppercase' }}>{t.label}</span>
             </div>
           ))}
           <span style={{ marginLeft:'auto', fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.65rem', color:PDS.fog }}>
