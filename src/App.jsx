@@ -1119,7 +1119,9 @@ export default function CaliforniaBuildingIndex() {
   const [showSources,    setShowSources]    = useState(false);
   const [showUpload,     setShowUpload]     = useState(false);
   const [activeMetro,    setActiveMetro]    = useState(null);
-  const [scraperRecords, setScraperRecords] = useState(null);
+  const [scraperRecords, setScraperRecords] = useState(()=>{
+    try { const s=localStorage.getItem('ca-fee-data'); return s?JSON.parse(s):null; } catch{return null;}
+  });
   const [rankTab,        setRankTab]        = useState('county');
 
   // Scraper lookup
@@ -1232,7 +1234,7 @@ export default function CaliforniaBuildingIndex() {
         button{border-radius:0!important}
       `}</style>
 
-      {showUpload&&<FeeUploadPanel onLoad={r=>{setScraperRecords(r);setShowUpload(false);}} onClose={()=>setShowUpload(false)}/>}
+      {showUpload&&<FeeUploadPanel onLoad={r=>{try{localStorage.setItem('ca-fee-data',JSON.stringify(r));}catch{}setScraperRecords(r);setShowUpload(false);}} onClose={()=>setShowUpload(false)}/>}
       {activeMetro&&<MetroZoomMap metroKey={activeMetro} cityScores={cityScores}
         geoBounds={geoBounds}
         selectedCity={selectedCity} onCityClick={n=>{setSelectedCity(n);setActiveMetro(null);}} onClose={()=>setActiveMetro(null)}/>}
@@ -1534,7 +1536,7 @@ export default function CaliforniaBuildingIndex() {
                 <stop offset="100%" stopColor='#6B1F1F'/>
               </linearGradient>
             </defs>
-            <g transform="translate(375,595)">
+            <g transform="translate(10,595)">
               <text x="0" y="0" fill={NB.fog} fontSize="7.5"
                 fontFamily="'Source Serif 4','Charter',Georgia,serif" letterSpacing="2" fontWeight="600">
                 {LAYERS[activeLayer].label.toUpperCase()}
@@ -1543,7 +1545,7 @@ export default function CaliforniaBuildingIndex() {
               <text x="0" y="21" fill={NB.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">LOW</text>
               <text x="85" y="21" fill={NB.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">HIGH</text>
             </g>
-            <g transform="translate(290,622)">
+            <g transform="translate(10,622)">
               <circle cx="4" cy="4" r="4" fill={scoreColor(0.7,0.9)}/>
               <text x="12" y="8" fill={NB.fog} fontSize="7" fontFamily="'IBM Plex Mono','Consolas',monospace">scraped fee data</text>
               <circle cx="4" cy="16" r="4" fill={scoreColor(0.4,0.3)}/>
@@ -1669,7 +1671,7 @@ export default function CaliforniaBuildingIndex() {
               padding:'0.75rem 1rem', animation:'fadeUp .3s ease' }}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:6 }}>
                 <SectionLabel accent={NB.electric}>Field Intelligence</SectionLabel>
-                <button onClick={()=>setScraperRecords(null)} className="nb-btn"
+                <button onClick={()=>{try{localStorage.removeItem('ca-fee-data');}catch{}setScraperRecords(null);}} className="nb-btn"
                   style={{ background:'none', border:'none', color:NB.fog,
                     fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.65rem', cursor:'pointer' }}>
                   ✕ clear
