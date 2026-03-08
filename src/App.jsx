@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
+import defaultFeeData from './data/feeData.json';
 
 // ═══════════════════════════════════════════════════════════════
 // PENNEY DESIGN SYSTEM TOKENS
@@ -1120,7 +1121,7 @@ export default function CaliforniaBuildingIndex() {
   const [showUpload,     setShowUpload]     = useState(false);
   const [activeMetro,    setActiveMetro]    = useState(null);
   const [scraperRecords, setScraperRecords] = useState(()=>{
-    try { const s=localStorage.getItem('ca-fee-data'); return s?JSON.parse(s):null; } catch{return null;}
+    try { const s=localStorage.getItem('ca-fee-data'); return s?JSON.parse(s):defaultFeeData; } catch{return defaultFeeData;}
   });
   const [rankTab,        setRankTab]        = useState('county');
 
@@ -1671,7 +1672,7 @@ export default function CaliforniaBuildingIndex() {
               padding:'0.75rem 1rem', animation:'fadeUp .3s ease' }}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:6 }}>
                 <SectionLabel accent={NB.electric}>Field Intelligence</SectionLabel>
-                <button onClick={()=>{try{localStorage.removeItem('ca-fee-data');}catch{}setScraperRecords(null);}} className="nb-btn"
+                <button onClick={()=>{try{localStorage.removeItem('ca-fee-data');}catch{}setScraperRecords(defaultFeeData);}} className="nb-btn"
                   style={{ background:'none', border:'none', color:NB.fog,
                     fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.65rem', cursor:'pointer' }}>
                   ✕ clear

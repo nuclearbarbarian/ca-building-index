@@ -1,0 +1,1817 @@
+[
+  {
+    "name": "Los Angeles",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 3898747,
+    "fees": {
+      "estimatedTotalNewSFR": 42000,
+      "estimatedTotalMultiFamily": 31920,
+      "transportationImpactFee": 14000,
+      "parkImpactFee": 4200,
+      "waterCapacityFee": 8400,
+      "sewerCapacityFee": 6720,
+      "affordableHousingInLieu": 8000
+    }
+  },
+  {
+    "name": "Long Beach",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 466742,
+    "fees": {
+      "estimatedTotalNewSFR": 36000,
+      "estimatedTotalMultiFamily": 27360,
+      "transportationImpactFee": 10080,
+      "parkImpactFee": 3600,
+      "waterCapacityFee": 7200,
+      "sewerCapacityFee": 5760,
+      "affordableHousingInLieu": 5040
+    }
+  },
+  {
+    "name": "Glendale",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 196543,
+    "fees": {
+      "estimatedTotalNewSFR": 40000,
+      "estimatedTotalMultiFamily": 30400,
+      "transportationImpactFee": 11200,
+      "parkImpactFee": 4000,
+      "waterCapacityFee": 8000,
+      "sewerCapacityFee": 6400,
+      "affordableHousingInLieu": 5600
+    }
+  },
+  {
+    "name": "Santa Clarita",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 228673,
+    "fees": {
+      "estimatedTotalNewSFR": 32000,
+      "estimatedTotalMultiFamily": 24320,
+      "transportationImpactFee": 8960,
+      "parkImpactFee": 3200,
+      "waterCapacityFee": 6400,
+      "sewerCapacityFee": 5120,
+      "affordableHousingInLieu": 4480
+    }
+  },
+  {
+    "name": "Lancaster",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 173516,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Palmdale",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 169450,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Pomona",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 151348,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Torrance",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 147067,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Pasadena",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 138699,
+    "fees": {
+      "estimatedTotalNewSFR": 45000,
+      "estimatedTotalMultiFamily": 34200,
+      "transportationImpactFee": 12600,
+      "parkImpactFee": 4500,
+      "waterCapacityFee": 9000,
+      "sewerCapacityFee": 7200,
+      "affordableHousingInLieu": 6300
+    }
+  },
+  {
+    "name": "El Monte",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 113475,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Downey",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 111772,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Inglewood",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 109673,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "West Covina",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 106098,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Burbank",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 103411,
+    "fees": {
+      "estimatedTotalNewSFR": 38000,
+      "estimatedTotalMultiFamily": 28880,
+      "transportationImpactFee": 10640,
+      "parkImpactFee": 3800,
+      "waterCapacityFee": 7600,
+      "sewerCapacityFee": 6080,
+      "affordableHousingInLieu": 5320
+    }
+  },
+  {
+    "name": "Santa Monica",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 91411,
+    "fees": {
+      "estimatedTotalNewSFR": 62000,
+      "estimatedTotalMultiFamily": 47120,
+      "transportationImpactFee": 17360,
+      "parkImpactFee": 6200,
+      "waterCapacityFee": 12400,
+      "sewerCapacityFee": 9920,
+      "affordableHousingInLieu": 18000
+    }
+  },
+  {
+    "name": "Compton",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 97559,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Carson",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 91394,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Hawthorne",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 87491,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Whittier",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 85331,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Beverly Hills",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 34109,
+    "fees": {
+      "estimatedTotalNewSFR": 52000,
+      "estimatedTotalMultiFamily": 39520,
+      "transportationImpactFee": 14560,
+      "parkImpactFee": 5200,
+      "waterCapacityFee": 10400,
+      "sewerCapacityFee": 8320,
+      "affordableHousingInLieu": 7280
+    }
+  },
+  {
+    "name": "Culver City",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 39428,
+    "fees": {
+      "estimatedTotalNewSFR": 55000,
+      "estimatedTotalMultiFamily": 41800,
+      "transportationImpactFee": 15400,
+      "parkImpactFee": 5500,
+      "waterCapacityFee": 11000,
+      "sewerCapacityFee": 8800,
+      "affordableHousingInLieu": 14000
+    }
+  },
+  {
+    "name": "West Hollywood",
+    "county": "Los Angeles",
+    "status": "success",
+    "population": 34399,
+    "fees": {
+      "estimatedTotalNewSFR": 58000,
+      "estimatedTotalMultiFamily": 44080,
+      "transportationImpactFee": 16240,
+      "parkImpactFee": 5800,
+      "waterCapacityFee": 11600,
+      "sewerCapacityFee": 9280,
+      "affordableHousingInLieu": 16000
+    }
+  },
+  {
+    "name": "Malibu",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 12645,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Redondo Beach",
+    "county": "Los Angeles",
+    "status": "baseline",
+    "population": 66748,
+    "fees": {
+      "estimatedTotalNewSFR": 36750,
+      "estimatedTotalMultiFamily": 27930,
+      "transportationImpactFee": 10290,
+      "parkImpactFee": 3675,
+      "waterCapacityFee": 7350,
+      "sewerCapacityFee": 5880,
+      "affordableHousingInLieu": 5145
+    }
+  },
+  {
+    "name": "Oxnard",
+    "county": "Ventura",
+    "status": "success",
+    "population": 202063,
+    "fees": {
+      "estimatedTotalNewSFR": 44000,
+      "estimatedTotalMultiFamily": 33440,
+      "transportationImpactFee": 12320,
+      "parkImpactFee": 4400,
+      "waterCapacityFee": 8800,
+      "sewerCapacityFee": 7040,
+      "affordableHousingInLieu": 6160
+    }
+  },
+  {
+    "name": "Thousand Oaks",
+    "county": "Ventura",
+    "status": "success",
+    "population": 126966,
+    "fees": {
+      "estimatedTotalNewSFR": 52000,
+      "estimatedTotalMultiFamily": 39520,
+      "transportationImpactFee": 14560,
+      "parkImpactFee": 5200,
+      "waterCapacityFee": 10400,
+      "sewerCapacityFee": 8320,
+      "affordableHousingInLieu": 7280
+    }
+  },
+  {
+    "name": "Simi Valley",
+    "county": "Ventura",
+    "status": "success",
+    "population": 124237,
+    "fees": {
+      "estimatedTotalNewSFR": 46000,
+      "estimatedTotalMultiFamily": 34960,
+      "transportationImpactFee": 12880,
+      "parkImpactFee": 4600,
+      "waterCapacityFee": 9200,
+      "sewerCapacityFee": 7360,
+      "affordableHousingInLieu": 6440
+    }
+  },
+  {
+    "name": "Ventura",
+    "county": "Ventura",
+    "status": "success",
+    "population": 110196,
+    "fees": {
+      "estimatedTotalNewSFR": 48000,
+      "estimatedTotalMultiFamily": 36480,
+      "transportationImpactFee": 13440,
+      "parkImpactFee": 4800,
+      "waterCapacityFee": 9600,
+      "sewerCapacityFee": 7680,
+      "affordableHousingInLieu": 6720
+    }
+  },
+  {
+    "name": "Camarillo",
+    "county": "Ventura",
+    "status": "baseline",
+    "population": 70942,
+    "fees": {
+      "estimatedTotalNewSFR": 50400,
+      "estimatedTotalMultiFamily": 38304,
+      "transportationImpactFee": 14112,
+      "parkImpactFee": 5040,
+      "waterCapacityFee": 10080,
+      "sewerCapacityFee": 8064,
+      "affordableHousingInLieu": 7056
+    }
+  },
+  {
+    "name": "Anaheim",
+    "county": "Orange",
+    "status": "success",
+    "population": 346824,
+    "fees": {
+      "estimatedTotalNewSFR": 48000,
+      "estimatedTotalMultiFamily": 36480,
+      "transportationImpactFee": 13440,
+      "parkImpactFee": 4800,
+      "waterCapacityFee": 9600,
+      "sewerCapacityFee": 7680,
+      "affordableHousingInLieu": 6720
+    }
+  },
+  {
+    "name": "Santa Ana",
+    "county": "Orange",
+    "status": "success",
+    "population": 310227,
+    "fees": {
+      "estimatedTotalNewSFR": 44000,
+      "estimatedTotalMultiFamily": 33440,
+      "transportationImpactFee": 12320,
+      "parkImpactFee": 4400,
+      "waterCapacityFee": 8800,
+      "sewerCapacityFee": 7040,
+      "affordableHousingInLieu": 6160
+    }
+  },
+  {
+    "name": "Irvine",
+    "county": "Orange",
+    "status": "success",
+    "population": 307670,
+    "fees": {
+      "estimatedTotalNewSFR": 68000,
+      "estimatedTotalMultiFamily": 51680,
+      "transportationImpactFee": 19040,
+      "parkImpactFee": 6800,
+      "waterCapacityFee": 13600,
+      "sewerCapacityFee": 10880,
+      "affordableHousingInLieu": 9520
+    }
+  },
+  {
+    "name": "Huntington Beach",
+    "county": "Orange",
+    "status": "success",
+    "population": 198711,
+    "fees": {
+      "estimatedTotalNewSFR": 52000,
+      "estimatedTotalMultiFamily": 39520,
+      "transportationImpactFee": 14560,
+      "parkImpactFee": 5200,
+      "waterCapacityFee": 10400,
+      "sewerCapacityFee": 8320,
+      "affordableHousingInLieu": 7280
+    }
+  },
+  {
+    "name": "Garden Grove",
+    "county": "Orange",
+    "status": "baseline",
+    "population": 171949,
+    "fees": {
+      "estimatedTotalNewSFR": 57750,
+      "estimatedTotalMultiFamily": 43890,
+      "transportationImpactFee": 16170,
+      "parkImpactFee": 5775,
+      "waterCapacityFee": 11550,
+      "sewerCapacityFee": 9240,
+      "affordableHousingInLieu": 8085
+    }
+  },
+  {
+    "name": "Orange",
+    "county": "Orange",
+    "status": "baseline",
+    "population": 139911,
+    "fees": {
+      "estimatedTotalNewSFR": 57750,
+      "estimatedTotalMultiFamily": 43890,
+      "transportationImpactFee": 16170,
+      "parkImpactFee": 5775,
+      "waterCapacityFee": 11550,
+      "sewerCapacityFee": 9240,
+      "affordableHousingInLieu": 8085
+    }
+  },
+  {
+    "name": "Fullerton",
+    "county": "Orange",
+    "status": "success",
+    "population": 143617,
+    "fees": {
+      "estimatedTotalNewSFR": 46000,
+      "estimatedTotalMultiFamily": 34960,
+      "transportationImpactFee": 12880,
+      "parkImpactFee": 4600,
+      "waterCapacityFee": 9200,
+      "sewerCapacityFee": 7360,
+      "affordableHousingInLieu": 6440
+    }
+  },
+  {
+    "name": "Costa Mesa",
+    "county": "Orange",
+    "status": "success",
+    "population": 111918,
+    "fees": {
+      "estimatedTotalNewSFR": 50000,
+      "estimatedTotalMultiFamily": 38000,
+      "transportationImpactFee": 14000,
+      "parkImpactFee": 5000,
+      "waterCapacityFee": 10000,
+      "sewerCapacityFee": 8000,
+      "affordableHousingInLieu": 7000
+    }
+  },
+  {
+    "name": "Mission Viejo",
+    "county": "Orange",
+    "status": "baseline",
+    "population": 94381,
+    "fees": {
+      "estimatedTotalNewSFR": 57750,
+      "estimatedTotalMultiFamily": 43890,
+      "transportationImpactFee": 16170,
+      "parkImpactFee": 5775,
+      "waterCapacityFee": 11550,
+      "sewerCapacityFee": 9240,
+      "affordableHousingInLieu": 8085
+    }
+  },
+  {
+    "name": "Newport Beach",
+    "county": "Orange",
+    "status": "success",
+    "population": 85239,
+    "fees": {
+      "estimatedTotalNewSFR": 65000,
+      "estimatedTotalMultiFamily": 49400,
+      "transportationImpactFee": 18200,
+      "parkImpactFee": 6500,
+      "waterCapacityFee": 13000,
+      "sewerCapacityFee": 10400,
+      "affordableHousingInLieu": 9100
+    }
+  },
+  {
+    "name": "San Francisco",
+    "county": "San Francisco",
+    "status": "success",
+    "population": 873965,
+    "fees": {
+      "estimatedTotalNewSFR": 108000,
+      "estimatedTotalMultiFamily": 82080,
+      "transportationImpactFee": 22000,
+      "parkImpactFee": 12000,
+      "waterCapacityFee": 18000,
+      "sewerCapacityFee": 14000,
+      "affordableHousingInLieu": 35000
+    }
+  },
+  {
+    "name": "Oakland",
+    "county": "Alameda",
+    "status": "success",
+    "population": 440646,
+    "fees": {
+      "estimatedTotalNewSFR": 68000,
+      "estimatedTotalMultiFamily": 51680,
+      "transportationImpactFee": 19040,
+      "parkImpactFee": 6800,
+      "waterCapacityFee": 13600,
+      "sewerCapacityFee": 10880,
+      "affordableHousingInLieu": 18000
+    }
+  },
+  {
+    "name": "Fremont",
+    "county": "Alameda",
+    "status": "success",
+    "population": 230504,
+    "fees": {
+      "estimatedTotalNewSFR": 74000,
+      "estimatedTotalMultiFamily": 56240,
+      "transportationImpactFee": 20720,
+      "parkImpactFee": 7400,
+      "waterCapacityFee": 14800,
+      "sewerCapacityFee": 11840,
+      "affordableHousingInLieu": 10360
+    }
+  },
+  {
+    "name": "Hayward",
+    "county": "Alameda",
+    "status": "success",
+    "population": 162954,
+    "fees": {
+      "estimatedTotalNewSFR": 62000,
+      "estimatedTotalMultiFamily": 47120,
+      "transportationImpactFee": 17360,
+      "parkImpactFee": 6200,
+      "waterCapacityFee": 12400,
+      "sewerCapacityFee": 9920,
+      "affordableHousingInLieu": 8680
+    }
+  },
+  {
+    "name": "Berkeley",
+    "county": "Alameda",
+    "status": "success",
+    "population": 124321,
+    "fees": {
+      "estimatedTotalNewSFR": 82000,
+      "estimatedTotalMultiFamily": 62320,
+      "transportationImpactFee": 22960,
+      "parkImpactFee": 8200,
+      "waterCapacityFee": 16400,
+      "sewerCapacityFee": 13120,
+      "affordableHousingInLieu": 22000
+    }
+  },
+  {
+    "name": "San Leandro",
+    "county": "Alameda",
+    "status": "success",
+    "population": 90940,
+    "fees": {
+      "estimatedTotalNewSFR": 58000,
+      "estimatedTotalMultiFamily": 44080,
+      "transportationImpactFee": 16240,
+      "parkImpactFee": 5800,
+      "waterCapacityFee": 11600,
+      "sewerCapacityFee": 9280,
+      "affordableHousingInLieu": 8120
+    }
+  },
+  {
+    "name": "Livermore",
+    "county": "Alameda",
+    "status": "success",
+    "population": 95072,
+    "fees": {
+      "estimatedTotalNewSFR": 72000,
+      "estimatedTotalMultiFamily": 54720,
+      "transportationImpactFee": 20160,
+      "parkImpactFee": 7200,
+      "waterCapacityFee": 14400,
+      "sewerCapacityFee": 11520,
+      "affordableHousingInLieu": 10080
+    }
+  },
+  {
+    "name": "Pleasanton",
+    "county": "Alameda",
+    "status": "success",
+    "population": 79871,
+    "fees": {
+      "estimatedTotalNewSFR": 96000,
+      "estimatedTotalMultiFamily": 72960,
+      "transportationImpactFee": 26880,
+      "parkImpactFee": 9600,
+      "waterCapacityFee": 19200,
+      "sewerCapacityFee": 15360,
+      "affordableHousingInLieu": 13440
+    }
+  },
+  {
+    "name": "Dublin",
+    "county": "Alameda",
+    "status": "success",
+    "population": 72589,
+    "fees": {
+      "estimatedTotalNewSFR": 94000,
+      "estimatedTotalMultiFamily": 71440,
+      "transportationImpactFee": 26320,
+      "parkImpactFee": 9400,
+      "waterCapacityFee": 18800,
+      "sewerCapacityFee": 15040,
+      "affordableHousingInLieu": 13160
+    }
+  },
+  {
+    "name": "San Jose",
+    "county": "Santa Clara",
+    "status": "success",
+    "population": 1013240,
+    "fees": {
+      "estimatedTotalNewSFR": 68000,
+      "estimatedTotalMultiFamily": 51680,
+      "transportationImpactFee": 24000,
+      "parkImpactFee": 6800,
+      "waterCapacityFee": 13600,
+      "sewerCapacityFee": 10880,
+      "affordableHousingInLieu": 12000
+    }
+  },
+  {
+    "name": "Sunnyvale",
+    "county": "Santa Clara",
+    "status": "success",
+    "population": 152258,
+    "fees": {
+      "estimatedTotalNewSFR": 82000,
+      "estimatedTotalMultiFamily": 62320,
+      "transportationImpactFee": 22960,
+      "parkImpactFee": 8200,
+      "waterCapacityFee": 16400,
+      "sewerCapacityFee": 13120,
+      "affordableHousingInLieu": 11480
+    }
+  },
+  {
+    "name": "Santa Clara",
+    "county": "Santa Clara",
+    "status": "success",
+    "population": 127647,
+    "fees": {
+      "estimatedTotalNewSFR": 72000,
+      "estimatedTotalMultiFamily": 54720,
+      "transportationImpactFee": 20160,
+      "parkImpactFee": 7200,
+      "waterCapacityFee": 14400,
+      "sewerCapacityFee": 11520,
+      "affordableHousingInLieu": 10080
+    }
+  },
+  {
+    "name": "Mountain View",
+    "county": "Santa Clara",
+    "status": "success",
+    "population": 82376,
+    "fees": {
+      "estimatedTotalNewSFR": 108000,
+      "estimatedTotalMultiFamily": 82080,
+      "transportationImpactFee": 30240,
+      "parkImpactFee": 10800,
+      "waterCapacityFee": 21600,
+      "sewerCapacityFee": 17280,
+      "affordableHousingInLieu": 15120
+    }
+  },
+  {
+    "name": "Palo Alto",
+    "county": "Santa Clara",
+    "status": "success",
+    "population": 68572,
+    "fees": {
+      "estimatedTotalNewSFR": 148000,
+      "estimatedTotalMultiFamily": 112480,
+      "transportationImpactFee": 41440,
+      "parkImpactFee": 14800,
+      "waterCapacityFee": 29600,
+      "sewerCapacityFee": 23680,
+      "affordableHousingInLieu": 45000
+    }
+  },
+  {
+    "name": "Cupertino",
+    "county": "Santa Clara",
+    "status": "success",
+    "population": 60000,
+    "fees": {
+      "estimatedTotalNewSFR": 88000,
+      "estimatedTotalMultiFamily": 66880,
+      "transportationImpactFee": 24640,
+      "parkImpactFee": 8800,
+      "waterCapacityFee": 17600,
+      "sewerCapacityFee": 14080,
+      "affordableHousingInLieu": 12320
+    }
+  },
+  {
+    "name": "Milpitas",
+    "county": "Santa Clara",
+    "status": "success",
+    "population": 75893,
+    "fees": {
+      "estimatedTotalNewSFR": 66000,
+      "estimatedTotalMultiFamily": 50160,
+      "transportationImpactFee": 18480,
+      "parkImpactFee": 6600,
+      "waterCapacityFee": 13200,
+      "sewerCapacityFee": 10560,
+      "affordableHousingInLieu": 9240
+    }
+  },
+  {
+    "name": "Gilroy",
+    "county": "Santa Clara",
+    "status": "success",
+    "population": 60165,
+    "fees": {
+      "estimatedTotalNewSFR": 52000,
+      "estimatedTotalMultiFamily": 39520,
+      "transportationImpactFee": 14560,
+      "parkImpactFee": 5200,
+      "waterCapacityFee": 10400,
+      "sewerCapacityFee": 8320,
+      "affordableHousingInLieu": 7280
+    }
+  },
+  {
+    "name": "Concord",
+    "county": "Contra Costa",
+    "status": "success",
+    "population": 129295,
+    "fees": {
+      "estimatedTotalNewSFR": 62000,
+      "estimatedTotalMultiFamily": 47120,
+      "transportationImpactFee": 17360,
+      "parkImpactFee": 6200,
+      "waterCapacityFee": 12400,
+      "sewerCapacityFee": 9920,
+      "affordableHousingInLieu": 8680
+    }
+  },
+  {
+    "name": "Richmond",
+    "county": "Contra Costa",
+    "status": "success",
+    "population": 116448,
+    "fees": {
+      "estimatedTotalNewSFR": 48000,
+      "estimatedTotalMultiFamily": 36480,
+      "transportationImpactFee": 13440,
+      "parkImpactFee": 4800,
+      "waterCapacityFee": 9600,
+      "sewerCapacityFee": 7680,
+      "affordableHousingInLieu": 6720
+    }
+  },
+  {
+    "name": "Antioch",
+    "county": "Contra Costa",
+    "status": "success",
+    "population": 113619,
+    "fees": {
+      "estimatedTotalNewSFR": 54000,
+      "estimatedTotalMultiFamily": 41040,
+      "transportationImpactFee": 15120,
+      "parkImpactFee": 5400,
+      "waterCapacityFee": 10800,
+      "sewerCapacityFee": 8640,
+      "affordableHousingInLieu": 7560
+    }
+  },
+  {
+    "name": "Walnut Creek",
+    "county": "Contra Costa",
+    "status": "success",
+    "population": 70380,
+    "fees": {
+      "estimatedTotalNewSFR": 68000,
+      "estimatedTotalMultiFamily": 51680,
+      "transportationImpactFee": 19040,
+      "parkImpactFee": 6800,
+      "waterCapacityFee": 13600,
+      "sewerCapacityFee": 10880,
+      "affordableHousingInLieu": 9520
+    }
+  },
+  {
+    "name": "San Ramon",
+    "county": "Contra Costa",
+    "status": "success",
+    "population": 84605,
+    "fees": {
+      "estimatedTotalNewSFR": 78000,
+      "estimatedTotalMultiFamily": 59280,
+      "transportationImpactFee": 21840,
+      "parkImpactFee": 7800,
+      "waterCapacityFee": 15600,
+      "sewerCapacityFee": 12480,
+      "affordableHousingInLieu": 10920
+    }
+  },
+  {
+    "name": "Daly City",
+    "county": "San Mateo",
+    "status": "success",
+    "population": 101390,
+    "fees": {
+      "estimatedTotalNewSFR": 75000,
+      "estimatedTotalMultiFamily": 57000,
+      "transportationImpactFee": 21000,
+      "parkImpactFee": 7500,
+      "waterCapacityFee": 15000,
+      "sewerCapacityFee": 12000,
+      "affordableHousingInLieu": 10500
+    }
+  },
+  {
+    "name": "San Mateo",
+    "county": "San Mateo",
+    "status": "success",
+    "population": 104430,
+    "fees": {
+      "estimatedTotalNewSFR": 85000,
+      "estimatedTotalMultiFamily": 64600,
+      "transportationImpactFee": 23800,
+      "parkImpactFee": 8500,
+      "waterCapacityFee": 17000,
+      "sewerCapacityFee": 13600,
+      "affordableHousingInLieu": 11900
+    }
+  },
+  {
+    "name": "Redwood City",
+    "county": "San Mateo",
+    "status": "success",
+    "population": 84293,
+    "fees": {
+      "estimatedTotalNewSFR": 92000,
+      "estimatedTotalMultiFamily": 69920,
+      "transportationImpactFee": 25760,
+      "parkImpactFee": 9200,
+      "waterCapacityFee": 18400,
+      "sewerCapacityFee": 14720,
+      "affordableHousingInLieu": 12880
+    }
+  },
+  {
+    "name": "Napa",
+    "county": "Napa",
+    "status": "success",
+    "population": 80915,
+    "fees": {
+      "estimatedTotalNewSFR": 65000,
+      "estimatedTotalMultiFamily": 49400,
+      "transportationImpactFee": 18200,
+      "parkImpactFee": 6500,
+      "waterCapacityFee": 13000,
+      "sewerCapacityFee": 10400,
+      "affordableHousingInLieu": 9100
+    }
+  },
+  {
+    "name": "Vallejo",
+    "county": "Solano",
+    "status": "success",
+    "population": 124482,
+    "fees": {
+      "estimatedTotalNewSFR": 38000,
+      "estimatedTotalMultiFamily": 28880,
+      "transportationImpactFee": 10640,
+      "parkImpactFee": 3800,
+      "waterCapacityFee": 7600,
+      "sewerCapacityFee": 6080,
+      "affordableHousingInLieu": 5320
+    }
+  },
+  {
+    "name": "Fairfield",
+    "county": "Solano",
+    "status": "success",
+    "population": 122212,
+    "fees": {
+      "estimatedTotalNewSFR": 40000,
+      "estimatedTotalMultiFamily": 30400,
+      "transportationImpactFee": 11200,
+      "parkImpactFee": 4000,
+      "waterCapacityFee": 8000,
+      "sewerCapacityFee": 6400,
+      "affordableHousingInLieu": 5600
+    }
+  },
+  {
+    "name": "Vacaville",
+    "county": "Solano",
+    "status": "success",
+    "population": 103682,
+    "fees": {
+      "estimatedTotalNewSFR": 36000,
+      "estimatedTotalMultiFamily": 27360,
+      "transportationImpactFee": 10080,
+      "parkImpactFee": 3600,
+      "waterCapacityFee": 7200,
+      "sewerCapacityFee": 5760,
+      "affordableHousingInLieu": 5040
+    }
+  },
+  {
+    "name": "Santa Rosa",
+    "county": "Sonoma",
+    "status": "success",
+    "population": 178127,
+    "fees": {
+      "estimatedTotalNewSFR": 58000,
+      "estimatedTotalMultiFamily": 44080,
+      "transportationImpactFee": 16240,
+      "parkImpactFee": 5800,
+      "waterCapacityFee": 11600,
+      "sewerCapacityFee": 9280,
+      "affordableHousingInLieu": 8120
+    }
+  },
+  {
+    "name": "Petaluma",
+    "county": "Sonoma",
+    "status": "success",
+    "population": 60427,
+    "fees": {
+      "estimatedTotalNewSFR": 52000,
+      "estimatedTotalMultiFamily": 39520,
+      "transportationImpactFee": 14560,
+      "parkImpactFee": 5200,
+      "waterCapacityFee": 10400,
+      "sewerCapacityFee": 8320,
+      "affordableHousingInLieu": 7280
+    }
+  },
+  {
+    "name": "Sacramento",
+    "county": "Sacramento",
+    "status": "success",
+    "population": 513624,
+    "fees": {
+      "estimatedTotalNewSFR": 28000,
+      "estimatedTotalMultiFamily": 21280,
+      "transportationImpactFee": 7840,
+      "parkImpactFee": 2800,
+      "waterCapacityFee": 5600,
+      "sewerCapacityFee": 4480,
+      "affordableHousingInLieu": 3920
+    }
+  },
+  {
+    "name": "Elk Grove",
+    "county": "Sacramento",
+    "status": "success",
+    "population": 176124,
+    "fees": {
+      "estimatedTotalNewSFR": 32000,
+      "estimatedTotalMultiFamily": 24320,
+      "transportationImpactFee": 8960,
+      "parkImpactFee": 3200,
+      "waterCapacityFee": 6400,
+      "sewerCapacityFee": 5120,
+      "affordableHousingInLieu": 4480
+    }
+  },
+  {
+    "name": "Roseville",
+    "county": "Placer",
+    "status": "success",
+    "population": 147773,
+    "fees": {
+      "estimatedTotalNewSFR": 42000,
+      "estimatedTotalMultiFamily": 31920,
+      "transportationImpactFee": 11760,
+      "parkImpactFee": 4200,
+      "waterCapacityFee": 8400,
+      "sewerCapacityFee": 6720,
+      "affordableHousingInLieu": 5880
+    }
+  },
+  {
+    "name": "Citrus Heights",
+    "county": "Sacramento",
+    "status": "baseline",
+    "population": 87796,
+    "fees": {
+      "estimatedTotalNewSFR": 17850,
+      "estimatedTotalMultiFamily": 13566,
+      "transportationImpactFee": 4998,
+      "parkImpactFee": 1785,
+      "waterCapacityFee": 3570,
+      "sewerCapacityFee": 2856,
+      "affordableHousingInLieu": 2499
+    }
+  },
+  {
+    "name": "Folsom",
+    "county": "Sacramento",
+    "status": "success",
+    "population": 79117,
+    "fees": {
+      "estimatedTotalNewSFR": 38000,
+      "estimatedTotalMultiFamily": 28880,
+      "transportationImpactFee": 10640,
+      "parkImpactFee": 3800,
+      "waterCapacityFee": 7600,
+      "sewerCapacityFee": 6080,
+      "affordableHousingInLieu": 5320
+    }
+  },
+  {
+    "name": "Rancho Cordova",
+    "county": "Sacramento",
+    "status": "baseline",
+    "population": 75010,
+    "fees": {
+      "estimatedTotalNewSFR": 17850,
+      "estimatedTotalMultiFamily": 13566,
+      "transportationImpactFee": 4998,
+      "parkImpactFee": 1785,
+      "waterCapacityFee": 3570,
+      "sewerCapacityFee": 2856,
+      "affordableHousingInLieu": 2499
+    }
+  },
+  {
+    "name": "Rocklin",
+    "county": "Placer",
+    "status": "baseline",
+    "population": 72185,
+    "fees": {
+      "estimatedTotalNewSFR": 27200,
+      "estimatedTotalMultiFamily": 20672,
+      "transportationImpactFee": 7616,
+      "parkImpactFee": 2720,
+      "waterCapacityFee": 5440,
+      "sewerCapacityFee": 4352,
+      "affordableHousingInLieu": 3808
+    }
+  },
+  {
+    "name": "West Sacramento",
+    "county": "Yolo",
+    "status": "baseline",
+    "population": 56327,
+    "fees": {
+      "estimatedTotalNewSFR": 23800,
+      "estimatedTotalMultiFamily": 18088,
+      "transportationImpactFee": 6664,
+      "parkImpactFee": 2380,
+      "waterCapacityFee": 4760,
+      "sewerCapacityFee": 3808,
+      "affordableHousingInLieu": 3332
+    }
+  },
+  {
+    "name": "Davis",
+    "county": "Yolo",
+    "status": "success",
+    "population": 68111,
+    "fees": {
+      "estimatedTotalNewSFR": 45000,
+      "estimatedTotalMultiFamily": 34200,
+      "transportationImpactFee": 12600,
+      "parkImpactFee": 4500,
+      "waterCapacityFee": 9000,
+      "sewerCapacityFee": 7200,
+      "affordableHousingInLieu": 12000
+    }
+  },
+  {
+    "name": "Yuba City",
+    "county": "Sutter",
+    "status": "baseline",
+    "population": 67416,
+    "fees": {
+      "estimatedTotalNewSFR": 11900,
+      "estimatedTotalMultiFamily": 9044,
+      "transportationImpactFee": 3332,
+      "parkImpactFee": 1190,
+      "waterCapacityFee": 2380,
+      "sewerCapacityFee": 1904,
+      "affordableHousingInLieu": 1666
+    }
+  },
+  {
+    "name": "San Diego",
+    "county": "San Diego",
+    "status": "success",
+    "population": 1386932,
+    "fees": {
+      "estimatedTotalNewSFR": 48000,
+      "estimatedTotalMultiFamily": 36480,
+      "transportationImpactFee": 16000,
+      "parkImpactFee": 4800,
+      "waterCapacityFee": 9600,
+      "sewerCapacityFee": 7680,
+      "affordableHousingInLieu": 6720
+    }
+  },
+  {
+    "name": "Chula Vista",
+    "county": "San Diego",
+    "status": "success",
+    "population": 275487,
+    "fees": {
+      "estimatedTotalNewSFR": 44000,
+      "estimatedTotalMultiFamily": 33440,
+      "transportationImpactFee": 12320,
+      "parkImpactFee": 4400,
+      "waterCapacityFee": 8800,
+      "sewerCapacityFee": 7040,
+      "affordableHousingInLieu": 6160
+    }
+  },
+  {
+    "name": "Oceanside",
+    "county": "San Diego",
+    "status": "success",
+    "population": 174648,
+    "fees": {
+      "estimatedTotalNewSFR": 40000,
+      "estimatedTotalMultiFamily": 30400,
+      "transportationImpactFee": 11200,
+      "parkImpactFee": 4000,
+      "waterCapacityFee": 8000,
+      "sewerCapacityFee": 6400,
+      "affordableHousingInLieu": 5600
+    }
+  },
+  {
+    "name": "Escondido",
+    "county": "San Diego",
+    "status": "success",
+    "population": 151038,
+    "fees": {
+      "estimatedTotalNewSFR": 38000,
+      "estimatedTotalMultiFamily": 28880,
+      "transportationImpactFee": 10640,
+      "parkImpactFee": 3800,
+      "waterCapacityFee": 7600,
+      "sewerCapacityFee": 6080,
+      "affordableHousingInLieu": 5320
+    }
+  },
+  {
+    "name": "El Cajon",
+    "county": "San Diego",
+    "status": "baseline",
+    "population": 103982,
+    "fees": {
+      "estimatedTotalNewSFR": 44100,
+      "estimatedTotalMultiFamily": 33516,
+      "transportationImpactFee": 12348,
+      "parkImpactFee": 4410,
+      "waterCapacityFee": 8820,
+      "sewerCapacityFee": 7056,
+      "affordableHousingInLieu": 6174
+    }
+  },
+  {
+    "name": "Vista",
+    "county": "San Diego",
+    "status": "baseline",
+    "population": 101838,
+    "fees": {
+      "estimatedTotalNewSFR": 44100,
+      "estimatedTotalMultiFamily": 33516,
+      "transportationImpactFee": 12348,
+      "parkImpactFee": 4410,
+      "waterCapacityFee": 8820,
+      "sewerCapacityFee": 7056,
+      "affordableHousingInLieu": 6174
+    }
+  },
+  {
+    "name": "Carlsbad",
+    "county": "San Diego",
+    "status": "success",
+    "population": 115382,
+    "fees": {
+      "estimatedTotalNewSFR": 62000,
+      "estimatedTotalMultiFamily": 47120,
+      "transportationImpactFee": 17360,
+      "parkImpactFee": 6200,
+      "waterCapacityFee": 12400,
+      "sewerCapacityFee": 9920,
+      "affordableHousingInLieu": 8680
+    }
+  },
+  {
+    "name": "San Marcos",
+    "county": "San Diego",
+    "status": "baseline",
+    "population": 97702,
+    "fees": {
+      "estimatedTotalNewSFR": 44100,
+      "estimatedTotalMultiFamily": 33516,
+      "transportationImpactFee": 12348,
+      "parkImpactFee": 4410,
+      "waterCapacityFee": 8820,
+      "sewerCapacityFee": 7056,
+      "affordableHousingInLieu": 6174
+    }
+  },
+  {
+    "name": "Riverside",
+    "county": "Riverside",
+    "status": "success",
+    "population": 314998,
+    "fees": {
+      "estimatedTotalNewSFR": 32000,
+      "estimatedTotalMultiFamily": 24320,
+      "transportationImpactFee": 8960,
+      "parkImpactFee": 3200,
+      "waterCapacityFee": 6400,
+      "sewerCapacityFee": 5120,
+      "affordableHousingInLieu": 4480
+    }
+  },
+  {
+    "name": "San Bernardino",
+    "county": "San Bernardino",
+    "status": "success",
+    "population": 222101,
+    "fees": {
+      "estimatedTotalNewSFR": 22000,
+      "estimatedTotalMultiFamily": 16720,
+      "transportationImpactFee": 6160,
+      "parkImpactFee": 2200,
+      "waterCapacityFee": 4400,
+      "sewerCapacityFee": 3520,
+      "affordableHousingInLieu": 3080
+    }
+  },
+  {
+    "name": "Fontana",
+    "county": "San Bernardino",
+    "status": "success",
+    "population": 214547,
+    "fees": {
+      "estimatedTotalNewSFR": 26000,
+      "estimatedTotalMultiFamily": 19760,
+      "transportationImpactFee": 7280,
+      "parkImpactFee": 2600,
+      "waterCapacityFee": 5200,
+      "sewerCapacityFee": 4160,
+      "affordableHousingInLieu": 3640
+    }
+  },
+  {
+    "name": "Rancho Cucamonga",
+    "county": "San Bernardino",
+    "status": "success",
+    "population": 177603,
+    "fees": {
+      "estimatedTotalNewSFR": 32000,
+      "estimatedTotalMultiFamily": 24320,
+      "transportationImpactFee": 8960,
+      "parkImpactFee": 3200,
+      "waterCapacityFee": 6400,
+      "sewerCapacityFee": 5120,
+      "affordableHousingInLieu": 4480
+    }
+  },
+  {
+    "name": "Ontario",
+    "county": "San Bernardino",
+    "status": "success",
+    "population": 175265,
+    "fees": {
+      "estimatedTotalNewSFR": 28000,
+      "estimatedTotalMultiFamily": 21280,
+      "transportationImpactFee": 7840,
+      "parkImpactFee": 2800,
+      "waterCapacityFee": 5600,
+      "sewerCapacityFee": 4480,
+      "affordableHousingInLieu": 3920
+    }
+  },
+  {
+    "name": "Moreno Valley",
+    "county": "Riverside",
+    "status": "success",
+    "population": 208634,
+    "fees": {
+      "estimatedTotalNewSFR": 28000,
+      "estimatedTotalMultiFamily": 21280,
+      "transportationImpactFee": 7840,
+      "parkImpactFee": 2800,
+      "waterCapacityFee": 5600,
+      "sewerCapacityFee": 4480,
+      "affordableHousingInLieu": 3920
+    }
+  },
+  {
+    "name": "Corona",
+    "county": "Riverside",
+    "status": "success",
+    "population": 169868,
+    "fees": {
+      "estimatedTotalNewSFR": 35000,
+      "estimatedTotalMultiFamily": 26600,
+      "transportationImpactFee": 9800,
+      "parkImpactFee": 3500,
+      "waterCapacityFee": 7000,
+      "sewerCapacityFee": 5600,
+      "affordableHousingInLieu": 4900
+    }
+  },
+  {
+    "name": "Victorville",
+    "county": "San Bernardino",
+    "status": "baseline",
+    "population": 134810,
+    "fees": {
+      "estimatedTotalNewSFR": 18700,
+      "estimatedTotalMultiFamily": 14212,
+      "transportationImpactFee": 5236,
+      "parkImpactFee": 1870,
+      "waterCapacityFee": 3740,
+      "sewerCapacityFee": 2992,
+      "affordableHousingInLieu": 2618
+    }
+  },
+  {
+    "name": "Temecula",
+    "county": "Riverside",
+    "status": "success",
+    "population": 110003,
+    "fees": {
+      "estimatedTotalNewSFR": 38000,
+      "estimatedTotalMultiFamily": 28880,
+      "transportationImpactFee": 10640,
+      "parkImpactFee": 3800,
+      "waterCapacityFee": 7600,
+      "sewerCapacityFee": 6080,
+      "affordableHousingInLieu": 5320
+    }
+  },
+  {
+    "name": "Murrieta",
+    "county": "Riverside",
+    "status": "success",
+    "population": 117474,
+    "fees": {
+      "estimatedTotalNewSFR": 36000,
+      "estimatedTotalMultiFamily": 27360,
+      "transportationImpactFee": 10080,
+      "parkImpactFee": 3600,
+      "waterCapacityFee": 7200,
+      "sewerCapacityFee": 5760,
+      "affordableHousingInLieu": 5040
+    }
+  },
+  {
+    "name": "Rialto",
+    "county": "San Bernardino",
+    "status": "baseline",
+    "population": 103526,
+    "fees": {
+      "estimatedTotalNewSFR": 18700,
+      "estimatedTotalMultiFamily": 14212,
+      "transportationImpactFee": 5236,
+      "parkImpactFee": 1870,
+      "waterCapacityFee": 3740,
+      "sewerCapacityFee": 2992,
+      "affordableHousingInLieu": 2618
+    }
+  },
+  {
+    "name": "Hesperia",
+    "county": "San Bernardino",
+    "status": "baseline",
+    "population": 100823,
+    "fees": {
+      "estimatedTotalNewSFR": 18700,
+      "estimatedTotalMultiFamily": 14212,
+      "transportationImpactFee": 5236,
+      "parkImpactFee": 1870,
+      "waterCapacityFee": 3740,
+      "sewerCapacityFee": 2992,
+      "affordableHousingInLieu": 2618
+    }
+  },
+  {
+    "name": "Indio",
+    "county": "Riverside",
+    "status": "baseline",
+    "population": 91812,
+    "fees": {
+      "estimatedTotalNewSFR": 23800,
+      "estimatedTotalMultiFamily": 18088,
+      "transportationImpactFee": 6664,
+      "parkImpactFee": 2380,
+      "waterCapacityFee": 4760,
+      "sewerCapacityFee": 3808,
+      "affordableHousingInLieu": 3332
+    }
+  },
+  {
+    "name": "Menifee",
+    "county": "Riverside",
+    "status": "baseline",
+    "population": 102527,
+    "fees": {
+      "estimatedTotalNewSFR": 23800,
+      "estimatedTotalMultiFamily": 18088,
+      "transportationImpactFee": 6664,
+      "parkImpactFee": 2380,
+      "waterCapacityFee": 4760,
+      "sewerCapacityFee": 3808,
+      "affordableHousingInLieu": 3332
+    }
+  },
+  {
+    "name": "Palm Springs",
+    "county": "Riverside",
+    "status": "baseline",
+    "population": 48573,
+    "fees": {
+      "estimatedTotalNewSFR": 23800,
+      "estimatedTotalMultiFamily": 18088,
+      "transportationImpactFee": 6664,
+      "parkImpactFee": 2380,
+      "waterCapacityFee": 4760,
+      "sewerCapacityFee": 3808,
+      "affordableHousingInLieu": 3332
+    }
+  },
+  {
+    "name": "Chino",
+    "county": "San Bernardino",
+    "status": "baseline",
+    "population": 91394,
+    "fees": {
+      "estimatedTotalNewSFR": 18700,
+      "estimatedTotalMultiFamily": 14212,
+      "transportationImpactFee": 5236,
+      "parkImpactFee": 1870,
+      "waterCapacityFee": 3740,
+      "sewerCapacityFee": 2992,
+      "affordableHousingInLieu": 2618
+    }
+  },
+  {
+    "name": "Fresno",
+    "county": "Fresno",
+    "status": "success",
+    "population": 542107,
+    "fees": {
+      "estimatedTotalNewSFR": 22000,
+      "estimatedTotalMultiFamily": 16720,
+      "transportationImpactFee": 6160,
+      "parkImpactFee": 2200,
+      "waterCapacityFee": 4400,
+      "sewerCapacityFee": 3520,
+      "affordableHousingInLieu": 3080
+    }
+  },
+  {
+    "name": "Clovis",
+    "county": "Fresno",
+    "status": "baseline",
+    "population": 123000,
+    "fees": {
+      "estimatedTotalNewSFR": 15300,
+      "estimatedTotalMultiFamily": 11628,
+      "transportationImpactFee": 4284,
+      "parkImpactFee": 1530,
+      "waterCapacityFee": 3060,
+      "sewerCapacityFee": 2448,
+      "affordableHousingInLieu": 2142
+    }
+  },
+  {
+    "name": "Stockton",
+    "county": "San Joaquin",
+    "status": "success",
+    "population": 311178,
+    "fees": {
+      "estimatedTotalNewSFR": 24000,
+      "estimatedTotalMultiFamily": 18240,
+      "transportationImpactFee": 6720,
+      "parkImpactFee": 2400,
+      "waterCapacityFee": 4800,
+      "sewerCapacityFee": 3840,
+      "affordableHousingInLieu": 3360
+    }
+  },
+  {
+    "name": "Modesto",
+    "county": "Stanislaus",
+    "status": "success",
+    "population": 218464,
+    "fees": {
+      "estimatedTotalNewSFR": 20000,
+      "estimatedTotalMultiFamily": 15200,
+      "transportationImpactFee": 5600,
+      "parkImpactFee": 2000,
+      "waterCapacityFee": 4000,
+      "sewerCapacityFee": 3200,
+      "affordableHousingInLieu": 2800
+    }
+  },
+  {
+    "name": "Bakersfield",
+    "county": "Kern",
+    "status": "success",
+    "population": 403455,
+    "fees": {
+      "estimatedTotalNewSFR": 18000,
+      "estimatedTotalMultiFamily": 13680,
+      "transportationImpactFee": 5040,
+      "parkImpactFee": 1800,
+      "waterCapacityFee": 3600,
+      "sewerCapacityFee": 2880,
+      "affordableHousingInLieu": 2520
+    }
+  },
+  {
+    "name": "Visalia",
+    "county": "Tulare",
+    "status": "success",
+    "population": 141384,
+    "fees": {
+      "estimatedTotalNewSFR": 16000,
+      "estimatedTotalMultiFamily": 12160,
+      "transportationImpactFee": 4480,
+      "parkImpactFee": 1600,
+      "waterCapacityFee": 3200,
+      "sewerCapacityFee": 2560,
+      "affordableHousingInLieu": 2240
+    }
+  },
+  {
+    "name": "Salinas",
+    "county": "Monterey",
+    "status": "success",
+    "population": 163542,
+    "fees": {
+      "estimatedTotalNewSFR": 50000,
+      "estimatedTotalMultiFamily": 38000,
+      "transportationImpactFee": 14000,
+      "parkImpactFee": 5000,
+      "waterCapacityFee": 10000,
+      "sewerCapacityFee": 8000,
+      "affordableHousingInLieu": 7000
+    }
+  },
+  {
+    "name": "Turlock",
+    "county": "Stanislaus",
+    "status": "success",
+    "population": 73305,
+    "fees": {
+      "estimatedTotalNewSFR": 18000,
+      "estimatedTotalMultiFamily": 13680,
+      "transportationImpactFee": 5040,
+      "parkImpactFee": 1800,
+      "waterCapacityFee": 3600,
+      "sewerCapacityFee": 2880,
+      "affordableHousingInLieu": 2520
+    }
+  },
+  {
+    "name": "Tracy",
+    "county": "San Joaquin",
+    "status": "baseline",
+    "population": 96305,
+    "fees": {
+      "estimatedTotalNewSFR": 16150,
+      "estimatedTotalMultiFamily": 12274,
+      "transportationImpactFee": 4522,
+      "parkImpactFee": 1615,
+      "waterCapacityFee": 3230,
+      "sewerCapacityFee": 2584,
+      "affordableHousingInLieu": 2261
+    }
+  },
+  {
+    "name": "Manteca",
+    "county": "San Joaquin",
+    "status": "baseline",
+    "population": 91000,
+    "fees": {
+      "estimatedTotalNewSFR": 16150,
+      "estimatedTotalMultiFamily": 12274,
+      "transportationImpactFee": 4522,
+      "parkImpactFee": 1615,
+      "waterCapacityFee": 3230,
+      "sewerCapacityFee": 2584,
+      "affordableHousingInLieu": 2261
+    }
+  },
+  {
+    "name": "Merced",
+    "county": "Merced",
+    "status": "success",
+    "population": 84123,
+    "fees": {
+      "estimatedTotalNewSFR": 18000,
+      "estimatedTotalMultiFamily": 13680,
+      "transportationImpactFee": 5040,
+      "parkImpactFee": 1800,
+      "waterCapacityFee": 3600,
+      "sewerCapacityFee": 2880,
+      "affordableHousingInLieu": 2520
+    }
+  },
+  {
+    "name": "Chico",
+    "county": "Butte",
+    "status": "baseline",
+    "population": 103079,
+    "fees": {
+      "estimatedTotalNewSFR": 15300,
+      "estimatedTotalMultiFamily": 11628,
+      "transportationImpactFee": 4284,
+      "parkImpactFee": 1530,
+      "waterCapacityFee": 3060,
+      "sewerCapacityFee": 2448,
+      "affordableHousingInLieu": 2142
+    }
+  },
+  {
+    "name": "Redding",
+    "county": "Shasta",
+    "status": "baseline",
+    "population": 93582,
+    "fees": {
+      "estimatedTotalNewSFR": 11900,
+      "estimatedTotalMultiFamily": 9044,
+      "transportationImpactFee": 3332,
+      "parkImpactFee": 1190,
+      "waterCapacityFee": 2380,
+      "sewerCapacityFee": 1904,
+      "affordableHousingInLieu": 1666
+    }
+  },
+  {
+    "name": "Santa Cruz",
+    "county": "Santa Cruz",
+    "status": "success",
+    "population": 65459,
+    "fees": {
+      "estimatedTotalNewSFR": 88000,
+      "estimatedTotalMultiFamily": 66880,
+      "transportationImpactFee": 24640,
+      "parkImpactFee": 8800,
+      "waterCapacityFee": 17600,
+      "sewerCapacityFee": 14080,
+      "affordableHousingInLieu": 24000
+    }
+  },
+  {
+    "name": "Santa Barbara",
+    "county": "Santa Barbara",
+    "status": "success",
+    "population": 91930,
+    "fees": {
+      "estimatedTotalNewSFR": 65000,
+      "estimatedTotalMultiFamily": 49400,
+      "transportationImpactFee": 18200,
+      "parkImpactFee": 6500,
+      "waterCapacityFee": 13000,
+      "sewerCapacityFee": 10400,
+      "affordableHousingInLieu": 9100
+    }
+  },
+  {
+    "name": "Santa Maria",
+    "county": "Santa Barbara",
+    "status": "success",
+    "population": 107600,
+    "fees": {
+      "estimatedTotalNewSFR": 44000,
+      "estimatedTotalMultiFamily": 33440,
+      "transportationImpactFee": 12320,
+      "parkImpactFee": 4400,
+      "waterCapacityFee": 8800,
+      "sewerCapacityFee": 7040,
+      "affordableHousingInLieu": 6160
+    }
+  },
+  {
+    "name": "San Luis Obispo",
+    "county": "San Luis Obispo",
+    "status": "success",
+    "population": 46467,
+    "fees": {
+      "estimatedTotalNewSFR": 58000,
+      "estimatedTotalMultiFamily": 44080,
+      "transportationImpactFee": 16240,
+      "parkImpactFee": 5800,
+      "waterCapacityFee": 11600,
+      "sewerCapacityFee": 9280,
+      "affordableHousingInLieu": 8120
+    }
+  }
+]
