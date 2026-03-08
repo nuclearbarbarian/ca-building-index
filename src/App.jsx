@@ -921,8 +921,24 @@ function HETooltipLabel() {
   );
 }
 
+// Carrying cost assumptions — commercial bridge/construction loan basis
+const CARRYING_LAND_SHARE  = 0.20;   // land as share of median home price
+const CARRYING_PREDEV_SOFT = 35000;  // arch, engineering, environmental, legal (per unit, CA avg)
+const CARRYING_LOAN_RATE   = 0.085;  // commercial construction loan rate (annualized)
+
+function calcCarryingCost(data) {
+  const landPerUnit  = (data.medianHomePrice || 600000) * CARRYING_LAND_SHARE;
+  const financedBasis = landPerUnit + CARRYING_PREDEV_SOFT;
+  return {
+    landPerUnit,
+    financedBasis,
+    cost: financedBasis * CARRYING_LOAN_RATE * ((data.permitDays || 90) / 365),
+  };
+}
+
 function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, onLoadScraper }) {
   const tier = getTier(data.composite);
+  const carry = calcCarryingCost(data);
   return (
     <div style={{ background:PDS.shadow, border:`1px solid ${PDS.mist}`, borderTop:`2px solid ${PDS.reactor}` }}>
       <div style={{ padding:'1rem', borderBottom:`1px solid ${PDS.fog}` }}>
@@ -971,6 +987,25 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
               </div>
             );
           })}
+        </div>
+
+        {/* ── Carrying Cost Estimate ─────────────────────────────────── */}
+        <div style={{ padding:'0.5rem 0.65rem', background:PDS.void,
+          border:`1px solid ${PDS.fog}`, borderLeft:`2px solid ${PDS.ember}`,
+          marginBottom:'0.6rem' }}>
+          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'baseline' }}>
+            <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
+              letterSpacing:'0.12em', color:PDS.oxide, textTransform:'uppercase' }}>
+              Carrying Cost / Unit
+            </span>
+            <DataVal color={PDS.ember} size="0.9rem">{fmtFull(carry.cost)}</DataVal>
+          </div>
+          <div style={{ marginTop:'0.3rem', display:'flex', gap:'0.8rem', flexWrap:'wrap',
+            fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.58rem', color:PDS.oxide }}>
+            <span>land+soft {fmtK(carry.financedBasis)}</span>
+            <span>· {(CARRYING_LOAN_RATE*100).toFixed(1)}% loan</span>
+            <span>· {data.permitDays}d</span>
+          </div>
         </div>
 
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'0.5rem',
