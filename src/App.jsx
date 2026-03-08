@@ -1119,6 +1119,7 @@ export default function CaliforniaBuildingIndex() {
   const [selectedCity,   setSelectedCity]   = useState(null);
   const [showSources,    setShowSources]    = useState(false);
   const [showUpload,     setShowUpload]     = useState(false);
+  const [showDataSources, setShowDataSources] = useState(false);
   const [activeMetro,    setActiveMetro]    = useState(null);
   const [scraperRecords, setScraperRecords] = useState(()=>{
     try { const s=localStorage.getItem('ca-fee-data'); return s?JSON.parse(s):defaultFeeData; } catch{return defaultFeeData;}
@@ -1243,7 +1244,64 @@ export default function CaliforniaBuildingIndex() {
       {/* ── MASTHEAD — Penney document-header: ink bg, white text ── */}
       <div style={{ background:NB.reactor, borderBottom:`2px solid ${NB.reactor}`,
         padding:'2rem 1.5rem 1.5rem', textAlign:'center' }}>
-        <div style={{ maxWidth:1200, margin:'0 auto' }}>
+        <div style={{ maxWidth:1200, margin:'0 auto', position:'relative' }}>
+
+          {/* Sources button — top right of masthead */}
+          <div style={{ position:'absolute', top:0, right:0 }}
+            onMouseEnter={()=>setShowDataSources(true)}
+            onMouseLeave={()=>setShowDataSources(false)}>
+            <button style={{
+              fontFamily:"'IBM Plex Mono','Consolas',monospace",
+              fontSize:'0.65rem', letterSpacing:'0.15em',
+              color:NB.oxide, background:'none',
+              border:`1px solid ${NB.oxide}50`,
+              padding:'4px 10px', textTransform:'uppercase',
+              cursor:'default', userSelect:'none',
+            }}>
+              Sources
+            </button>
+            {showDataSources&&(
+              <div style={{
+                position:'absolute', top:'100%', right:0, marginTop:4,
+                background:NB.void, border:`1px solid ${NB.fog}`,
+                borderLeft:`3px solid ${NB.electric}`,
+                padding:'0.75rem 1rem', width:360, zIndex:999,
+                boxShadow:'0 4px 16px rgba(26,26,26,.15)',
+                animation:'fadeUp .12s ease', textAlign:'left',
+              }}>
+                <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+                  fontSize:'0.6rem', letterSpacing:'0.2em', color:NB.oxide,
+                  textTransform:'uppercase', marginBottom:'0.6rem', borderBottom:`1px solid ${NB.fog}`,
+                  paddingBottom:'0.4rem' }}>
+                  Data Sources
+                </div>
+                {[
+                  { label:'HCD Annual Progress Reports', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Permit counts & housing production by jurisdiction' },
+                  { label:'Housing Element / SB 35 Status', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Housing element compliance & SB 35 eligibility determinations' },
+                  { label:'RHNA Progress Report', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Regional Housing Needs Allocation fulfillment by jurisdiction' },
+                  { label:'CA County Boundaries', org:'CA State GIS Open Data', url:'gis.data.ca.gov', desc:'GeoJSON county boundaries for the interactive map' },
+                  { label:'Baseline Jurisdiction Estimates', org:'Compiled — state & local sources', url:null, desc:'Permit timelines, CEQA risk, coastal/fire zone coverage, approval rates' },
+                  { label:'Municipal Development Fee Schedules', org:'City websites (scraped)', url:null, desc:'Impact fees for 120+ cities: transportation, park, water, sewer, affordable housing in-lieu' },
+                ].map((s,i)=>(
+                  <div key={i} style={{ paddingBottom:'0.55rem', marginBottom:'0.55rem',
+                    borderBottom:i<5?`1px solid ${NB.fog}30`:'none' }}>
+                    <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+                      fontSize:'0.68rem', color:NB.reactor, fontWeight:600, marginBottom:2 }}>
+                      {s.label}
+                    </div>
+                    <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace",
+                      fontSize:'0.57rem', color:NB.electric, marginBottom:2 }}>
+                      {s.org}{s.url?` · ${s.url}`:''}
+                    </div>
+                    <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+                      fontSize:'0.62rem', color:NB.fuel, fontStyle:'italic' }}>
+                      {s.desc}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
           <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.72rem',
             letterSpacing:'0.1em', color:NB.oxide, textTransform:'uppercase', marginBottom:'0.5rem' }}>
             California Housing Policy &bull; All 58 Counties &bull; 120+ Cities
