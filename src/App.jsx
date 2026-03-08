@@ -1053,8 +1053,8 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
             </DataVal>
           </div>
           <div>
-            <span style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
-              letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase' }}>Median Home Price </span>
+            <span title="Median Home Price" style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.6rem',
+              letterSpacing:'0.15em', color:PDS.oxide, textTransform:'uppercase', cursor:'help', borderBottom:`1px dotted ${PDS.oxide}` }}>MHP </span>
             <DataVal size="0.75rem">${(data.medianHomePrice/1000).toFixed(0)}K</DataVal>
           </div>
         </div>
