@@ -1246,7 +1246,7 @@ export default function CaliforniaBuildingIndex() {
         <div style={{ maxWidth:1200, margin:'0 auto' }}>
           <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.72rem',
             letterSpacing:'0.1em', color:NB.oxide, textTransform:'uppercase', marginBottom:'0.5rem' }}>
-            California Housing Policy &bull; All 58 Counties &bull; 130+ Cities
+            California Housing Policy &bull; All 58 Counties &bull; 120+ Cities
           </div>
           <h1 style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
             fontWeight:700, fontSize:'clamp(1.6rem,4vw,2.4rem)', color:NB.shadow,
