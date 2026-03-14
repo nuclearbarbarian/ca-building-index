@@ -1216,9 +1216,9 @@ function FeeUploadPanel({ onLoad, onClose }) {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// NB LOGO
+// FAI LOGO
 // ═══════════════════════════════════════════════════════════════
-function NbLogo({ height = 48 }) {
+function FaiLogo({ height = 48 }) {
   const width = Math.round(height * 1910 / 1003);
   return (
     <svg viewBox="0 0 1910 1003" xmlns="http://www.w3.org/2000/svg" width={width} height={height} style={{ display:'block' }}>
@@ -1375,7 +1375,7 @@ export default function CaliforniaBuildingIndex() {
 
           {/* NB logo — top left of masthead */}
           <div style={{ position:'absolute', top:0, left:0 }}>
-            <NbLogo height={48} />
+            <FaiLogo height={48} />
           </div>
 
           {/* Sources button — top right of masthead */}
