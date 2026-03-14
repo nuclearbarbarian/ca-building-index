@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import defaultFeeData from './data/feeData.json';
-import nbLogo from './nb-logo.png';
 
 // ═══════════════════════════════════════════════════════════════
 // PENNEY DESIGN SYSTEM TOKENS
@@ -1217,6 +1216,48 @@ function FeeUploadPanel({ onLoad, onClose }) {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// NB LOGO
+// ═══════════════════════════════════════════════════════════════
+function NbLogo({ size = 56 }) {
+  return (
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={size} height={size} style={{ display:'block' }}>
+      <rect width="200" height="200" fill="#000"/>
+      {/* Letters */}
+      <text x="6" y="152" fontFamily="Georgia,'Times New Roman',serif" fontSize="118" fontWeight="700" fill="#F0EAD6">N</text>
+      <text x="102" y="152" fontFamily="Georgia,'Times New Roman',serif" fontSize="118" fontWeight="700" fill="#F0EAD6">B</text>
+      {/* Sword 1 — blade upper-right, handle lower-left */}
+      <g transform="translate(100,90) rotate(45)">
+        <polygon points="0,-85 4,0 -4,0" fill="#F0EAD6"/>
+        <line x1="0" y1="-82" x2="0" y2="-5" stroke="#000" strokeWidth="1" opacity="0.35"/>
+        <rect x="-21" y="-5" width="42" height="10" rx="3" fill="#F0EAD6"/>
+        <ellipse cx="-21" cy="0" rx="6" ry="7" fill="#F0EAD6"/>
+        <ellipse cx="21" cy="0" rx="6" ry="7" fill="#F0EAD6"/>
+        <rect x="-3.5" y="5" width="7" height="55" rx="2" fill="#F0EAD6"/>
+        <line x1="-3.5" y1="15" x2="3.5" y2="15" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
+        <line x1="-3.5" y1="25" x2="3.5" y2="25" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
+        <line x1="-3.5" y1="35" x2="3.5" y2="35" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
+        <line x1="-3.5" y1="45" x2="3.5" y2="45" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
+        <ellipse cx="0" cy="68" rx="10" ry="9" fill="#F0EAD6"/>
+      </g>
+      {/* Sword 2 — blade upper-left, handle lower-right */}
+      <g transform="translate(100,90) rotate(-45)">
+        <polygon points="0,-85 4,0 -4,0" fill="#F0EAD6"/>
+        <line x1="0" y1="-82" x2="0" y2="-5" stroke="#000" strokeWidth="1" opacity="0.35"/>
+        <rect x="-21" y="-5" width="42" height="10" rx="3" fill="#F0EAD6"/>
+        <ellipse cx="-21" cy="0" rx="6" ry="7" fill="#F0EAD6"/>
+        <ellipse cx="21" cy="0" rx="6" ry="7" fill="#F0EAD6"/>
+        <rect x="-3.5" y="5" width="7" height="55" rx="2" fill="#F0EAD6"/>
+        <line x1="-3.5" y1="15" x2="3.5" y2="15" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
+        <line x1="-3.5" y1="25" x2="3.5" y2="25" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
+        <line x1="-3.5" y1="35" x2="3.5" y2="35" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
+        <line x1="-3.5" y1="45" x2="3.5" y2="45" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
+        <ellipse cx="0" cy="68" rx="10" ry="9" fill="#F0EAD6"/>
+      </g>
+    </svg>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
 // MAIN
 // ═══════════════════════════════════════════════════════════════
 export default function CaliforniaBuildingIndex() {
@@ -1360,7 +1401,7 @@ export default function CaliforniaBuildingIndex() {
 
           {/* NB logo — top left of masthead */}
           <div style={{ position:'absolute', top:0, left:0 }}>
-            <img src={nbLogo} alt="Nuclear Barbarians" style={{ height:56, width:56, display:'block' }} />
+            <NbLogo size={56} />
           </div>
 
           {/* Sources button — top right of masthead */}
