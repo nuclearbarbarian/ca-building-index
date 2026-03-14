@@ -1247,6 +1247,7 @@ export default function CaliforniaBuildingIndex() {
   const [showSources,    setShowSources]    = useState(false);
   const [showUpload,     setShowUpload]     = useState(false);
   const [showDataSources, setShowDataSources] = useState(false);
+  const [showFaiInfo,     setShowFaiInfo]     = useState(false);
   const [activeMetro,    setActiveMetro]    = useState(null);
   const [scraperRecords, setScraperRecords] = useState(()=>{
     try { const s=localStorage.getItem('ca-fee-data'); return s?JSON.parse(s):defaultFeeData; } catch{return defaultFeeData;}
@@ -1373,9 +1374,30 @@ export default function CaliforniaBuildingIndex() {
         padding:'2rem 1.5rem 1.5rem', textAlign:'center' }}>
         <div style={{ maxWidth:1200, margin:'0 auto', position:'relative' }}>
 
-          {/* NB logo — top left of masthead */}
-          <div style={{ position:'absolute', top:0, left:0 }}>
+          {/* FAI logo — top left of masthead */}
+          <div style={{ position:'absolute', top:0, left:0 }}
+            onMouseEnter={()=>setShowFaiInfo(true)}
+            onMouseLeave={()=>setShowFaiInfo(false)}>
             <FaiLogo height={48} />
+            {showFaiInfo&&(
+              <div style={{
+                position:'absolute', top:'100%', left:0, marginTop:4,
+                background:PDS.void, border:`1px solid ${PDS.fog}`,
+                borderLeft:`3px solid ${PDS.electric}`,
+                padding:'0.75rem 1rem', width:280, zIndex:999,
+                boxShadow:'0 4px 16px rgba(26,26,26,.15)',
+                animation:'fadeUp .12s ease', textAlign:'left',
+              }}>
+                <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
+                  fontSize:'0.68rem', color:PDS.fuel, lineHeight:1.6 }}>
+                  This is a Foundation for American Innovation project. Support this project and others like it here:{' '}
+                  <a href="https://www.thefai.org/donate" target="_blank" rel="noreferrer"
+                    style={{ color:PDS.electric, textDecoration:'underline' }}>
+                    thefai.org/donate
+                  </a>.
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Sources button — top right of masthead */}
