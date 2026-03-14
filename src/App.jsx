@@ -1216,43 +1216,17 @@ function FeeUploadPanel({ onLoad, onClose }) {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// NB LOGO
+// FAI LOGO
 // ═══════════════════════════════════════════════════════════════
-function NbLogo({ size = 56 }) {
+function FaiLogo({ height = 48 }) {
+  const width = Math.round(height * 1910 / 1003);
   return (
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={size} height={size} style={{ display:'block' }}>
-      <rect width="200" height="200" fill="#000"/>
-      {/* Letters */}
-      <text x="6" y="152" fontFamily="Georgia,'Times New Roman',serif" fontSize="118" fontWeight="700" fill="#F0EAD6">N</text>
-      <text x="102" y="152" fontFamily="Georgia,'Times New Roman',serif" fontSize="118" fontWeight="700" fill="#F0EAD6">B</text>
-      {/* Sword 1 — blade upper-right, handle lower-left */}
-      <g transform="translate(100,90) rotate(45)">
-        <polygon points="0,-85 4,0 -4,0" fill="#F0EAD6"/>
-        <line x1="0" y1="-82" x2="0" y2="-5" stroke="#000" strokeWidth="1" opacity="0.35"/>
-        <rect x="-21" y="-5" width="42" height="10" rx="3" fill="#F0EAD6"/>
-        <ellipse cx="-21" cy="0" rx="6" ry="7" fill="#F0EAD6"/>
-        <ellipse cx="21" cy="0" rx="6" ry="7" fill="#F0EAD6"/>
-        <rect x="-3.5" y="5" width="7" height="55" rx="2" fill="#F0EAD6"/>
-        <line x1="-3.5" y1="15" x2="3.5" y2="15" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
-        <line x1="-3.5" y1="25" x2="3.5" y2="25" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
-        <line x1="-3.5" y1="35" x2="3.5" y2="35" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
-        <line x1="-3.5" y1="45" x2="3.5" y2="45" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
-        <ellipse cx="0" cy="68" rx="10" ry="9" fill="#F0EAD6"/>
-      </g>
-      {/* Sword 2 — blade upper-left, handle lower-right */}
-      <g transform="translate(100,90) rotate(-45)">
-        <polygon points="0,-85 4,0 -4,0" fill="#F0EAD6"/>
-        <line x1="0" y1="-82" x2="0" y2="-5" stroke="#000" strokeWidth="1" opacity="0.35"/>
-        <rect x="-21" y="-5" width="42" height="10" rx="3" fill="#F0EAD6"/>
-        <ellipse cx="-21" cy="0" rx="6" ry="7" fill="#F0EAD6"/>
-        <ellipse cx="21" cy="0" rx="6" ry="7" fill="#F0EAD6"/>
-        <rect x="-3.5" y="5" width="7" height="55" rx="2" fill="#F0EAD6"/>
-        <line x1="-3.5" y1="15" x2="3.5" y2="15" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
-        <line x1="-3.5" y1="25" x2="3.5" y2="25" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
-        <line x1="-3.5" y1="35" x2="3.5" y2="35" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
-        <line x1="-3.5" y1="45" x2="3.5" y2="45" stroke="#000" strokeWidth="1.5" opacity="0.35"/>
-        <ellipse cx="0" cy="68" rx="10" ry="9" fill="#F0EAD6"/>
-      </g>
+    <svg viewBox="0 0 1910 1003" xmlns="http://www.w3.org/2000/svg" width={width} height={height} style={{ display:'block' }}>
+      <path fill="#fdfcf9" d="M426.01.6l407.96,500.92-407.96,500.92V.6h0Z"/>
+      <path fill="#fdfcf9" d="M0,.6l407.96,500.92L0,1002.43V.59h0Z"/>
+      <path fill="#fdfcf9" d="M1111.6,998.9v-472.9h147.97v-119.65h-147.97V131.44h167.88V1.82h-334.35v997.09h166.47Z"/>
+      <path fill="#fdfcf9" d="M1355.54,1.81l-106.71,997.09h149.39l27.03-273.49h99.6l25.61,273.49h156.5L1597.41,1.81h-241.87ZM1476.48,199.8l36.99,401.69h-76.83l39.84-401.69h0Z"/>
+      <path fill="#fdfcf9" d="M1739.27.38v998.51h170.73V.38h-170.73Z"/>
     </svg>
   );
 }
@@ -1401,7 +1375,7 @@ export default function CaliforniaBuildingIndex() {
 
           {/* NB logo — top left of masthead */}
           <div style={{ position:'absolute', top:0, left:0 }}>
-            <NbLogo size={56} />
+            <FaiLogo height={48} />
           </div>
 
           {/* Sources button — top right of masthead */}
