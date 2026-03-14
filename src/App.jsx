@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import defaultFeeData from './data/feeData.json';
+import nbLogo from './nb-logo.png';
 
 // ═══════════════════════════════════════════════════════════════
 // PENNEY DESIGN SYSTEM TOKENS
@@ -1356,6 +1357,11 @@ export default function CaliforniaBuildingIndex() {
       <div style={{ background:PDS.reactor, borderBottom:`2px solid ${PDS.reactor}`,
         padding:'2rem 1.5rem 1.5rem', textAlign:'center' }}>
         <div style={{ maxWidth:1200, margin:'0 auto', position:'relative' }}>
+
+          {/* NB logo — top left of masthead */}
+          <div style={{ position:'absolute', top:0, left:0 }}>
+            <img src={nbLogo} alt="Nuclear Barbarians" style={{ height:56, width:56, display:'block' }} />
+          </div>
 
           {/* Sources button — top right of masthead */}
           <div style={{ position:'absolute', top:0, right:0 }}
