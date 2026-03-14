@@ -1390,10 +1390,10 @@ export default function CaliforniaBuildingIndex() {
               }}>
                 <div style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
                   fontSize:'0.68rem', color:PDS.fuel, lineHeight:1.6 }}>
-                  This is a Foundation for American Innovation project. Support this project and others like it here:{' '}
+                  This is a Foundation for American Innovation project. Support this project and others like it{' '}
                   <a href="https://www.thefai.org/donate" target="_blank" rel="noreferrer"
                     style={{ color:PDS.electric, textDecoration:'underline' }}>
-                    thefai.org/donate
+                    here
                   </a>.
                 </div>
               </div>
