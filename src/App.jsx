@@ -1371,11 +1371,14 @@ export default function CaliforniaBuildingIndex() {
 
       {/* ── MASTHEAD — Penney document-header: ink bg, white text ── */}
       <div style={{ background:PDS.reactor, borderBottom:`2px solid ${PDS.reactor}`,
-        padding:'2rem 1.5rem 1.5rem', textAlign:'center' }}>
-        <div style={{ maxWidth:1200, margin:'0 auto', position:'relative' }}>
+        padding:'2rem 1.5rem 1.5rem' }}>
+        <div style={{ maxWidth:1200, margin:'0 auto' }}>
+
+          {/* Top row: logo left, sources right */}
+          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:'1rem' }}>
 
           {/* FAI logo — top left of masthead */}
-          <div style={{ position:'absolute', top:0, left:0 }}
+          <div style={{ position:'relative' }}
             onMouseEnter={()=>setShowFaiInfo(true)}
             onMouseLeave={()=>setShowFaiInfo(false)}>
             <FaiLogo height={48} />
@@ -1401,7 +1404,7 @@ export default function CaliforniaBuildingIndex() {
           </div>
 
           {/* Sources button — top right of masthead */}
-          <div style={{ position:'absolute', top:0, right:0 }}
+          <div style={{ position:'relative' }}
             onMouseEnter={()=>setShowDataSources(true)}
             onMouseLeave={()=>setShowDataSources(false)}>
             <button style={{
@@ -1459,6 +1462,10 @@ export default function CaliforniaBuildingIndex() {
               </div>
             )}
           </div>
+
+          </div>{/* end top flex row */}
+
+          <div style={{ textAlign:'center' }}>
           <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.72rem',
             letterSpacing:'0.1em', color:PDS.oxide, textTransform:'uppercase', marginBottom:'0.5rem' }}>
             California Housing Policy &bull; All 58 Counties &bull; 120+ Cities
@@ -1470,10 +1477,15 @@ export default function CaliforniaBuildingIndex() {
           </h1>
           <p style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.9rem',
             fontStyle:'italic', color:'#B8B8B8', maxWidth:580, lineHeight:1.6,
-            margin:'0 auto' }}>
+            margin:'0 auto 0.75rem' }}>
             Composite scoring of regulatory friction, fee burden, and permitting obstruction
             across California jurisdictions.
           </p>
+          <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.62rem',
+            letterSpacing:'0.12em', color:PDS.fog, textTransform:'uppercase' }}>
+            Last Updated: March 15, 2026
+          </div>
+          </div>{/* end centered title block */}
         </div>
       </div>
 
