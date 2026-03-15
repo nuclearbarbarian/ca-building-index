@@ -1477,10 +1477,14 @@ export default function CaliforniaBuildingIndex() {
           </h1>
           <p style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.9rem',
             fontStyle:'italic', color:'#B8B8B8', maxWidth:580, lineHeight:1.6,
-            margin:'0 auto' }}>
+            margin:'0 auto 0.75rem' }}>
             Composite scoring of regulatory friction, fee burden, and permitting obstruction
             across California jurisdictions.
           </p>
+          <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.62rem',
+            letterSpacing:'0.12em', color:PDS.fog, textTransform:'uppercase' }}>
+            Last Updated: March 15, 2026
+          </div>
           </div>{/* end centered title block */}
         </div>
       </div>
