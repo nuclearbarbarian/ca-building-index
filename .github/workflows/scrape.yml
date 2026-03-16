@@ -1,0 +1,67 @@
+name: Update Scraper Data
+
+on:
+  schedule:
+    # Weekly on Monday at 6:00 AM UTC (Sunday 10 PM PT)
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # Run fee scraper
+      - name: Run fee scraper
+        run: npm run scrape
+
+      # Run CEQA scraper
+      - name: Run CEQA scraper
+        run: npm run scrape:ceqa
+
+      # Bundle updated data
+      - name: Bundle scraper output
+        run: |
+          cp output/results.json src/data/feeData.json 2>/dev/null || echo "No fee data update"
+          cp output/ceqa-detail.json src/data/ceqaData.json 2>/dev/null || echo "No CEQA data update"
+
+      # Check if anything changed
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet src/data/; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      # Create PR if data changed
+      - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'data: update scraped fee and CEQA data'
+          title: 'Automated data update'
+          body: |
+            Weekly automated scraper run.
+
+            **Updated files:**
+            - `src/data/feeData.json` — fee scraper output
+            - `src/data/ceqaData.json` — CEQA detail scraper output
+
+            Review the diff to verify data quality before merging.
+          branch: automated/scraper-update
+          delete-branch: true

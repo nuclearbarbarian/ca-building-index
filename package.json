@@ -8,7 +8,8 @@
     "build":   "vite build",
     "preview": "vite preview",
     "scrape":  "node scraper/scrape.js",
-    "scrape:live": "node scraper/scrape.js --live"
+    "scrape:live": "node scraper/scrape.js --live",
+    "scrape:ceqa": "node scraper/scrape-ceqa.js"
   },
   "dependencies": {
     "react":     "^18.3.1",

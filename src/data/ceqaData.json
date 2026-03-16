@@ -1,0 +1,1575 @@
+[
+  {
+    "name": "Los Angeles",
+    "county": "Los Angeles",
+    "population": 3898747,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 220,
+      "categoricalExemptionRate": 0.35,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Long Beach",
+    "county": "Los Angeles",
+    "population": 466742,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 170,
+      "categoricalExemptionRate": 0.45,
+      "eirRate": 0.07,
+      "mitigatedNegDecRate": 0.24,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Glendale",
+    "county": "Los Angeles",
+    "population": 196543,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 160,
+      "categoricalExemptionRate": 0.48,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Santa Clarita",
+    "county": "Los Angeles",
+    "population": 228673,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 211,
+      "categoricalExemptionRate": 0.35,
+      "eirRate": 0.11,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Lancaster",
+    "county": "Los Angeles",
+    "population": 173516,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Palmdale",
+    "county": "Los Angeles",
+    "population": 169450,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Pomona",
+    "county": "Los Angeles",
+    "population": 151348,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Torrance",
+    "county": "Los Angeles",
+    "population": 147067,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Pasadena",
+    "county": "Los Angeles",
+    "population": 138699,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 180,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "El Monte",
+    "county": "Los Angeles",
+    "population": 113475,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Downey",
+    "county": "Los Angeles",
+    "population": 111772,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Inglewood",
+    "county": "Los Angeles",
+    "population": 109673,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "West Covina",
+    "county": "Los Angeles",
+    "population": 106098,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Burbank",
+    "county": "Los Angeles",
+    "population": 103411,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 203,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Santa Monica",
+    "county": "Los Angeles",
+    "population": 91411,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 260,
+      "categoricalExemptionRate": 0.28,
+      "eirRate": 0.14,
+      "mitigatedNegDecRate": 0.32,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Compton",
+    "county": "Los Angeles",
+    "population": 97559,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 195,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Carson",
+    "county": "Los Angeles",
+    "population": 91394,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 195,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Hawthorne",
+    "county": "Los Angeles",
+    "population": 87491,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 195,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Whittier",
+    "county": "Los Angeles",
+    "population": 85331,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 195,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Beverly Hills",
+    "county": "Los Angeles",
+    "population": 34109,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 240,
+      "categoricalExemptionRate": 0.3,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Culver City",
+    "county": "Los Angeles",
+    "population": 39428,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 195,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "West Hollywood",
+    "county": "Los Angeles",
+    "population": 34399,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 195,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Malibu",
+    "county": "Los Angeles",
+    "population": 12645,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 195,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Redondo Beach",
+    "county": "Los Angeles",
+    "population": 66748,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 195,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Oxnard",
+    "county": "Ventura",
+    "population": 202063,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 194,
+      "categoricalExemptionRate": 0.35,
+      "eirRate": 0.09,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.7
+    }
+  },
+  {
+    "name": "Thousand Oaks",
+    "county": "Ventura",
+    "population": 126966,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 187,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.7
+    }
+  },
+  {
+    "name": "Simi Valley",
+    "county": "Ventura",
+    "population": 124237,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 187,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.7
+    }
+  },
+  {
+    "name": "Ventura",
+    "county": "Ventura",
+    "population": 110196,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 187,
+      "categoricalExemptionRate": 0.37,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.7
+    }
+  },
+  {
+    "name": "Camarillo",
+    "county": "Ventura",
+    "population": 70942,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 180,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.7
+    }
+  },
+  {
+    "name": "Anaheim",
+    "county": "Orange",
+    "population": 346824,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 157,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Santa Ana",
+    "county": "Orange",
+    "population": 310227,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 157,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Irvine",
+    "county": "Orange",
+    "population": 307670,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 157,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Huntington Beach",
+    "county": "Orange",
+    "population": 198711,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 151,
+      "categoricalExemptionRate": 0.43,
+      "eirRate": 0.07,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Garden Grove",
+    "county": "Orange",
+    "population": 171949,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 151,
+      "categoricalExemptionRate": 0.43,
+      "eirRate": 0.07,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Orange",
+    "county": "Orange",
+    "population": 139911,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 151,
+      "categoricalExemptionRate": 0.43,
+      "eirRate": 0.07,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Fullerton",
+    "county": "Orange",
+    "population": 143617,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 151,
+      "categoricalExemptionRate": 0.43,
+      "eirRate": 0.07,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Costa Mesa",
+    "county": "Orange",
+    "population": 111918,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 151,
+      "categoricalExemptionRate": 0.43,
+      "eirRate": 0.07,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Mission Viejo",
+    "county": "Orange",
+    "population": 94381,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 145,
+      "categoricalExemptionRate": 0.45,
+      "eirRate": 0.07,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "Newport Beach",
+    "county": "Orange",
+    "population": 85239,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 190,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.09,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.62
+    }
+  },
+  {
+    "name": "San Francisco",
+    "county": "San Francisco",
+    "population": 873965,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 350,
+      "categoricalExemptionRate": 0.18,
+      "eirRate": 0.22,
+      "mitigatedNegDecRate": 0.35,
+      "ceqaRisk": 0.92
+    }
+  },
+  {
+    "name": "Oakland",
+    "county": "Alameda",
+    "population": 440646,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 200,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "Fremont",
+    "county": "Alameda",
+    "population": 230504,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 200,
+      "categoricalExemptionRate": 0.39,
+      "eirRate": 0.09,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "Hayward",
+    "county": "Alameda",
+    "population": 162954,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 192,
+      "categoricalExemptionRate": 0.4,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "Berkeley",
+    "county": "Alameda",
+    "population": 124321,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 240,
+      "categoricalExemptionRate": 0.3,
+      "eirRate": 0.14,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "San Leandro",
+    "county": "Alameda",
+    "population": 90940,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 185,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "Livermore",
+    "county": "Alameda",
+    "population": 95072,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 185,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "Pleasanton",
+    "county": "Alameda",
+    "population": 79871,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 185,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "Dublin",
+    "county": "Alameda",
+    "population": 72589,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 185,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "San Jose",
+    "county": "Santa Clara",
+    "population": 1013240,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 210,
+      "categoricalExemptionRate": 0.35,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Sunnyvale",
+    "county": "Santa Clara",
+    "population": 152258,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 250,
+      "categoricalExemptionRate": 0.29,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Santa Clara",
+    "county": "Santa Clara",
+    "population": 127647,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 250,
+      "categoricalExemptionRate": 0.29,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Mountain View",
+    "county": "Santa Clara",
+    "population": 82376,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 240,
+      "categoricalExemptionRate": 0.3,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Palo Alto",
+    "county": "Santa Clara",
+    "population": 68572,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 280,
+      "categoricalExemptionRate": 0.25,
+      "eirRate": 0.15,
+      "mitigatedNegDecRate": 0.32,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Cupertino",
+    "county": "Santa Clara",
+    "population": 60000,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 240,
+      "categoricalExemptionRate": 0.3,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Milpitas",
+    "county": "Santa Clara",
+    "population": 75893,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 240,
+      "categoricalExemptionRate": 0.3,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Gilroy",
+    "county": "Santa Clara",
+    "population": 60165,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 240,
+      "categoricalExemptionRate": 0.3,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Concord",
+    "county": "Contra Costa",
+    "population": 129295,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 161,
+      "categoricalExemptionRate": 0.46,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.25,
+      "ceqaRisk": 0.65
+    }
+  },
+  {
+    "name": "Richmond",
+    "county": "Contra Costa",
+    "population": 116448,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 161,
+      "categoricalExemptionRate": 0.46,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.25,
+      "ceqaRisk": 0.65
+    }
+  },
+  {
+    "name": "Antioch",
+    "county": "Contra Costa",
+    "population": 113619,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 161,
+      "categoricalExemptionRate": 0.46,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.25,
+      "ceqaRisk": 0.65
+    }
+  },
+  {
+    "name": "Walnut Creek",
+    "county": "Contra Costa",
+    "population": 70380,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 155,
+      "categoricalExemptionRate": 0.48,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.25,
+      "ceqaRisk": 0.65
+    }
+  },
+  {
+    "name": "San Ramon",
+    "county": "Contra Costa",
+    "population": 84605,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 155,
+      "categoricalExemptionRate": 0.48,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.25,
+      "ceqaRisk": 0.65
+    }
+  },
+  {
+    "name": "Daly City",
+    "county": "San Mateo",
+    "population": 101390,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 270,
+      "categoricalExemptionRate": 0.27,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.32,
+      "ceqaRisk": 0.88
+    }
+  },
+  {
+    "name": "San Mateo",
+    "county": "San Mateo",
+    "population": 104430,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 270,
+      "categoricalExemptionRate": 0.27,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.32,
+      "ceqaRisk": 0.88
+    }
+  },
+  {
+    "name": "Redwood City",
+    "county": "San Mateo",
+    "population": 84293,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 260,
+      "categoricalExemptionRate": 0.28,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.32,
+      "ceqaRisk": 0.88
+    }
+  },
+  {
+    "name": "Napa",
+    "county": "Napa",
+    "population": 80915,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 180,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.7
+    }
+  },
+  {
+    "name": "Vallejo",
+    "county": "Solano",
+    "population": 124482,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 99,
+      "categoricalExemptionRate": 0.53,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.45
+    }
+  },
+  {
+    "name": "Fairfield",
+    "county": "Solano",
+    "population": 122212,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 99,
+      "categoricalExemptionRate": 0.53,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.45
+    }
+  },
+  {
+    "name": "Vacaville",
+    "county": "Solano",
+    "population": 103682,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 99,
+      "categoricalExemptionRate": 0.53,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.45
+    }
+  },
+  {
+    "name": "Santa Rosa",
+    "county": "Sonoma",
+    "population": 178127,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 175,
+      "categoricalExemptionRate": 0.4,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Petaluma",
+    "county": "Sonoma",
+    "population": 60427,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 185,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Sacramento",
+    "county": "Sacramento",
+    "population": 513624,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 105,
+      "categoricalExemptionRate": 0.5,
+      "eirRate": 0.05,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.45
+    }
+  },
+  {
+    "name": "Elk Grove",
+    "county": "Sacramento",
+    "population": 176124,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 99,
+      "categoricalExemptionRate": 0.5,
+      "eirRate": 0.05,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.45
+    }
+  },
+  {
+    "name": "Roseville",
+    "county": "Placer",
+    "population": 147773,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 88,
+      "categoricalExemptionRate": 0.56,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.4
+    }
+  },
+  {
+    "name": "Citrus Heights",
+    "county": "Sacramento",
+    "population": 87796,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 95,
+      "categoricalExemptionRate": 0.52,
+      "eirRate": 0.05,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.45
+    }
+  },
+  {
+    "name": "Folsom",
+    "county": "Sacramento",
+    "population": 79117,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 95,
+      "categoricalExemptionRate": 0.52,
+      "eirRate": 0.05,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.45
+    }
+  },
+  {
+    "name": "Rancho Cordova",
+    "county": "Sacramento",
+    "population": 75010,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 95,
+      "categoricalExemptionRate": 0.52,
+      "eirRate": 0.05,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.45
+    }
+  },
+  {
+    "name": "Rocklin",
+    "county": "Placer",
+    "population": 72185,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 85,
+      "categoricalExemptionRate": 0.58,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.4
+    }
+  },
+  {
+    "name": "West Sacramento",
+    "county": "Yolo",
+    "population": 56327,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 88,
+      "categoricalExemptionRate": 0.55,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Davis",
+    "county": "Yolo",
+    "population": 68111,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 88,
+      "categoricalExemptionRate": 0.55,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Yuba City",
+    "county": "Sutter",
+    "population": 67416,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 42,
+      "categoricalExemptionRate": 0.75,
+      "eirRate": 0.02,
+      "mitigatedNegDecRate": 0.12,
+      "ceqaRisk": 0.22
+    }
+  },
+  {
+    "name": "San Diego",
+    "county": "San Diego",
+    "population": 1386932,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 145,
+      "categoricalExemptionRate": 0.45,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.24,
+      "ceqaRisk": 0.55
+    }
+  },
+  {
+    "name": "Chula Vista",
+    "county": "San Diego",
+    "population": 275487,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 140,
+      "categoricalExemptionRate": 0.44,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.24,
+      "ceqaRisk": 0.55
+    }
+  },
+  {
+    "name": "Oceanside",
+    "county": "San Diego",
+    "population": 174648,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 135,
+      "categoricalExemptionRate": 0.46,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.24,
+      "ceqaRisk": 0.55
+    }
+  },
+  {
+    "name": "Escondido",
+    "county": "San Diego",
+    "population": 151038,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 135,
+      "categoricalExemptionRate": 0.46,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.24,
+      "ceqaRisk": 0.55
+    }
+  },
+  {
+    "name": "El Cajon",
+    "county": "San Diego",
+    "population": 103982,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 135,
+      "categoricalExemptionRate": 0.46,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.24,
+      "ceqaRisk": 0.55
+    }
+  },
+  {
+    "name": "Vista",
+    "county": "San Diego",
+    "population": 101838,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 135,
+      "categoricalExemptionRate": 0.46,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.24,
+      "ceqaRisk": 0.55
+    }
+  },
+  {
+    "name": "Carlsbad",
+    "county": "San Diego",
+    "population": 115382,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 160,
+      "categoricalExemptionRate": 0.42,
+      "eirRate": 0.07,
+      "mitigatedNegDecRate": 0.26,
+      "ceqaRisk": 0.55
+    }
+  },
+  {
+    "name": "San Marcos",
+    "county": "San Diego",
+    "population": 97702,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 130,
+      "categoricalExemptionRate": 0.48,
+      "eirRate": 0.06,
+      "mitigatedNegDecRate": 0.24,
+      "ceqaRisk": 0.55
+    }
+  },
+  {
+    "name": "Riverside",
+    "county": "Riverside",
+    "population": 314998,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 95,
+      "categoricalExemptionRate": 0.52,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "San Bernardino",
+    "county": "San Bernardino",
+    "population": 222101,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 82,
+      "categoricalExemptionRate": 0.56,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.38
+    }
+  },
+  {
+    "name": "Fontana",
+    "county": "San Bernardino",
+    "population": 214547,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 86,
+      "categoricalExemptionRate": 0.54,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.38
+    }
+  },
+  {
+    "name": "Rancho Cucamonga",
+    "county": "San Bernardino",
+    "population": 177603,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 83,
+      "categoricalExemptionRate": 0.56,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.38
+    }
+  },
+  {
+    "name": "Ontario",
+    "county": "San Bernardino",
+    "population": 175265,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 75,
+      "categoricalExemptionRate": 0.6,
+      "eirRate": 0.03,
+      "mitigatedNegDecRate": 0.18,
+      "ceqaRisk": 0.38
+    }
+  },
+  {
+    "name": "Moreno Valley",
+    "county": "Riverside",
+    "population": 208634,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 97,
+      "categoricalExemptionRate": 0.51,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Corona",
+    "county": "Riverside",
+    "population": 169868,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 88,
+      "categoricalExemptionRate": 0.55,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Victorville",
+    "county": "San Bernardino",
+    "population": 134810,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 83,
+      "categoricalExemptionRate": 0.56,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.38
+    }
+  },
+  {
+    "name": "Temecula",
+    "county": "Riverside",
+    "population": 110003,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 94,
+      "categoricalExemptionRate": 0.53,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Murrieta",
+    "county": "Riverside",
+    "population": 117474,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 94,
+      "categoricalExemptionRate": 0.53,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Rialto",
+    "county": "San Bernardino",
+    "population": 103526,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 83,
+      "categoricalExemptionRate": 0.56,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.38
+    }
+  },
+  {
+    "name": "Hesperia",
+    "county": "San Bernardino",
+    "population": 100823,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 83,
+      "categoricalExemptionRate": 0.56,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.38
+    }
+  },
+  {
+    "name": "Indio",
+    "county": "Riverside",
+    "population": 91812,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 90,
+      "categoricalExemptionRate": 0.55,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Menifee",
+    "county": "Riverside",
+    "population": 102527,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 94,
+      "categoricalExemptionRate": 0.53,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Palm Springs",
+    "county": "Riverside",
+    "population": 48573,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 90,
+      "categoricalExemptionRate": 0.55,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.22,
+      "ceqaRisk": 0.42
+    }
+  },
+  {
+    "name": "Chino",
+    "county": "San Bernardino",
+    "population": 91394,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 80,
+      "categoricalExemptionRate": 0.58,
+      "eirRate": 0.04,
+      "mitigatedNegDecRate": 0.2,
+      "ceqaRisk": 0.38
+    }
+  },
+  {
+    "name": "Fresno",
+    "county": "Fresno",
+    "population": 542107,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 55,
+      "categoricalExemptionRate": 0.68,
+      "eirRate": 0.02,
+      "mitigatedNegDecRate": 0.16,
+      "ceqaRisk": 0.3
+    }
+  },
+  {
+    "name": "Clovis",
+    "county": "Fresno",
+    "population": 123000,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 62,
+      "categoricalExemptionRate": 0.63,
+      "eirRate": 0.03,
+      "mitigatedNegDecRate": 0.18,
+      "ceqaRisk": 0.3
+    }
+  },
+  {
+    "name": "Stockton",
+    "county": "San Joaquin",
+    "population": 311178,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 58,
+      "categoricalExemptionRate": 0.65,
+      "eirRate": 0.03,
+      "mitigatedNegDecRate": 0.18,
+      "ceqaRisk": 0.32
+    }
+  },
+  {
+    "name": "Modesto",
+    "county": "Stanislaus",
+    "population": 218464,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 52,
+      "categoricalExemptionRate": 0.68,
+      "eirRate": 0.02,
+      "mitigatedNegDecRate": 0.16,
+      "ceqaRisk": 0.28
+    }
+  },
+  {
+    "name": "Bakersfield",
+    "county": "Kern",
+    "population": 403455,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 48,
+      "categoricalExemptionRate": 0.72,
+      "eirRate": 0.02,
+      "mitigatedNegDecRate": 0.14,
+      "ceqaRisk": 0.25
+    }
+  },
+  {
+    "name": "Visalia",
+    "county": "Tulare",
+    "population": 141384,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 44,
+      "categoricalExemptionRate": 0.72,
+      "eirRate": 0.02,
+      "mitigatedNegDecRate": 0.12,
+      "ceqaRisk": 0.22
+    }
+  },
+  {
+    "name": "Salinas",
+    "county": "Monterey",
+    "population": 163542,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 198,
+      "categoricalExemptionRate": 0.34,
+      "eirRate": 0.09,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.72
+    }
+  },
+  {
+    "name": "Turlock",
+    "county": "Stanislaus",
+    "population": 73305,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 55,
+      "categoricalExemptionRate": 0.68,
+      "eirRate": 0.02,
+      "mitigatedNegDecRate": 0.16,
+      "ceqaRisk": 0.28
+    }
+  },
+  {
+    "name": "Tracy",
+    "county": "San Joaquin",
+    "population": 96305,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 62,
+      "categoricalExemptionRate": 0.65,
+      "eirRate": 0.03,
+      "mitigatedNegDecRate": 0.18,
+      "ceqaRisk": 0.32
+    }
+  },
+  {
+    "name": "Manteca",
+    "county": "San Joaquin",
+    "population": 91000,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 62,
+      "categoricalExemptionRate": 0.65,
+      "eirRate": 0.03,
+      "mitigatedNegDecRate": 0.18,
+      "ceqaRisk": 0.32
+    }
+  },
+  {
+    "name": "Merced",
+    "county": "Merced",
+    "population": 84123,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 55,
+      "categoricalExemptionRate": 0.68,
+      "eirRate": 0.02,
+      "mitigatedNegDecRate": 0.16,
+      "ceqaRisk": 0.28
+    }
+  },
+  {
+    "name": "Chico",
+    "county": "Butte",
+    "population": 103079,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 68,
+      "categoricalExemptionRate": 0.63,
+      "eirRate": 0.03,
+      "mitigatedNegDecRate": 0.18,
+      "ceqaRisk": 0.35
+    }
+  },
+  {
+    "name": "Redding",
+    "county": "Shasta",
+    "population": 93582,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 50,
+      "categoricalExemptionRate": 0.72,
+      "eirRate": 0.02,
+      "mitigatedNegDecRate": 0.14,
+      "ceqaRisk": 0.25
+    }
+  },
+  {
+    "name": "Santa Cruz",
+    "county": "Santa Cruz",
+    "population": 65459,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 260,
+      "categoricalExemptionRate": 0.25,
+      "eirRate": 0.14,
+      "mitigatedNegDecRate": 0.32,
+      "ceqaRisk": 0.82
+    }
+  },
+  {
+    "name": "Santa Barbara",
+    "county": "Santa Barbara",
+    "population": 91930,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 230,
+      "categoricalExemptionRate": 0.3,
+      "eirRate": 0.12,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "Santa Maria",
+    "county": "Santa Barbara",
+    "population": 107600,
+    "status": "baseline",
+    "ceqa": {
+      "avgReviewDays": 208,
+      "categoricalExemptionRate": 0.34,
+      "eirRate": 0.1,
+      "mitigatedNegDecRate": 0.3,
+      "ceqaRisk": 0.75
+    }
+  },
+  {
+    "name": "San Luis Obispo",
+    "county": "San Luis Obispo",
+    "population": 46467,
+    "status": "researched",
+    "ceqa": {
+      "avgReviewDays": 180,
+      "categoricalExemptionRate": 0.38,
+      "eirRate": 0.08,
+      "mitigatedNegDecRate": 0.28,
+      "ceqaRisk": 0.68
+    }
+  }
+]
