@@ -1629,7 +1629,7 @@ export default function CaliforniaBuildingIndex() {
           </p>
           <div style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.62rem',
             letterSpacing:'0.12em', color:PDS.fog, textTransform:'uppercase' }}>
-            Last Updated: March 15, 2026
+            Last Updated: {__BUILD_DATE__}
           </div>
           </div>{/* end centered title block */}
         </div>
