@@ -53,7 +53,6 @@ const HCD_BASE = 'https://data.ca.gov/api/3/action';
 const PACKAGES = {
   APR:  'housing-element-annual-progress-report-apr-data-by-jurisdiction-and-year',
   SB35: 'housing-element-open-data-project-and-sb-35-determination',
-  RHNA: 'rhna-progress-report',
 };
 
 function getField(rec, candidates, def = null) {
@@ -333,64 +332,64 @@ const lookupCity = (name,county) => {
 // BASELINE DATA
 // ═══════════════════════════════════════════════════════════════
 const BASELINE = {
-  "Alameda":        { permitDays:195, feesPerUnit:72000,  ceqaRisk:0.75, coastalPct:12,  fireZonePct:18,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.42, approvalRate:0.78, population:1682353,  medianHomePrice:1150000,  airportNoisePct:12,  histPreservation:0.70, calGreen:0.72 },
-  "Alpine":         { permitDays:45,  feesPerUnit:8000,   ceqaRisk:0.15, coastalPct:0,   fireZonePct:85,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.95, approvalRate:0.92, population:1204,     medianHomePrice:425000,  airportNoisePct:0,   histPreservation:0.05, calGreen:0.10 },
-  "Amador":         { permitDays:55,  feesPerUnit:12000,  ceqaRisk:0.20, coastalPct:0,   fireZonePct:72,  sb35Status:"subject",  heCompliance:"non-compliant", rhnaProgress:0.28, approvalRate:0.85, population:40474,    medianHomePrice:385000,  airportNoisePct:0,   histPreservation:0.55, calGreen:0.15 },
-  "Butte":          { permitDays:75,  feesPerUnit:18000,  ceqaRisk:0.35, coastalPct:0,   fireZonePct:68,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.35, approvalRate:0.82, population:211632,   medianHomePrice:340000,  airportNoisePct:2,   histPreservation:0.22, calGreen:0.20 },
-  "Calaveras":      { permitDays:60,  feesPerUnit:14000,  ceqaRisk:0.25, coastalPct:0,   fireZonePct:78,  sb35Status:"subject",  heCompliance:"non-compliant", rhnaProgress:0.22, approvalRate:0.88, population:45905,    medianHomePrice:395000,  airportNoisePct:0,   histPreservation:0.45, calGreen:0.15 },
-  "Colusa":         { permitDays:40,  feesPerUnit:9000,   ceqaRisk:0.12, coastalPct:0,   fireZonePct:15,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.88, approvalRate:0.94, population:21917,    medianHomePrice:295000,  airportNoisePct:0,   histPreservation:0.10, calGreen:0.10 },
-  "Contra Costa":   { permitDays:165, feesPerUnit:58000,  ceqaRisk:0.65, coastalPct:8,   fireZonePct:28,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.38, approvalRate:0.76, population:1161413,  medianHomePrice:875000,  airportNoisePct:8,   histPreservation:0.48, calGreen:0.55 },
-  "Del Norte":      { permitDays:70,  feesPerUnit:15000,  ceqaRisk:0.30, coastalPct:45,  fireZonePct:55,  sb35Status:"subject",  heCompliance:"non-compliant", rhnaProgress:0.18, approvalRate:0.80, population:27812,    medianHomePrice:285000,  airportNoisePct:1,   histPreservation:0.12, calGreen:0.15 },
-  "El Dorado":      { permitDays:105, feesPerUnit:38000,  ceqaRisk:0.50, coastalPct:0,   fireZonePct:72,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.32, approvalRate:0.79, population:192843,   medianHomePrice:625000,  airportNoisePct:1,   histPreservation:0.32, calGreen:0.25 },
-  "Fresno":         { permitDays:68,  feesPerUnit:18000,  ceqaRisk:0.30, coastalPct:0,   fireZonePct:18,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.45, approvalRate:0.86, population:1008654,  medianHomePrice:365000,  airportNoisePct:5,   histPreservation:0.20, calGreen:0.20 },
-  "Glenn":          { permitDays:42,  feesPerUnit:10000,  ceqaRisk:0.15, coastalPct:0,   fireZonePct:22,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.82, approvalRate:0.91, population:28750,    medianHomePrice:285000,  airportNoisePct:0,   histPreservation:0.10, calGreen:0.10 },
-  "Humboldt":       { permitDays:135, feesPerUnit:25000,  ceqaRisk:0.50, coastalPct:58,  fireZonePct:45,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.28, approvalRate:0.75, population:136310,   medianHomePrice:395000,  airportNoisePct:2,   histPreservation:0.35, calGreen:0.30 },
-  "Imperial":       { permitDays:48,  feesPerUnit:10000,  ceqaRisk:0.15, coastalPct:0,   fireZonePct:5,   sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.55, approvalRate:0.90, population:180701,   medianHomePrice:285000,  airportNoisePct:3,   histPreservation:0.10, calGreen:0.12 },
-  "Inyo":           { permitDays:55,  feesPerUnit:12000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:45,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.75, approvalRate:0.88, population:19016,    medianHomePrice:325000,  airportNoisePct:1,   histPreservation:0.20, calGreen:0.12 },
-  "Kern":           { permitDays:58,  feesPerUnit:15000,  ceqaRisk:0.25, coastalPct:0,   fireZonePct:22,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.52, approvalRate:0.87, population:909235,   medianHomePrice:315000,  airportNoisePct:4,   histPreservation:0.15, calGreen:0.18 },
-  "Kings":          { permitDays:50,  feesPerUnit:12000,  ceqaRisk:0.18, coastalPct:0,   fireZonePct:8,   sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.48, approvalRate:0.89, population:153443,   medianHomePrice:295000,  airportNoisePct:3,   histPreservation:0.12, calGreen:0.15 },
-  "Lake":           { permitDays:85,  feesPerUnit:18000,  ceqaRisk:0.35, coastalPct:0,   fireZonePct:75,  sb35Status:"subject",  heCompliance:"non-compliant", rhnaProgress:0.22, approvalRate:0.80, population:68766,    medianHomePrice:295000,  airportNoisePct:0,   histPreservation:0.15, calGreen:0.18 },
-  "Lassen":         { permitDays:45,  feesPerUnit:10000,  ceqaRisk:0.15, coastalPct:0,   fireZonePct:62,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.85, approvalRate:0.92, population:30573,    medianHomePrice:245000,  airportNoisePct:1,   histPreservation:0.10, calGreen:0.10 },
-  "Los Angeles":    { permitDays:185, feesPerUnit:35000,  ceqaRisk:0.72, coastalPct:8,   fireZonePct:28,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.25, approvalRate:0.72, population:9829544,  medianHomePrice:925000,  airportNoisePct:22,  histPreservation:0.68, calGreen:0.58 },
-  "Madera":         { permitDays:65,  feesPerUnit:16000,  ceqaRisk:0.28, coastalPct:0,   fireZonePct:35,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.42, approvalRate:0.85, population:160089,   medianHomePrice:365000,  airportNoisePct:2,   histPreservation:0.15, calGreen:0.18 },
-  "Marin":          { permitDays:340, feesPerUnit:95000,  ceqaRisk:0.95, coastalPct:68,  fireZonePct:65,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.12, approvalRate:0.58, population:262321,   medianHomePrice:1650000, airportNoisePct:3,   histPreservation:0.72, calGreen:0.82 },
-  "Mariposa":       { permitDays:55,  feesPerUnit:12000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:82,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.78, approvalRate:0.88, population:17131,    medianHomePrice:385000,  airportNoisePct:0,   histPreservation:0.25, calGreen:0.15 },
-  "Mendocino":      { permitDays:155, feesPerUnit:28000,  ceqaRisk:0.55, coastalPct:52,  fireZonePct:55,  sb35Status:"subject",  heCompliance:"non-compliant", rhnaProgress:0.18, approvalRate:0.72, population:91601,    medianHomePrice:485000,  airportNoisePct:1,   histPreservation:0.38, calGreen:0.28 },
-  "Merced":         { permitDays:62,  feesPerUnit:16000,  ceqaRisk:0.28, coastalPct:0,   fireZonePct:12,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.48, approvalRate:0.86, population:286461,   medianHomePrice:365000,  airportNoisePct:5,   histPreservation:0.18, calGreen:0.18 },
-  "Modoc":          { permitDays:38,  feesPerUnit:8000,   ceqaRisk:0.10, coastalPct:0,   fireZonePct:55,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.92, approvalRate:0.95, population:8661,     medianHomePrice:195000,  airportNoisePct:0,   histPreservation:0.08, calGreen:0.10 },
-  "Mono":           { permitDays:75,  feesPerUnit:22000,  ceqaRisk:0.35, coastalPct:0,   fireZonePct:58,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.35, approvalRate:0.82, population:13247,    medianHomePrice:585000,  airportNoisePct:0,   histPreservation:0.18, calGreen:0.15 },
-  "Monterey":       { permitDays:235, feesPerUnit:48000,  ceqaRisk:0.72, coastalPct:42,  fireZonePct:38,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.22, approvalRate:0.68, population:439035,   medianHomePrice:825000,  airportNoisePct:4,   histPreservation:0.78, calGreen:0.48 },
-  "Napa":           { permitDays:175, feesPerUnit:58000,  ceqaRisk:0.70, coastalPct:5,   fireZonePct:58,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.28, approvalRate:0.72, population:138019,   medianHomePrice:895000,  airportNoisePct:3,   histPreservation:0.65, calGreen:0.52 },
-  "Nevada":         { permitDays:95,  feesPerUnit:35000,  ceqaRisk:0.45, coastalPct:0,   fireZonePct:78,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.32, approvalRate:0.78, population:103487,   medianHomePrice:595000,  airportNoisePct:0,   histPreservation:0.62, calGreen:0.28 },
-  "Orange":         { permitDays:125, feesPerUnit:55000,  ceqaRisk:0.62, coastalPct:18,  fireZonePct:22,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.35, approvalRate:0.75, population:3186989,  medianHomePrice:1125000, airportNoisePct:8,   histPreservation:0.35, calGreen:0.30 },
-  "Placer":         { permitDays:82,  feesPerUnit:32000,  ceqaRisk:0.40, coastalPct:0,   fireZonePct:48,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.55, approvalRate:0.82, population:412300,   medianHomePrice:675000,  airportNoisePct:2,   histPreservation:0.30, calGreen:0.28 },
-  "Plumas":         { permitDays:50,  feesPerUnit:12000,  ceqaRisk:0.20, coastalPct:0,   fireZonePct:82,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.82, approvalRate:0.90, population:19790,    medianHomePrice:325000,  airportNoisePct:0,   histPreservation:0.18, calGreen:0.12 },
-  "Riverside":      { permitDays:88,  feesPerUnit:28000,  ceqaRisk:0.42, coastalPct:0,   fireZonePct:42,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.48, approvalRate:0.84, population:2458395,  medianHomePrice:565000,  airportNoisePct:6,   histPreservation:0.28, calGreen:0.22 },
-  "Sacramento":     { permitDays:92,  feesPerUnit:21000,  ceqaRisk:0.45, coastalPct:0,   fireZonePct:12,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.42, approvalRate:0.82, population:1585055,  medianHomePrice:485000,  airportNoisePct:8,   histPreservation:0.52, calGreen:0.38 },
-  "San Benito":     { permitDays:115, feesPerUnit:42000,  ceqaRisk:0.52, coastalPct:0,   fireZonePct:35,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.38, approvalRate:0.78, population:64209,    medianHomePrice:725000,  airportNoisePct:0,   histPreservation:0.22, calGreen:0.22 },
-  "San Bernardino": { permitDays:82,  feesPerUnit:22000,  ceqaRisk:0.38, coastalPct:0,   fireZonePct:42,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.52, approvalRate:0.85, population:2194710,  medianHomePrice:485000,  airportNoisePct:7,   histPreservation:0.22, calGreen:0.20 },
-  "San Diego":      { permitDays:145, feesPerUnit:42000,  ceqaRisk:0.55, coastalPct:15,  fireZonePct:38,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.32, approvalRate:0.76, population:3298634,  medianHomePrice:925000,  airportNoisePct:18,  histPreservation:0.52, calGreen:0.45 },
-  "San Francisco":  { permitDays:425, feesPerUnit:88000,  ceqaRisk:0.92, coastalPct:100, fireZonePct:5,   sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.15, approvalRate:0.55, population:873965,   medianHomePrice:1485000, airportNoisePct:28,  histPreservation:0.92, calGreen:0.95 },
-  "San Joaquin":    { permitDays:72,  feesPerUnit:19000,  ceqaRisk:0.32, coastalPct:0,   fireZonePct:8,   sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.52, approvalRate:0.85, population:789410,   medianHomePrice:495000,  airportNoisePct:4,   histPreservation:0.28, calGreen:0.22 },
-  "San Luis Obispo":{ permitDays:205, feesPerUnit:48000,  ceqaRisk:0.68, coastalPct:48,  fireZonePct:42,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.22, approvalRate:0.70, population:283111,   medianHomePrice:825000,  airportNoisePct:3,   histPreservation:0.55, calGreen:0.50 },
-  "San Mateo":      { permitDays:275, feesPerUnit:92000,  ceqaRisk:0.88, coastalPct:55,  fireZonePct:22,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.18, approvalRate:0.62, population:764442,   medianHomePrice:1725000, airportNoisePct:35,  histPreservation:0.52, calGreen:0.72 },
-  "Santa Barbara":  { permitDays:215, feesPerUnit:52000,  ceqaRisk:0.75, coastalPct:42,  fireZonePct:55,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.22, approvalRate:0.68, population:448229,   medianHomePrice:985000,  airportNoisePct:5,   histPreservation:0.88, calGreen:0.55 },
-  "Santa Clara":    { permitDays:195, feesPerUnit:78000,  ceqaRisk:0.82, coastalPct:5,   fireZonePct:15,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.28, approvalRate:0.72, population:1936259,  medianHomePrice:1585000, airportNoisePct:10,  histPreservation:0.38, calGreen:0.75 },
-  "Santa Cruz":     { permitDays:255, feesPerUnit:68000,  ceqaRisk:0.82, coastalPct:75,  fireZonePct:48,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.15, approvalRate:0.62, population:270861,   medianHomePrice:1125000, airportNoisePct:2,   histPreservation:0.58, calGreen:0.62 },
-  "Shasta":         { permitDays:62,  feesPerUnit:14000,  ceqaRisk:0.25, coastalPct:0,   fireZonePct:58,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.55, approvalRate:0.88, population:182155,   medianHomePrice:345000,  airportNoisePct:2,   histPreservation:0.20, calGreen:0.18 },
-  "Sierra":         { permitDays:40,  feesPerUnit:8000,   ceqaRisk:0.12, coastalPct:0,   fireZonePct:85,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.95, approvalRate:0.94, population:3236,     medianHomePrice:285000,  airportNoisePct:0,   histPreservation:0.12, calGreen:0.10 },
-  "Siskiyou":       { permitDays:52,  feesPerUnit:11000,  ceqaRisk:0.18, coastalPct:0,   fireZonePct:62,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.78, approvalRate:0.90, population:44076,    medianHomePrice:265000,  airportNoisePct:1,   histPreservation:0.18, calGreen:0.12 },
-  "Solano":         { permitDays:98,  feesPerUnit:35000,  ceqaRisk:0.45, coastalPct:12,  fireZonePct:12,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.42, approvalRate:0.80, population:453491,   medianHomePrice:545000,  airportNoisePct:5,   histPreservation:0.28, calGreen:0.32 },
-  "Sonoma":         { permitDays:195, feesPerUnit:62000,  ceqaRisk:0.72, coastalPct:22,  fireZonePct:62,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.25, approvalRate:0.70, population:488863,   medianHomePrice:795000,  airportNoisePct:3,   histPreservation:0.60, calGreen:0.58 },
-  "Stanislaus":     { permitDays:68,  feesPerUnit:17000,  ceqaRisk:0.28, coastalPct:0,   fireZonePct:8,   sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.52, approvalRate:0.86, population:552878,   medianHomePrice:445000,  airportNoisePct:3,   histPreservation:0.22, calGreen:0.20 },
-  "Sutter":         { permitDays:55,  feesPerUnit:14000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:5,   sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.58, approvalRate:0.88, population:99633,    medianHomePrice:385000,  airportNoisePct:2,   histPreservation:0.15, calGreen:0.15 },
-  "Tehama":         { permitDays:48,  feesPerUnit:11000,  ceqaRisk:0.18, coastalPct:0,   fireZonePct:55,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.75, approvalRate:0.90, population:65829,    medianHomePrice:285000,  airportNoisePct:1,   histPreservation:0.12, calGreen:0.10 },
-  "Trinity":        { permitDays:45,  feesPerUnit:9000,   ceqaRisk:0.15, coastalPct:0,   fireZonePct:78,  sb35Status:"exempt",   heCompliance:"compliant",     rhnaProgress:0.88, approvalRate:0.92, population:16060,    medianHomePrice:245000,  airportNoisePct:0,   histPreservation:0.12, calGreen:0.10 },
-  "Tulare":         { permitDays:52,  feesPerUnit:12000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:22,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.55, approvalRate:0.88, population:473117,   medianHomePrice:325000,  airportNoisePct:2,   histPreservation:0.15, calGreen:0.18 },
-  "Tuolumne":       { permitDays:65,  feesPerUnit:15000,  ceqaRisk:0.28, coastalPct:0,   fireZonePct:78,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.45, approvalRate:0.85, population:55810,    medianHomePrice:385000,  airportNoisePct:0,   histPreservation:0.40, calGreen:0.18 },
-  "Ventura":        { permitDays:185, feesPerUnit:48000,  ceqaRisk:0.70, coastalPct:32,  fireZonePct:52,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.25, approvalRate:0.70, population:843843,   medianHomePrice:825000,  airportNoisePct:4,   histPreservation:0.50, calGreen:0.45 },
-  "Yolo":           { permitDays:88,  feesPerUnit:28000,  ceqaRisk:0.42, coastalPct:0,   fireZonePct:15,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.48, approvalRate:0.82, population:216986,   medianHomePrice:565000,  airportNoisePct:4,   histPreservation:0.30, calGreen:0.38 },
-  "Yuba":           { permitDays:55,  feesPerUnit:14000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:35,  sb35Status:"subject",  heCompliance:"compliant",     rhnaProgress:0.52, approvalRate:0.86, population:81575,    medianHomePrice:385000,  airportNoisePct:3,   histPreservation:0.18, calGreen:0.18 },
+  "Alameda":        { permitDays:195, feesPerUnit:72000,  ceqaRisk:0.75, coastalPct:12,  fireZonePct:18,  heCompliance:"compliant",     approvalRate:0.78, population:1682353,  medianHomePrice:1150000,  airportNoisePct:12,  histPreservation:0.70, calGreen:0.72 },
+  "Alpine":         { permitDays:45,  feesPerUnit:8000,   ceqaRisk:0.15, coastalPct:0,   fireZonePct:85,  heCompliance:"compliant",     approvalRate:0.92, population:1204,     medianHomePrice:425000,  airportNoisePct:0,   histPreservation:0.05, calGreen:0.10 },
+  "Amador":         { permitDays:55,  feesPerUnit:12000,  ceqaRisk:0.20, coastalPct:0,   fireZonePct:72,  heCompliance:"non-compliant", approvalRate:0.85, population:40474,    medianHomePrice:385000,  airportNoisePct:0,   histPreservation:0.55, calGreen:0.15 },
+  "Butte":          { permitDays:75,  feesPerUnit:18000,  ceqaRisk:0.35, coastalPct:0,   fireZonePct:68,  heCompliance:"compliant",     approvalRate:0.82, population:211632,   medianHomePrice:340000,  airportNoisePct:2,   histPreservation:0.22, calGreen:0.20 },
+  "Calaveras":      { permitDays:60,  feesPerUnit:14000,  ceqaRisk:0.25, coastalPct:0,   fireZonePct:78,  heCompliance:"non-compliant", approvalRate:0.88, population:45905,    medianHomePrice:395000,  airportNoisePct:0,   histPreservation:0.45, calGreen:0.15 },
+  "Colusa":         { permitDays:40,  feesPerUnit:9000,   ceqaRisk:0.12, coastalPct:0,   fireZonePct:15,  heCompliance:"compliant",     approvalRate:0.94, population:21917,    medianHomePrice:295000,  airportNoisePct:0,   histPreservation:0.10, calGreen:0.10 },
+  "Contra Costa":   { permitDays:165, feesPerUnit:58000,  ceqaRisk:0.65, coastalPct:8,   fireZonePct:28,  heCompliance:"compliant",     approvalRate:0.76, population:1161413,  medianHomePrice:875000,  airportNoisePct:8,   histPreservation:0.48, calGreen:0.55 },
+  "Del Norte":      { permitDays:70,  feesPerUnit:15000,  ceqaRisk:0.30, coastalPct:45,  fireZonePct:55,  heCompliance:"non-compliant", approvalRate:0.80, population:27812,    medianHomePrice:285000,  airportNoisePct:1,   histPreservation:0.12, calGreen:0.15 },
+  "El Dorado":      { permitDays:105, feesPerUnit:38000,  ceqaRisk:0.50, coastalPct:0,   fireZonePct:72,  heCompliance:"compliant",     approvalRate:0.79, population:192843,   medianHomePrice:625000,  airportNoisePct:1,   histPreservation:0.32, calGreen:0.25 },
+  "Fresno":         { permitDays:68,  feesPerUnit:18000,  ceqaRisk:0.30, coastalPct:0,   fireZonePct:18,  heCompliance:"compliant",     approvalRate:0.86, population:1008654,  medianHomePrice:365000,  airportNoisePct:5,   histPreservation:0.20, calGreen:0.20 },
+  "Glenn":          { permitDays:42,  feesPerUnit:10000,  ceqaRisk:0.15, coastalPct:0,   fireZonePct:22,  heCompliance:"compliant",     approvalRate:0.91, population:28750,    medianHomePrice:285000,  airportNoisePct:0,   histPreservation:0.10, calGreen:0.10 },
+  "Humboldt":       { permitDays:135, feesPerUnit:25000,  ceqaRisk:0.50, coastalPct:58,  fireZonePct:45,  heCompliance:"compliant",     approvalRate:0.75, population:136310,   medianHomePrice:395000,  airportNoisePct:2,   histPreservation:0.35, calGreen:0.30 },
+  "Imperial":       { permitDays:48,  feesPerUnit:10000,  ceqaRisk:0.15, coastalPct:0,   fireZonePct:5,   heCompliance:"compliant",     approvalRate:0.90, population:180701,   medianHomePrice:285000,  airportNoisePct:3,   histPreservation:0.10, calGreen:0.12 },
+  "Inyo":           { permitDays:55,  feesPerUnit:12000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:45,  heCompliance:"compliant",     approvalRate:0.88, population:19016,    medianHomePrice:325000,  airportNoisePct:1,   histPreservation:0.20, calGreen:0.12 },
+  "Kern":           { permitDays:58,  feesPerUnit:15000,  ceqaRisk:0.25, coastalPct:0,   fireZonePct:22,  heCompliance:"compliant",     approvalRate:0.87, population:909235,   medianHomePrice:315000,  airportNoisePct:4,   histPreservation:0.15, calGreen:0.18 },
+  "Kings":          { permitDays:50,  feesPerUnit:12000,  ceqaRisk:0.18, coastalPct:0,   fireZonePct:8,   heCompliance:"compliant",     approvalRate:0.89, population:153443,   medianHomePrice:295000,  airportNoisePct:3,   histPreservation:0.12, calGreen:0.15 },
+  "Lake":           { permitDays:85,  feesPerUnit:18000,  ceqaRisk:0.35, coastalPct:0,   fireZonePct:75,  heCompliance:"non-compliant", approvalRate:0.80, population:68766,    medianHomePrice:295000,  airportNoisePct:0,   histPreservation:0.15, calGreen:0.18 },
+  "Lassen":         { permitDays:45,  feesPerUnit:10000,  ceqaRisk:0.15, coastalPct:0,   fireZonePct:62,  heCompliance:"compliant",     approvalRate:0.92, population:30573,    medianHomePrice:245000,  airportNoisePct:1,   histPreservation:0.10, calGreen:0.10 },
+  "Los Angeles":    { permitDays:185, feesPerUnit:35000,  ceqaRisk:0.72, coastalPct:8,   fireZonePct:28,  heCompliance:"compliant",     approvalRate:0.72, population:9829544,  medianHomePrice:925000,  airportNoisePct:22,  histPreservation:0.68, calGreen:0.58 },
+  "Madera":         { permitDays:65,  feesPerUnit:16000,  ceqaRisk:0.28, coastalPct:0,   fireZonePct:35,  heCompliance:"compliant",     approvalRate:0.85, population:160089,   medianHomePrice:365000,  airportNoisePct:2,   histPreservation:0.15, calGreen:0.18 },
+  "Marin":          { permitDays:340, feesPerUnit:95000,  ceqaRisk:0.95, coastalPct:68,  fireZonePct:65,  heCompliance:"compliant",     approvalRate:0.58, population:262321,   medianHomePrice:1650000, airportNoisePct:3,   histPreservation:0.72, calGreen:0.82 },
+  "Mariposa":       { permitDays:55,  feesPerUnit:12000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:82,  heCompliance:"compliant",     approvalRate:0.88, population:17131,    medianHomePrice:385000,  airportNoisePct:0,   histPreservation:0.25, calGreen:0.15 },
+  "Mendocino":      { permitDays:155, feesPerUnit:28000,  ceqaRisk:0.55, coastalPct:52,  fireZonePct:55,  heCompliance:"non-compliant", approvalRate:0.72, population:91601,    medianHomePrice:485000,  airportNoisePct:1,   histPreservation:0.38, calGreen:0.28 },
+  "Merced":         { permitDays:62,  feesPerUnit:16000,  ceqaRisk:0.28, coastalPct:0,   fireZonePct:12,  heCompliance:"compliant",     approvalRate:0.86, population:286461,   medianHomePrice:365000,  airportNoisePct:5,   histPreservation:0.18, calGreen:0.18 },
+  "Modoc":          { permitDays:38,  feesPerUnit:8000,   ceqaRisk:0.10, coastalPct:0,   fireZonePct:55,  heCompliance:"compliant",     approvalRate:0.95, population:8661,     medianHomePrice:195000,  airportNoisePct:0,   histPreservation:0.08, calGreen:0.10 },
+  "Mono":           { permitDays:75,  feesPerUnit:22000,  ceqaRisk:0.35, coastalPct:0,   fireZonePct:58,  heCompliance:"compliant",     approvalRate:0.82, population:13247,    medianHomePrice:585000,  airportNoisePct:0,   histPreservation:0.18, calGreen:0.15 },
+  "Monterey":       { permitDays:235, feesPerUnit:48000,  ceqaRisk:0.72, coastalPct:42,  fireZonePct:38,  heCompliance:"compliant",     approvalRate:0.68, population:439035,   medianHomePrice:825000,  airportNoisePct:4,   histPreservation:0.78, calGreen:0.48 },
+  "Napa":           { permitDays:175, feesPerUnit:58000,  ceqaRisk:0.70, coastalPct:5,   fireZonePct:58,  heCompliance:"compliant",     approvalRate:0.72, population:138019,   medianHomePrice:895000,  airportNoisePct:3,   histPreservation:0.65, calGreen:0.52 },
+  "Nevada":         { permitDays:95,  feesPerUnit:35000,  ceqaRisk:0.45, coastalPct:0,   fireZonePct:78,  heCompliance:"compliant",     approvalRate:0.78, population:103487,   medianHomePrice:595000,  airportNoisePct:0,   histPreservation:0.62, calGreen:0.28 },
+  "Orange":         { permitDays:125, feesPerUnit:55000,  ceqaRisk:0.62, coastalPct:18,  fireZonePct:22,  heCompliance:"compliant",     approvalRate:0.75, population:3186989,  medianHomePrice:1125000, airportNoisePct:8,   histPreservation:0.35, calGreen:0.30 },
+  "Placer":         { permitDays:82,  feesPerUnit:32000,  ceqaRisk:0.40, coastalPct:0,   fireZonePct:48,  heCompliance:"compliant",     approvalRate:0.82, population:412300,   medianHomePrice:675000,  airportNoisePct:2,   histPreservation:0.30, calGreen:0.28 },
+  "Plumas":         { permitDays:50,  feesPerUnit:12000,  ceqaRisk:0.20, coastalPct:0,   fireZonePct:82,  heCompliance:"compliant",     approvalRate:0.90, population:19790,    medianHomePrice:325000,  airportNoisePct:0,   histPreservation:0.18, calGreen:0.12 },
+  "Riverside":      { permitDays:88,  feesPerUnit:28000,  ceqaRisk:0.42, coastalPct:0,   fireZonePct:42,  heCompliance:"compliant",     approvalRate:0.84, population:2458395,  medianHomePrice:565000,  airportNoisePct:6,   histPreservation:0.28, calGreen:0.22 },
+  "Sacramento":     { permitDays:92,  feesPerUnit:21000,  ceqaRisk:0.45, coastalPct:0,   fireZonePct:12,  heCompliance:"compliant",     approvalRate:0.82, population:1585055,  medianHomePrice:485000,  airportNoisePct:8,   histPreservation:0.52, calGreen:0.38 },
+  "San Benito":     { permitDays:115, feesPerUnit:42000,  ceqaRisk:0.52, coastalPct:0,   fireZonePct:35,  heCompliance:"compliant",     approvalRate:0.78, population:64209,    medianHomePrice:725000,  airportNoisePct:0,   histPreservation:0.22, calGreen:0.22 },
+  "San Bernardino": { permitDays:82,  feesPerUnit:22000,  ceqaRisk:0.38, coastalPct:0,   fireZonePct:42,  heCompliance:"compliant",     approvalRate:0.85, population:2194710,  medianHomePrice:485000,  airportNoisePct:7,   histPreservation:0.22, calGreen:0.20 },
+  "San Diego":      { permitDays:145, feesPerUnit:42000,  ceqaRisk:0.55, coastalPct:15,  fireZonePct:38,  heCompliance:"compliant",     approvalRate:0.76, population:3298634,  medianHomePrice:925000,  airportNoisePct:18,  histPreservation:0.52, calGreen:0.45 },
+  "San Francisco":  { permitDays:425, feesPerUnit:88000,  ceqaRisk:0.92, coastalPct:100, fireZonePct:5,   heCompliance:"compliant",     approvalRate:0.55, population:873965,   medianHomePrice:1485000, airportNoisePct:28,  histPreservation:0.92, calGreen:0.95 },
+  "San Joaquin":    { permitDays:72,  feesPerUnit:19000,  ceqaRisk:0.32, coastalPct:0,   fireZonePct:8,   heCompliance:"compliant",     approvalRate:0.85, population:789410,   medianHomePrice:495000,  airportNoisePct:4,   histPreservation:0.28, calGreen:0.22 },
+  "San Luis Obispo":{ permitDays:205, feesPerUnit:48000,  ceqaRisk:0.68, coastalPct:48,  fireZonePct:42,  heCompliance:"compliant",     approvalRate:0.70, population:283111,   medianHomePrice:825000,  airportNoisePct:3,   histPreservation:0.55, calGreen:0.50 },
+  "San Mateo":      { permitDays:275, feesPerUnit:92000,  ceqaRisk:0.88, coastalPct:55,  fireZonePct:22,  heCompliance:"compliant",     approvalRate:0.62, population:764442,   medianHomePrice:1725000, airportNoisePct:35,  histPreservation:0.52, calGreen:0.72 },
+  "Santa Barbara":  { permitDays:215, feesPerUnit:52000,  ceqaRisk:0.75, coastalPct:42,  fireZonePct:55,  heCompliance:"compliant",     approvalRate:0.68, population:448229,   medianHomePrice:985000,  airportNoisePct:5,   histPreservation:0.88, calGreen:0.55 },
+  "Santa Clara":    { permitDays:195, feesPerUnit:78000,  ceqaRisk:0.82, coastalPct:5,   fireZonePct:15,  heCompliance:"compliant",     approvalRate:0.72, population:1936259,  medianHomePrice:1585000, airportNoisePct:10,  histPreservation:0.38, calGreen:0.75 },
+  "Santa Cruz":     { permitDays:255, feesPerUnit:68000,  ceqaRisk:0.82, coastalPct:75,  fireZonePct:48,  heCompliance:"compliant",     approvalRate:0.62, population:270861,   medianHomePrice:1125000, airportNoisePct:2,   histPreservation:0.58, calGreen:0.62 },
+  "Shasta":         { permitDays:62,  feesPerUnit:14000,  ceqaRisk:0.25, coastalPct:0,   fireZonePct:58,  heCompliance:"compliant",     approvalRate:0.88, population:182155,   medianHomePrice:345000,  airportNoisePct:2,   histPreservation:0.20, calGreen:0.18 },
+  "Sierra":         { permitDays:40,  feesPerUnit:8000,   ceqaRisk:0.12, coastalPct:0,   fireZonePct:85,  heCompliance:"compliant",     approvalRate:0.94, population:3236,     medianHomePrice:285000,  airportNoisePct:0,   histPreservation:0.12, calGreen:0.10 },
+  "Siskiyou":       { permitDays:52,  feesPerUnit:11000,  ceqaRisk:0.18, coastalPct:0,   fireZonePct:62,  heCompliance:"compliant",     approvalRate:0.90, population:44076,    medianHomePrice:265000,  airportNoisePct:1,   histPreservation:0.18, calGreen:0.12 },
+  "Solano":         { permitDays:98,  feesPerUnit:35000,  ceqaRisk:0.45, coastalPct:12,  fireZonePct:12,  heCompliance:"compliant",     approvalRate:0.80, population:453491,   medianHomePrice:545000,  airportNoisePct:5,   histPreservation:0.28, calGreen:0.32 },
+  "Sonoma":         { permitDays:195, feesPerUnit:62000,  ceqaRisk:0.72, coastalPct:22,  fireZonePct:62,  heCompliance:"compliant",     approvalRate:0.70, population:488863,   medianHomePrice:795000,  airportNoisePct:3,   histPreservation:0.60, calGreen:0.58 },
+  "Stanislaus":     { permitDays:68,  feesPerUnit:17000,  ceqaRisk:0.28, coastalPct:0,   fireZonePct:8,   heCompliance:"compliant",     approvalRate:0.86, population:552878,   medianHomePrice:445000,  airportNoisePct:3,   histPreservation:0.22, calGreen:0.20 },
+  "Sutter":         { permitDays:55,  feesPerUnit:14000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:5,   heCompliance:"compliant",     approvalRate:0.88, population:99633,    medianHomePrice:385000,  airportNoisePct:2,   histPreservation:0.15, calGreen:0.15 },
+  "Tehama":         { permitDays:48,  feesPerUnit:11000,  ceqaRisk:0.18, coastalPct:0,   fireZonePct:55,  heCompliance:"compliant",     approvalRate:0.90, population:65829,    medianHomePrice:285000,  airportNoisePct:1,   histPreservation:0.12, calGreen:0.10 },
+  "Trinity":        { permitDays:45,  feesPerUnit:9000,   ceqaRisk:0.15, coastalPct:0,   fireZonePct:78,  heCompliance:"compliant",     approvalRate:0.92, population:16060,    medianHomePrice:245000,  airportNoisePct:0,   histPreservation:0.12, calGreen:0.10 },
+  "Tulare":         { permitDays:52,  feesPerUnit:12000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:22,  heCompliance:"compliant",     approvalRate:0.88, population:473117,   medianHomePrice:325000,  airportNoisePct:2,   histPreservation:0.15, calGreen:0.18 },
+  "Tuolumne":       { permitDays:65,  feesPerUnit:15000,  ceqaRisk:0.28, coastalPct:0,   fireZonePct:78,  heCompliance:"compliant",     approvalRate:0.85, population:55810,    medianHomePrice:385000,  airportNoisePct:0,   histPreservation:0.40, calGreen:0.18 },
+  "Ventura":        { permitDays:185, feesPerUnit:48000,  ceqaRisk:0.70, coastalPct:32,  fireZonePct:52,  heCompliance:"compliant",     approvalRate:0.70, population:843843,   medianHomePrice:825000,  airportNoisePct:4,   histPreservation:0.50, calGreen:0.45 },
+  "Yolo":           { permitDays:88,  feesPerUnit:28000,  ceqaRisk:0.42, coastalPct:0,   fireZonePct:15,  heCompliance:"compliant",     approvalRate:0.82, population:216986,   medianHomePrice:565000,  airportNoisePct:4,   histPreservation:0.30, calGreen:0.38 },
+  "Yuba":           { permitDays:55,  feesPerUnit:14000,  ceqaRisk:0.22, coastalPct:0,   fireZonePct:35,  heCompliance:"compliant",     approvalRate:0.86, population:81575,    medianHomePrice:385000,  airportNoisePct:3,   histPreservation:0.18, calGreen:0.18 },
 };
 
 const COUNTY_SHAPES = {
@@ -460,23 +459,19 @@ const COUNTY_SHAPES = {
 const LAYERS = {
   composite:    { label:'Overall Difficulty', color:PDS.ember,    weight:null,
     description:'A weighted composite of all eight regulatory factors below. Counties scoring above 75 face conditions hostile enough to make most projects economically unviable. Think of it as the sum total of institutional resistance a builder must overcome.' },
-  permitDays:   { label:'Permit Timeline',    color:PDS.electric, weight:0.18, format:v=>`${v}d`, domain:[30,450],
+  permitDays:   { label:'Permit Timeline',    color:PDS.electric, weight:0.20, format:v=>`${v}d`, domain:[30,450],
     description:'The median number of calendar days from application to permit issuance for a new residential project. Every extra month is dead carrying cost — land loans accruing, construction windows closing, pro formas collapsing. San Francisco routinely exceeds a year.' },
-  feesPerUnit:  { label:'Dev Fees / Unit',    color:PDS.fuel,     weight:0.18, format:v=>fmtK(v), domain:[5000,100000],
+  feesPerUnit:  { label:'Dev Fees / Unit',    color:PDS.fuel,     weight:0.20, format:v=>fmtK(v), domain:[5000,100000],
     description:'Total government-imposed fees per housing unit: impact fees, plan check, utility connections, school fees, and affordable housing in-lieu payments. In coastal California these can exceed $150,000 per unit — a pure regulatory tax on housing production.' },
-  ceqaRisk:     { label:'CEQA Risk',          color:PDS.ember,    weight:0.08, format:v=>`${Math.round(v*100)}%`, domain:[0,1],
+  ceqaRisk:     { label:'CEQA Risk',          color:PDS.ember,    weight:0.09, format:v=>`${Math.round(v*100)}%`, domain:[0,1],
     description:'Probability of a project facing California Environmental Quality Act litigation or extended review. CEQA is frequently weaponized by neighbors and competitors to kill projects that have nothing to do with environmental harm. A high score means delay, legal fees, and settlement costs.' },
-  coastalPct:   { label:'Coastal Zone',       color:PDS.coolant,  weight:0.09, format:v=>`${v}%`, domain:[0,100],
+  coastalPct:   { label:'Coastal Zone',       color:PDS.coolant,  weight:0.10, format:v=>`${v}%`, domain:[0,100],
     description:'Percentage of the jurisdiction\'s land area subject to California Coastal Commission review. Coastal Act permitting adds a second approval layer on top of local permits, with its own appeals process. Projects in the Coastal Zone can take years longer than identical inland projects.' },
-  fireZonePct:  { label:'Fire Hazard',        color:'#A8441F',   weight:0.09, format:v=>`${v}%`, domain:[0,100],
+  fireZonePct:  { label:'Fire Hazard',        color:'#A8441F',   weight:0.10, format:v=>`${v}%`, domain:[0,100],
     description:'Share of land in a CalFire High or Very High Fire Hazard Severity Zone. Building in these zones triggers mandatory hardening requirements, insurance difficulties, and sometimes outright denial. After Paradise and Lahaina, some insurers have simply exited California entirely.' },
-  approvalRate: { label:'Approval Rate',      color:PDS.electric, weight:0.09, format:v=>`${Math.round(v*100)}%`, domain:[0.5,1], invert:true,
+  approvalRate: { label:'Approval Rate',      color:PDS.electric, weight:0.10, format:v=>`${Math.round(v*100)}%`, domain:[0,1], invert:true,
     description:'The fraction of submitted housing applications that reach final approval. A low approval rate signals a hostile planning commission, aggressive design review, or a council with a pattern of finding pretextual grounds to deny. High is good — low means the game is rigged.' },
-  rhnaProgress: { label:'RHNA Progress',      color:PDS.fuel,     weight:0.09, format:v=>`${Math.round(v*100)}%`, domain:[0,1], invert:true,
-    description:'How far along a jurisdiction is toward meeting its Regional Housing Needs Allocation — the state-mandated number of homes it must plan and permit. Low progress means the jurisdiction is chronically under-building, which tightens supply and signals bureaucratic resistance to growth.' },
-  sb35Status:   { label:'SB 35 Status',       color:PDS.blood,    weight:0.05, format:v=>v==='subject'?'SUBJECT':'EXEMPT', categorical:true,
-    description:'Whether the jurisdiction is subject to SB 35, which grants by-right ministerial approval to qualifying projects in cities that are behind on their RHNA targets. Being subject to SB 35 is a red flag — it means the city has failed its housing obligations and the state has stripped some of its discretionary power.' },
-  airportNoisePct:{ label:'Airport Noise Zone', color:PDS.reactor,  weight:0.05, format:v=>`${v}%`, domain:[0,40],
+  airportNoisePct:{ label:'Airport Noise Zone', color:PDS.reactor,  weight:0.06, format:v=>`${v}%`, domain:[0,40],
     description:"Percentage of the county's developable residential land inside a 65 dB CNEL contour — the noise threshold at which California Building Code §1207 mandates acoustic analysis and mitigation. Sourced from Airport Land Use Compatibility Plans (ALUCPs) filed with Caltrans Division of Aeronautics. High-noise zones add acoustic study costs ($5k–$20k per project), mandatory building treatment, and in some cases outright prohibition of residential use. San Mateo (SFO), Los Angeles (LAX + six general aviation airports), and San Diego (Lindbergh + Miramar + Montgomery) are the most constrained." },
   histPreservation:{ label:'Historic Preservation', color:'#7A5C3A', weight:0.05, format:v=>`${Math.round(v*100)}%`, domain:[0,1],
     description:"Share of a county's developable land subject to historic preservation overlay review. Designated historic districts — enforced under the California Historic Building Code and local ordinances — impose design review, materials restrictions, and demolition constraints that can add months and five-figure compliance costs to otherwise routine projects. San Francisco's blanket neighborhood designations, Santa Barbara's Spanish Colonial enforcement, and Gold Rush-era foothill counties carry the heaviest burden. Even a single contributing structure on a parcel can trigger full discretionary review." },
@@ -495,7 +490,6 @@ const scoreMetrics = (data) => {
     norm[key] = n;
     composite += n * cfg.weight;
   }
-  if (data.sb35Status==='subject')         composite += 0.05;
   if (data.heCompliance==='non-compliant') composite += 0.05;
   return { ...data, normalized:norm, composite:clamp(composite,0,1) };
 };
@@ -531,9 +525,7 @@ function buildCityRecord(geoEntry, scraperRec, hcdCity, countyBase) {
     calGreen:       base.calGreen    ?? 0.20,
     histPreservation: base.histPreservation ?? 0.20,
     approvalRate:   base.approvalRate|| 0.80,
-    sb35Status:     hcd.sb35Status   || base.sb35Status   || 'subject',
     heCompliance:   hcd.heCompliance || base.heCompliance || 'compliant',
-    rhnaProgress:   hcd.rhnaProgress != null ? hcd.rhnaProgress : (base.rhnaProgress||0.5),
     hasFeeData:     !!scraperRec?.fees?.estimatedTotalNewSFR,
     hasHCDData:     Object.keys(hcd).length > 0,
     scraperRecord:  scraperRec,
@@ -563,7 +555,7 @@ function useHCDData() {
     if (abortRef.current) abortRef.current.abort();
     const ctrl = new AbortController(); abortRef.current = ctrl;
     setState(s=>({...s, fetchStatus:'fetching',
-      sources:{ apr:{label:'APR Permits',status:'fetching'}, sb35:{label:'SB 35 / HE',status:'fetching'}, rhna:{label:'RHNA Progress',status:'fetching'} }
+      sources:{ apr:{label:'APR Permits',status:'fetching'}, he:{label:'Housing Element',status:'fetching'} }
     }));
     const countyAgg={}, cityData={}, srcRes={};
     const mergeCounty=(county,data)=>{ const k=normCounty(county); if(!countyAgg[k])countyAgg[k]={}; Object.assign(countyAgg[k],data); };
@@ -600,48 +592,27 @@ function useHCDData() {
         try{
           const res=(await fetchPkg(PACKAGES.SB35))[0]; const {records}=await fetchDS(res.id);
           const JNAME=['jurisdiction_name','jurisdiction','city','City']; const CNAME=['county','County'];
-          const SB35F=['sb35_status','SB35_Status','determination']; const HEF=['he_status','HE_Status','housing_element_status','compliance_status'];
-          const cSB={},cHE={};
+          const HEF=['he_status','HE_Status','housing_element_status','compliance_status'];
+          const cHE={};
           for(const rec of records){
             const j=getField(rec,JNAME); const c=normCounty(getField(rec,CNAME)||'');
-            const sb=(getField(rec,SB35F,'')||'').toLowerCase(); const he=(getField(rec,HEF,'')||'').toLowerCase();
-            const isSub=sb.includes('subject')||sb==='y'||sb==='1'; const isExm=sb.includes('exempt')||sb==='n'||sb==='0';
+            const he=(getField(rec,HEF,'')||'').toLowerCase();
             const isCom=he&&!he.includes('non')&&(he.includes('compliant')||he.includes('certified')); const isNon=he&&he.includes('non');
-            if(j&&c){ const upd={}; if(isSub)upd.sb35Status='subject'; else if(isExm)upd.sb35Status='exempt';
+            if(j&&c){ const upd={};
               if(isCom)upd.heCompliance='compliant'; else if(isNon)upd.heCompliance='non-compliant';
               if(Object.keys(upd).length)mergeCity(j,c,upd); }
-            if(c){ if(!cSB[c])cSB[c]={s:0,e:0}; if(!cHE[c])cHE[c]={y:0,n:0};
-              if(isSub)cSB[c].s++; if(isExm)cSB[c].e++; if(isCom)cHE[c].y++; if(isNon)cHE[c].n++; }
+            if(c){ if(!cHE[c])cHE[c]={y:0,n:0};
+              if(isCom)cHE[c].y++; if(isNon)cHE[c].n++; }
           }
-          for(const[c,v]of Object.entries(cSB))if(v.s+v.e>0)mergeCounty(c,{sb35Status:v.s>=v.e?'subject':'exempt'});
           for(const[c,v]of Object.entries(cHE))if(v.y+v.n>0)mergeCounty(c,{heCompliance:v.y>=v.n?'compliant':'non-compliant'});
-          srcRes.sb35={label:'SB 35 / HE',status:'success',records:records.length,year:new Date(res.last_modified||Date.now()).getFullYear()};
-        }catch(e){if(e.name!=='AbortError')srcRes.sb35={label:'SB 35 / HE',status:'error',error:e.message};}
-        setState(s=>({...s,sources:{...s.sources,...srcRes}}));
-      })(),
-      (async()=>{
-        try{
-          const res=(await fetchPkg(PACKAGES.RHNA))[0]; const {records}=await fetchDS(res.id);
-          const JNAME=['jurisdiction_name','jurisdiction','city','City']; const CNAME=['county','County'];
-          const ALLOC=['rhna_allocation','total_need','allocation']; const PERMIT=['units_permitted','actual','permits_issued'];
-          const PCT=['progress_pct','percent_complete','pct_progress']; const cBk={};
-          for(const rec of records){
-            const j=getField(rec,JNAME); const c=normCounty(getField(rec,CNAME)||''); if(!c)continue;
-            if(!cBk[c])cBk[c]={pSum:0,pN:0};
-            const p=safeFloat(getField(rec,PCT),NaN);
-            const prog=!isNaN(p)?(p>1?p/100:p):(safeFloat(getField(rec,ALLOC))>0?clamp(safeFloat(getField(rec,PERMIT))/safeFloat(getField(rec,ALLOC)),0,1):null);
-            if(prog!=null){cBk[c].pSum+=prog;cBk[c].pN++;}
-            if(j&&c&&prog!=null)mergeCity(j,c,{rhnaProgress:prog});
-          }
-          for(const[c,v]of Object.entries(cBk))if(v.pN>0)mergeCounty(c,{rhnaProgress:v.pSum/v.pN});
-          srcRes.rhna={label:'RHNA Progress',status:'success',records:records.length,year:new Date(res.last_modified||Date.now()).getFullYear()};
-        }catch(e){if(e.name!=='AbortError')srcRes.rhna={label:'RHNA Progress',status:'error',error:e.message};}
+          srcRes.he={label:'Housing Element',status:'success',records:records.length,year:new Date(res.last_modified||Date.now()).getFullYear()};
+        }catch(e){if(e.name!=='AbortError')srcRes.he={label:'Housing Element',status:'error',error:e.message};}
         setState(s=>({...s,sources:{...s.sources,...srcRes}}));
       })(),
     ]);
     if(ctrl.signal.aborted)return;
     const ok=Object.values(srcRes).filter(s=>s.status==='success').length;
-    setState({ fetchStatus:ok===0?'error':ok<3?'partial':'success', countyLive:countyAgg, cityLive:cityData, sources:srcRes, lastFetched:new Date() });
+    setState({ fetchStatus:ok===0?'error':ok<2?'partial':'success', countyLive:countyAgg, cityLive:cityData, sources:srcRes, lastFetched:new Date() });
   },[]);
 
   useEffect(()=>{ fetchAll(); return()=>abortRef.current?.abort(); },[fetchAll]);
@@ -813,7 +784,7 @@ const CEQA_TIPS = {
   'Cat. Exemption Rate':  'Share of projects granted categorical exemption — fast-tracked past full environmental review. Higher = easier path to approval.',
   'EIR Rate':             'Share of projects requiring a full Environmental Impact Report — the most expensive and time-consuming CEQA outcome.',
   'Mitigated Neg. Dec.':  'Share resolved via Mitigated Negative Declaration: environmental concerns exist but can be addressed with conditions.',
-  'Composite CEQA Risk':  'Weighted composite of EIR rate (40%), review days (35%), and inverse categorical exemption rate (25%). Higher = harder.',
+  'Composite CEQA Risk':  'Weighted composite: EIR rate normalized against a 22% ceiling (40% weight) + avg review days normalized against a 350-day ceiling (35% weight) + inverse categorical exemption rate (25% weight). Each component is clamped 0–1 before weighting. Higher = harder to build.',
 };
 const FEE_TIPS = {
   'Total SFR (est.)':      'Estimated total development fees for a new single-family residence, summing all applicable impact fees.',
@@ -911,7 +882,7 @@ function CityDetail({ city, onBack }) {
         <div style={{ display:'flex', flexDirection:'column', gap:5 }}>
           {Object.entries(LAYERS).filter(([k])=>k!=='composite').map(([key,cfg])=>{
             const val=city[key];
-            const bar=cfg.categorical?(val==='subject'?80:20):(city.normalized?.[key]||0)*100;
+            const bar=clamp(((val||0)/cfg.domain[1])*100,0,100);
             const isCity=key==='feesPerUnit'?city.hasFeeData:city.hasHCDData;
             return (
               <div key={key} style={{ display:'grid', gridTemplateColumns:'80px 1fr 45px 12px', gap:5, alignItems:'center' }}>
@@ -1153,7 +1124,7 @@ function CountyDetail({ county, data, liveFlags, citiesInCounty, onCityClick, on
         <div style={{ display:'flex', flexDirection:'column', gap:5, marginBottom:'0.75rem' }}>
           {Object.entries(LAYERS).filter(([k])=>k!=='composite').map(([key,cfg])=>{
             const val=data[key];
-            const bar=cfg.categorical?(val==='subject'?80:20):(data.normalized?.[key]||0)*100;
+            const bar=clamp(((val||0)/cfg.domain[1])*100,0,100);
             const isLive=liveFlags.has(key);
             return (
               <div key={key} style={{ display:'grid', gridTemplateColumns:'80px 1fr 45px 12px', gap:5, alignItems:'center' }}>
@@ -1579,8 +1550,7 @@ export default function CaliforniaBuildingIndex() {
                 </div>
                 {[
                   { label:'HCD Annual Progress Reports', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Permit counts & housing production by jurisdiction' },
-                  { label:'Housing Element / SB 35 Status', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Housing element compliance & SB 35 eligibility determinations' },
-                  { label:'RHNA Progress Report', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Regional Housing Needs Allocation fulfillment by jurisdiction' },
+                  { label:'Housing Element Compliance', org:'CA Dept of Housing & Community Development', url:'data.ca.gov', desc:'Housing element compliance status by jurisdiction' },
                   { label:'CA County Boundaries', org:'CA State GIS Open Data', url:'gis.data.ca.gov', desc:'GeoJSON county boundaries for the interactive map' },
                   { label:'CEQA Environmental Review Data', org:'CEQAnet / Governor\'s Office of Planning and Research', url:'ceqanet.opr.ca.gov', desc:'Filing-level data on environmental review outcomes: categorical exemptions, EIR rates, mitigated negative declarations, and review timelines for 121 jurisdictions' },
                   { label:'Baseline Jurisdiction Estimates', org:'Compiled — state & local sources', url:null, desc:'Permit timelines, CEQA risk, coastal/fire zone coverage, approval rates' },
@@ -1784,9 +1754,6 @@ export default function CaliforniaBuildingIndex() {
                   color:isActive&&scraperRecords?PDS.electric:PDS.fog }}>
                   {scraperRecords?'⚡':'≈'}
                 </span>}
-                {['rhnaProgress','sb35Status'].includes(key)&&hcdOk&&(
-                  <LivePip color={isActive?PDS.electric:PDS.fog} active={true}/>
-                )}
               </button>
             );
           })}
@@ -2125,7 +2092,7 @@ export default function CaliforniaBuildingIndex() {
           </p>
           <p style={{ fontFamily:"'IBM Plex Mono','Consolas',monospace", fontSize:'0.62rem',
             color:PDS.mist, margin:0, letterSpacing:'0.05em' }}>
-            Permit Time (20%) · Fees (20%) · CEQA (12%) · Coastal (9%) · Fire (9%) · Approval (9%) · RHNA (9%) · Noise (7%) · SB35 (5%)
+            Permit Time (20%) · Fees (20%) · Coastal (10%) · Fire (10%) · Approval (10%) · CEQA (9%) · Noise (6%) · Hist. Preservation (5%) · CalGreen (5%) · HE Compliance (5%)
           </p>
         </div>
       </div>
