@@ -1589,7 +1589,7 @@ export default function CaliforniaBuildingIndex() {
           <h1 style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif",
             fontWeight:700, fontSize:'clamp(1.6rem,4vw,2.4rem)', color:PDS.shadow,
             margin:'0 0 0.75rem', lineHeight:1.1, letterSpacing:'0.05em', textTransform:'uppercase' }}>
-            Building Difficulty Index
+            Building Difficulty Index <span style={{ fontSize:'0.5em', fontWeight:400, letterSpacing:'0.12em', verticalAlign:'super', color:PDS.oxide }}>(beta)</span>
           </h1>
           <p style={{ fontFamily:"'Source Serif 4','Charter',Georgia,serif", fontSize:'0.9rem',
             fontStyle:'italic', color:'#B8B8B8', maxWidth:580, lineHeight:1.6,
